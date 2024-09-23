@@ -130,6 +130,40 @@ int findStudent(vector<Student *> &studentList){
     }
 }
 
+
+
+void write()
+{
+    Student s;
+    s.accept();
+    ofstream fout("person.txt", ios::app);
+    fout << s.getRollNo() << "," << s.getName() << "," << s.getMarks() << endl;
+    fout.close();
+}
+
+void read()
+{
+    ifstream fin("emp.txt");
+    string line;
+    while (getline(fin, line))
+    {
+        stringstream data(line); // step 2
+        string id, name, salary; // step 3
+
+        // step 4
+        getline(data, id, ',');
+        getline(data, name, ',');
+        getline(data, salary, ',');
+
+        /// step 5
+        Employee e(stoi(id), name, stod(salary));
+
+        e.display();
+    }
+    fin.close();
+}
+
+
 int main()
 {
     int choice;

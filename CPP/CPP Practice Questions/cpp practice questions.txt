@@ -1,0 +1,13 @@
+Based on the coding questions from your provided PDFs, here are 3-4 similar coding questions combining multiple concepts:
+
+1. **Product Store Simulation**:  
+   Create a base class `Product` with attributes like ID, name, and price. Derive `Electronics` and `Groceries` classes with specific attributes (e.g., warranty, expiry date). Implement methods to calculate the total price, considering discounts (e.g., 10% for electronics, 5% for groceries). Make a menu-driven program to add/remove products, and generate a bill.
+
+2. **Employee Management System**:  
+   Design an `Employee` class with attributes such as ID, name, and salary. Inherit `FullTimeEmployee` and `PartTimeEmployee`. For `FullTimeEmployee`, add benefits; for `PartTimeEmployee`, calculate payment based on hours worked. Implement a menu-driven program to add employees, display employees by type, and calculate total company expenditure.
+
+3. **Banking System**:  
+   Create a `BankAccount` class with attributes like account number, balance, and account type (use `enum`). Inherit `SavingsAccount` and `CurrentAccount`. Implement functionalities to deposit, withdraw, and display account details. Ensure exception handling for negative deposits or insufficient balance.
+
+4. **Online Shopping System**:  
+   Implement a class `Customer` with personal details and a list of purchased products. Create a `Product` class with ID, name, and price. The customer can buy multiple products, and the program should display purchase history. Add functionalities for discount calculations and generating the final bill.

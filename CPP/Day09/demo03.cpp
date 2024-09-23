@@ -20,8 +20,8 @@ void read()
 }
 int main()
 {
-    // cout << "Hello" << endl;
-    // write();
+    cout << "Hello" << endl;
+    write();
     read();
     return 0;
 }
