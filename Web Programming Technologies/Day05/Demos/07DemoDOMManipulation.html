@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM Manipulation</title>
+  </head>
+  <body>
+    <center>
+      <div
+        style="height: 200px; width: 200px; background-color: yellow"
+        id="myDiv"
+        onmouseover="DoSomething()"
+        onmouseout="DoSomethingElse()"
+      ></div>
+    </center>
+
+    <script>
+      function DoSomething() {
+        var refTomyDiv = document.getElementById("myDiv");
+        refTomyDiv.style.backgroundColor = "Red";
+        refTomyDiv.style.height = "100px";
+      }
+
+      function DoSomethingElse() {
+        var refTomyDiv = document.getElementById("myDiv");
+        refTomyDiv.style.backgroundColor = "Yellow";
+        refTomyDiv.style.height = "200px";
+      }
+    </script>
+  </body>
+</html>

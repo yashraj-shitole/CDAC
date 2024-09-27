@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-3 Question-1</title>
+
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        .inputs{
+            display: flex;
+            width: 100%;
+            justify-content: start;
+            align-items: center;
+        }
+    </style>
+   
+</head>
+<body>
+
+    <center>
+        <h1><u>Registration Form</u></h1>
+    </center>
+    <br>
+
+        <div style="display: flex; align-items: center; justify-content: center; padding: 20px ;">
+            <div style="width: 50%;">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/TmLIzFwLwc8?si=7Z3d2tgcK1yxgg8G" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <div style="width: 50%;">
+
+                <!-- <div class="inputs">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" >
+                </div>
+
+                <div class="inputs">
+                    <label for="birthdate">Birth Date</label>
+                    <input type="date" name="birthdate" >
+                </div>
+
+                <div class="inputs">
+                    <label for="email">Email</label>
+                    <input type="email" name="email">
+                </div>
+
+                <div>
+                    <label for="password">Password</label>
+                    <input type="password" name="password" >
+                </div>
+
+                <div style="display: flex; ">
+                    <label for="address">Address</label>
+
+                    <div>
+                        <select name="state" id="">
+                            <option value="">Select State</option>
+                            <option value="Maharashtra">Maharashtra</option>
+                            <option value="Madhya Pradesh">Madhya Pradesh</option>
+                            <option value="Goa">Goa</option>
+                        </select>
+                        <h6>State</h6>
+                    </div>
+                    <div>
+                        <select name="state" id="">
+                            <option value="">Select District</option>
+                            <option value="Maharashtra">Pune</option>
+                            <option value="Madhya Pradesh">Sata</option>
+                            <option value="Goa">Kolhapur</option>
+                        </select>
+                        <h6>District</h6>
+                    </div>
+                    <div>
+                        <select name="state" id="">
+                            <option value="">Select City</option>
+                            <option value="Maharashtra">Pune</option>
+                            <option value="Madhya Pradesh">Karad</option>
+                            <option value="Goa">Kolhapur</option>
+                        </select>
+                        <h6>City</h6>
+                    </div>
+                </div>
+
+                <div>
+                    <label for="gender">Gender</label>
+                    <input type="radio" name="gender" >Male
+                    <input type="radio" name="gender">Female
+                </div>
+
+                <div>
+                    <label for="fileinput">Upload Photo</label>
+                    <input name="fileinput" type="file"/>
+                </div>
+                
+                <div>
+                    <label for="course">Select your course</label>
+                <select name="state" id="">
+                    <option value="">Select course</option>
+                    <option value="DAC">DAC</option>
+                    <option value="DMC">DMC</option>
+                </select>
+                </div>
+                
+
+                <div>
+                    <input type="button" value="Register">
+                    <input type="button" value="Clear">
+                </div> -->
+                
+
+                <table >
+                    <tr>
+                        <td width="150px">
+                            <label for="name">Name</label>
+                        </td>
+                        <td>
+                            <input type="text" name="name" >
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <label for="birthdate">Birth Date</label>
+                        </td>
+                        <td>
+                            <input type="date" name="birthdate" >
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <label for="email">Email</label>
+                        </td>
+                        <td>
+                            <input type="email" name="email">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="password">Password</label>
+                        </td>
+                        <td>
+                            <input type="password" name="password" >
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="address">Address</label>
+                        </td>
+                        <td>
+                            <div style="display: flex; gap:10px;" >
+
+                                <div>
+                                    <select name="state" id="">
+                                        <option value="">Select State</option>
+                                        <option value="Maharashtra">Maharashtra</option>
+                                        <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                        <option value="Goa">Goa</option>
+                                    </select>
+                                    <h6>State</h6>
+                                </div>
+                                <div>
+                                    <select name="state" id="">
+                                        <option value="">Select District</option>
+                                        <option value="Maharashtra">Pune</option>
+                                        <option value="Madhya Pradesh">Sata</option>
+                                        <option value="Goa">Kolhapur</option>
+                                    </select>
+                                    <h6>District</h6>
+                                </div>
+                                <div>
+                                    <select name="state" id="">
+                                        <option value="">Select City</option>
+                                        <option value="Maharashtra">Pune</option>
+                                        <option value="Madhya Pradesh">Karad</option>
+                                        <option value="Goa">Kolhapur</option>
+                                    </select>
+                                    <h6>City</h6>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="gender">Gender</label>
+                        </td>
+                        <td>
+                            <input type="radio" name="gender" >Male
+                            <input type="radio" name="gender">Female
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="fileinput">Upload Photo</label>
+                        </td>
+                        <td>
+                            <input name="fileinput" type="file"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="course">Select your course</label>
+                        </td>
+                        <td>
+                            <select name="state" id="">
+                                <option value="">Select course</option>
+                                <option value="DAC">DAC</option>
+                                <option value="DMC">DMC</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="button" value="Register">
+                        </td>
+                        <td>
+                            <input type="button" value="Clear">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+</body>
+</html>

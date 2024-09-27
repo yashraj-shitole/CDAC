@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title>Demo</title>
+  </head>
+  <body>
+    Name: <input type="text" id="txtName" value="" />
+    <div id="myErrorDiv1" style="color: red"></div>
+    <br />
+    Address: <input type="text" id="txtAddress" value="" />
+    <div id="myErrorDiv2" style="color: red"></div>
+    <br />
+    <input type="button" value="Click Me" onclick="DoSomething()" />
+
+    <!-- <script src="mycommoncode.js"></script> -->
+
+    <!-- <script src="mycommoncode1.min.js"></script> -->
+
+    <script src="mycommoncode.min.js"></script>
+    <script>
+      function DoSomething() {
+        CheckEmpty("txtName", "myErrorDiv1", "Name can not be empty!");
+        CheckEmpty("txtAddress", "myErrorDiv2", "Address can not be empty!");
+      }
+    </script>
+  </body>
+</html>

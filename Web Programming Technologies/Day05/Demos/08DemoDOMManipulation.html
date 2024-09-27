@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM Manipulation</title>
+  </head>
+  <body>
+    <center>
+      <img
+        style="height: 200px; width: 200px"
+        id="myImage"
+        src="first.jpeg"
+        onmouseover="DoSomething()"
+        onmouseout="DoSomethingElse()"
+      />
+    </center>
+
+    <script>
+      function DoSomething() {
+        var refTomyImage = document.getElementById("myImage");
+        refTomyImage.src = "second.jpeg";
+      }
+
+      function DoSomethingElse() {
+        var refTomyImage = document.getElementById("myImage");
+        refTomyImage.src = "first.jpeg";
+      }
+    </script>
+  </body>
+</html>

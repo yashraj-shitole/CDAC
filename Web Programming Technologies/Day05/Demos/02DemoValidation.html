@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>Demo</title>
+  </head>
+  <body>
+    Name: <input type="text" id="txtName" value="" />
+    <div id="myErrorDiv1" style="color: red"></div>
+    <input type="button" value="Click Me" onclick="DoSomething()" />
+    <script>
+      function DoSomething() {
+        debugger;
+        var refToTxtName = document.getElementById("txtName");
+        var refToErrorLocation = document.getElementById("myErrorDiv1");
+        if (refToTxtName.value == "") {
+          refToErrorLocation.innerText = "Name can not be empty!";
+        } else {
+          console.log(refToTxtName.value);
+          refToErrorLocation.innerText = "";
+        }
+      }
+
+      // DoSomething();
+    </script>
+  </body>
+</html>

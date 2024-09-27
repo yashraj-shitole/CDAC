@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title>Demo</title>
+  </head>
+  <body>
+    Name: <input type="text" id="txtName" value="" />
+    <div id="myErrorDiv1" style="color: red"></div>
+    <br />
+    Address: <input type="text" id="txtAddress" value="" />
+    <div id="myErrorDiv2" style="color: red"></div>
+    <br />
+    <input type="button" value="Click Me" onclick="DoSomething()" />
+    <script>
+      function DoSomething() {
+        CheckEmpty("txtName", "myErrorDiv1", "Name can not be empty!");
+        CheckEmpty("txtAddress", "myErrorDiv2", "Address can not be empty!");
+      }
+      function CheckEmpty(controlID, errorDivID, errorMessage) {
+        var refToSomeInput = document.getElementById(controlID);
+        var refToErrorLocation = document.getElementById(errorDivID);
+
+        if (refToSomeInput.value == "") {
+          refToErrorLocation.innerText = errorMessage;
+        } else {
+          console.log(refToSomeInput.value);
+          refToErrorLocation.innerText = "";
+        }
+      }
+    </script>
+  </body>
+</html>

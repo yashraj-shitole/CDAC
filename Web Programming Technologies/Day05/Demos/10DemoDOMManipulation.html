@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM Manipulation</title>
+  </head>
+  <body>
+    <input type="button" onclick="ChangeLocation()" value="Do Something" />
+
+    <input type="button" onclick="Hide()" value="Hide Content" />
+
+    <input type="button" onclick="Show()" value="Show Content" />
+
+    <input type="button" onclick="Circle()" value="Go Round" />
+    <br />
+    <hr />
+    <img
+      style="height: 200px; width: 200px"
+      id="myImage"
+      src="first.jpeg"
+      onmouseover="DoSomething()"
+      onmouseout="DoSomethingElse()"
+    />
+    <script>
+      var leftMargin = 0;
+      var rotationAngle = 0;
+      function ChangeLocation() {
+        leftMargin = leftMargin + 10;
+
+        var refTomyImage = document.getElementById("myImage");
+        refTomyImage.style.marginLeft = leftMargin + "px";
+
+        debugger;
+      }
+      function DoSomething() {
+        var refTomyImage = document.getElementById("myImage");
+        refTomyImage.src = "second.jpeg";
+      }
+
+      function DoSomethingElse() {
+        var refTomyImage = document.getElementById("myImage");
+        refTomyImage.src = "first.jpeg";
+      }
+
+      function Hide() {
+        var refTomyImage = document.getElementById("myImage");
+        refTomyImage.style.display = "none";
+      }
+
+      function Show() {
+        var refTomyImage = document.getElementById("myImage");
+        refTomyImage.style.display = "block";
+      }
+      function Circle() {
+        rotationAngle = rotationAngle + 20;
+        var refTomyImage = document.getElementById("myImage");
+        refTomyImage.style.rotate = rotationAngle + "deg";
+      }
+    </script>
+  </body>
+</html>

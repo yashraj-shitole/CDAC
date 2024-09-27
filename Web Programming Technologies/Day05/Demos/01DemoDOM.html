@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <title>Demo</title>
+  </head>
+  <body>
+    <input type="text" id="txtName" value="" />
+    <input type="button" value="Click Me" onclick="DoSomething()" />
+    <script>
+      function DoSomething() {
+        debugger;
+        var refToTxtName = document.getElementById("txtName");
+        refToTxtName.value = "PQR";
+      }
+
+      // DoSomething();
+    </script>
+  </body>
+</html>
