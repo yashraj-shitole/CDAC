@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FormValidation</title>
+
+    <style>
+        input{
+            border-radius: 20px;
+            padding: 6px;
+            border: 1px solid #383838;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <form id="myForm" style="display: flex; gap:10px; flex-direction: column; width: 200px;">
+            <input type="text" id="name" name="name" placeholder="Enter your name" value="">
+            <input type="text" id="address" name="address" placeholder="Enter your address" value="">
+            <div id="errorMessage"></div>
+
+
+            <input onclick="validation()" style="width: 100px; cursor: pointer; " type="button" value="Submit">
+        </form>
+    </div>
+
+
+    <script>
+        function validation(){
+
+            var name = document.getElementById("name").value;
+            var address = document.getElementById("address").value;
+            var errorBox= document.getElementById("errorMessage")
+            if(name=="" ||  address==""){
+                errorBox.innerHTML="Name or Address incorrect"
+            }
+            else{
+                errorBox.innerHTML=""
+                alert("Submission successfull")
+            }
+            
+        }
+    </script>
+</body>
+</html>

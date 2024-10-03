@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body> <center>
+    <button onclick="GetData()">Click Me</button>
+    <hr>
+   
+      <table id="myTable" border="1" style="width: 200px; text-align: center;">
+        <thead>
+          <th>No</th>
+          <th>Name</th>
+          <th>Address</th>
+        </thead>
+        <tbody id="myTableBody">
+         
+        </tbody>
+      </table>
+    </table>
+    </center>
+    <script>
+     // debugger;
+      var helper = new XMLHttpRequest();
+      // helper.readyState can be 0->1->2->3->4
+
+      console.log("Initial Value of readyState is:" + helper.readyState);
+
+      function GetData() {
+        //debugger;
+        helper.onreadystatechange = dosomething;
+
+        //Open means - prepare / create a packet
+        helper.open("GET", "http://127.0.0.1:5500/employees.json");
+
+        //Send means literally send the packet over network
+        helper.send();
+      }
+
+      function dosomething() {
+        console.log("ReadyState is " + helper.readyState);
+        if (helper.readyState == 4 && helper.status == 200) {
+          //readystate 4 means reply is here
+          //status = 200 means reply is successfull
+          var employees = JSON.parse(helper.responseText);
+
+          var refToMyTableBody = document.getElementById("myTableBody");
+
+
+          for (var i = 0; i < employees.length; i++) {
+            var employee = employees[i];
+            console.log(employee.No + employee.Name + employee.Address);
+
+            var row =`<tr>
+                        <td>` + employee.No + `</td>
+                        <td>` + employee.Name + `</td>
+                        <td>` + employee.Address + `</td>
+                      </tr>`;
+
+              refToMyTableBody.innerHTML = refToMyTableBody.innerHTML+ row;
+          }
+          //   debugger;
+        }
+      }
+    </script>
+  </body>
+</html>

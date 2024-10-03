@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <center>
+      Latitude : <input type="text" id="txtLat" /> <br />
+      Longitude : <input type="text" id="txtLon" /> <br />
+      <hr />
+      <input type="button" value="View On Map" onclick="GoToMapLink()" />
+      <hr />
+    </center>
+    <script>
+      navigator.geolocation.getCurrentPosition(
+        CallThisOnSuccess,
+        CallThisOnFailure
+      );
+
+      function CallThisOnSuccess(result) {
+        var lat = result.coords.latitude;
+        var lon = result.coords.longitude;
+
+        var refTotxtLat = document.getElementById("txtLat");
+        var refTotxtLon = document.getElementById("txtLon");
+
+        refTotxtLat.value = lat;
+        refTotxtLon.value = lon;
+      }
+
+      function CallThisOnFailure(error) {
+        debugger;
+        console.log(error);
+        alert("Something went wrong!");
+      }
+
+      function GoToMapLink() {
+        var refTotxtLat = document.getElementById("txtLat");
+        var refTotxtLon = document.getElementById("txtLon");
+
+        var latValue = refTotxtLat.value;
+        var lonValue = refTotxtLon.value;
+
+        var linkURL =
+          "https://www.latlong.net/c/?lat=" + latValue + "& long=" + lonValue;
+
+        window.location.href = linkURL;
+      }
+    </script>
+  </body>
+</html>

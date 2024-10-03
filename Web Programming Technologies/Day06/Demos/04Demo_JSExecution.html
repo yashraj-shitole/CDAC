@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="button" value="Disturb" onclick="DoSomethingForNoReason()" />
+
+    <script>
+      debugger;
+      console.log("One");
+
+      var op = window.setTimeout(ExecuteMe, 10000);
+
+      console.log(op);
+
+      console.log("Three");
+
+      function ExecuteMe() {
+        console.log("Two...... ");
+      }
+    </script>
+    <script>
+      function DoSomethingForNoReason() {
+        alert("I am here for no reason!");
+      }
+    </script>
+  </body>
+</html>

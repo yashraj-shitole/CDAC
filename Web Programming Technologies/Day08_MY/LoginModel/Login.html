@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+</head>
+<body>
+    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap:5px; height: 60vh;">
+        <label for="username">Username</label>
+        <input style="border-radius: 50px; padding: 5px;" type="text" name="username" id="username">
+        <label for="password">Password</label>
+        <input style="border-radius: 50px; padding: 5px;" type="password" name="password" id="password">
+        <input onclick="LogIn()" style="border: 1px solid black; padding: 10px; border-radius: 50px; text-decoration: none; color: black; font-weight: 900; margin: 5px;" type="button" value="Login">
+        <a style="border: 1px solid black; padding: 10px; border-radius: 50px; text-decoration: none; color: black; margin: 5px;" href="./Signin.html">Go to signin page</a>
+        
+    </div>
+
+    <script>
+
+        function LogIn(){
+            var username = document.getElementById("username").value
+            var password = document.getElementById("password").value
+    
+            var storedUsername=window.localStorage.getItem('username')
+
+            var storedPassword=atob(window.localStorage.getItem('password'))
+    
+            if(storedUsername==username &&  storedPassword==password){
+                
+                alert("Login Successfull")
+                window.location.assign('./Home.html')
+            }
+            else{
+                alert("Invalid Credentials")
+            }
+        }
+
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <center>
+      <input type="button" id="btn" value="Click Me" onclick="Play()" />
+      <br />
+      <video
+        id="myVideo"
+        style="height: 300px; width: 300px"
+        src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
+        controls="controls"
+      ></video>
+      <br />
+
+      <button onclick="PlayMe()">
+        <video
+          id="v2"
+          style="height: 300px; width: 300px"
+          src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
+          autoplay
+        ></video>
+      </button>
+      <br />
+      <br />
+      <button>
+        <table border="2">
+          <tr>
+            <td>1</td>
+            <td>Sunbeam</td>
+            <td>Karad</td>
+          </tr>
+          <tr>
+          
+            <td>1</td>
+            <td>Sunbeam</td>
+            <td>Karad</td>
+          </tr>
+          
+            <td>1</td>
+            <td>Sunbeam</td>
+            <td>Karad</td>
+          </tr>
+          </tr>
+            <td>1</td>
+            <td>Sunbeam</td>
+            <td>Karad</td>
+          </tr>
+        </table>
+      </button>
+
+      <br />
+      <video
+        style="height: 300px; width: 300px"
+        src="https://www.w3schools.com/html/mov_bbb.mp4"
+      ></video>
+    </center>
+
+    <script>
+      function Play() {
+        var refToMyVideo = document.getElementById("myVideo");
+        debugger;
+        refToMyVideo.play();
+      }
+
+      function PlayMe() {
+        var refToMyVideo = document.getElementById("v2");
+        debugger;
+        refToMyVideo.play();
+      }
+    </script>
+  </body>
+</html>

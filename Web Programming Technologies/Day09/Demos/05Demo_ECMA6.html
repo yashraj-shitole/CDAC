@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body id="myBody">
+    <script>
+      //ECMA 6 Features / Additions
+
+      //1: let & const
+      //-------------------------------------------------------------
+
+      //   debugger;
+      //   var counter = 99;
+      //   console.log("counter : " + counter);
+      //   function DoSomething() {
+      //     let counter = 88;
+      //     console.log("inside DoSomething");
+      //     console.log("counter : " + counter);
+      //   }
+      //   console.log("calling DoSomething");
+      //   DoSomething();
+      //   console.log("after DoSomething");
+      //   console.log("counter : " + counter);
+
+      //   debugger;
+      //   var interestRate = 15;
+      //   const interestRate = 15;
+      //   interestRate = 18;
+      //   interestRate = "INVALID";
+
+      //   const v = function () {
+      //     console.log("hi");
+      //   };
+
+      //   //   v = 100;
+
+      //   v();
+
+      //-------------------------------------------------------------
+      //2. spread operator
+      //-------------------------------------------------------------
+
+      //   var p1 = { No: 1, Name: "Mahesh", Address: "Pune" };
+      //   console.log(p1.Name);
+
+      //   var p2 = p1;  //This line will not create a copy of p1 into p2
+
+      //   var p2 = { ...p1 }; //... is called as spread operator
+      //   console.log(p2.Name);
+      //   p2.Name = "Chetan";
+
+      //   console.log(p1.Name);
+      //   console.log(p2.Name);
+      //   console.log(p2);
+
+      //Another Demo
+
+      //   var p1 = { No: 1, Name: "Mahesh", Address: "Pune" };
+      //   var p2 = { ...p1, Name: "Chetan", No: 2 };
+      //   console.log(p2);
+
+      //-------------------------------------------------------------
+      //3. template literal
+      //-------------------------------------------------------------
+
+      var message = "Hello ";
+      var name = "mahesh";
+      var address = "pune";
+
+      //   var v = "<h1>" + message + name + " from " + address + "</h1>";
+      //   console.log(v);
+
+      var v = `<h1>${message} ${name} from ${address}</h1>`;
+
+      var refTomyBody = document.getElementById("myBody");
+      refTomyBody.innerHTML = v;
+      //-------------------------------------------------------------
+      //4. arrow function
+      //-------------------------------------------------------------
+      //-------------------------------------------------------------
+      //5: array related new functions like map
+      //-------------------------------------------------------------
+      //-------------------------------------------------------------
+      //6: class syntax & extends keyword ..already covered!
+    </script>
+  </body>
+</html>

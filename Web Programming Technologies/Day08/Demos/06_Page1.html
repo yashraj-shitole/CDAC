@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>PAGE 1</title>
+  </head>
+  <body>
+    <h1>PAGE 1</h1>
+
+    Name: <input type="text" id="txtName" /> <br />
+    <br />
+    <input
+      type="button"
+      value="Store Data in Local Storage"
+      onclick="StoreInLocalStorage()"
+    />
+    <br />
+    <br />
+    <a href="07_Page2.html"> Go To Page 2</a>
+
+    <script>
+      function StoreInLocalStorage() {
+        debugger;
+        var refTotxtName = document.getElementById("txtName");
+        window.localStorage.setItem("myName", refTotxtName.value);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigator</title>
+</head>
+<body>
+    <div style="display: flex; flex-direction: column; gap: 20px; align-items: center; justify-content: center;">
+        <input type="text" id="txtLat">
+        <input type="text" id="txtLon">
+
+        <input type="button" value="Open Map" onclick="OpenMap()" href="">
+    </div>
+
+
+
+    <script>
+
+            navigator.geolocation.getCurrentPosition(
+                CallThisOnSuccess,
+                CallThisOnFailure
+            );
+
+        function CallThisOnSuccess(result){
+
+            var lat=result.coords.latitude
+            var lon=result.coords.longitude
+
+            var txtLat= document.getElementById('txtLat')
+            var txtLon= document.getElementById('txtLon')
+            console.log(lat,lon)
+            console.log("Hello")
+            txtLat.value=lat
+            txtLon.value=lon
+        }
+
+        function CallThisOnFailure(error){
+            console.log(error)
+            alert("Something went wrong, Give location permissions")
+        }
+
+        function OpenMap(){
+            var lat=document.getElementById("txtLat").value
+            var lon=document.getElementById("txtLon").value
+
+            var buttonLink="https://www.google.com/maps?q="+lat+","+lon
+            window.location.href=buttonLink
+        }
+        
+    </script>
+</body>
+</html>

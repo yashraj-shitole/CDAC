@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var employees = [
+        {
+          No: 1,
+          Name: "mahesh",
+          Address: "pune",
+        },
+        {
+          No: 2,
+          Name: "nilesh",
+          Address: "panji",
+        },
+      ];
+
+      debugger;
+      for (var i = 0; i < employees.length; i++) {
+        var employee = employees[i];
+        console.log(employee.No + employee.Name + employee.Address);
+      }
+
+      //Convert JSON Object into String
+      var dataInString = JSON.stringify(employees);
+      console.log(dataInString);
+    </script>
+  </body>
+</html>

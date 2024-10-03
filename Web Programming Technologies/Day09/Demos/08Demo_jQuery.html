@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <center>
+      <input type="button" id="btn" value="Click Me" />
+      <br />
+      <div
+        id="myDiv"
+        style="height: 100px; width: 100px; background-color: yellow"
+      ></div>
+    </center>
+
+    <script>
+      $("#btn").click(function () {
+        $("#myDiv").css({
+          "background-color": "red",
+          height: "200px",
+          width: "200px",
+        });
+      });
+
+      // $("#btn").click(function () {
+      //   $("#myDiv")
+      //     .css("background-color", "red")
+      //     .css("height", "200px")
+      //     .css("width", "200px");
+      // });
+
+      // $("#btn").click(function () {
+      //   $("#myDiv").css("background-color", "red");
+      //   $("#myDiv").css("height", "200px");
+      //   $("#myDiv").css("width", "200px");
+      // });
+    </script>
+  </body>
+</html>

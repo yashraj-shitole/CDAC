@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="radio" name="radgender" value="F" />Female
+    <input type="radio" name="radgender" value="M" />Male
+    <input type="radio" name="radgender" value="O" />Other
+    <br />
+
+    <input type="button" onclick="DoSomething()" value="Click Me" />
+    <script>
+      function DoSomething() {
+        // debugger;
+
+        var arrayOfRadioInputs = document.getElementsByName("radgender");
+
+        for (var i = 0; i < arrayOfRadioInputs.length; i++) {
+          var refOfOneRadioElement = arrayOfRadioInputs[i];
+          
+          if (refOfOneRadioElement.checked) {
+            console.log(
+              "U selected Gender Value " + refOfOneRadioElement.value
+            );
+            break;
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <h1 style="font-weight: 400;" id="welcomeText">Home</h1>
+    <h5 style="font-weight: 400;" id="username"></h5>
+
+<script>
+
+    var welcomeText=document.getElementById('welcomeText')
+    var name=window.localStorage.getItem('name')
+    var usernameDisplay=document.getElementById('username')
+    usernameDisplay.innerText=window.localStorage.getItem('username')
+    welcomeText.innerText="Welcome "+ name +" to the website"
+</script>
+</body>
+</html>

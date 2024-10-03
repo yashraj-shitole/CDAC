@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <center>
+      <div
+        style="height: 300px; width: 300px; border: 2px solid black"
+        id="myDiv"
+      ></div>
+      <br />
+      <button onclick="Add()">click me</button>
+    </center>
+    <script>
+      function Add() {
+        var refToMyDiv = document.getElementById("myDiv");
+
+        // refToMyDiv.innerText = "<h1>Hello</h1>";
+        refToMyDiv.innerHTML = "<h1>Hello</h1>";
+      }
+    </script>
+  </body>
+</html>

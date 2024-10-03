@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <center>
+      <img src="heart.png" id="myImage" />
+    </center>
+    <script>
+      debugger;
+
+      window.setInterval(ChangeWidth, 100);
+
+      function ChangeWidth() {
+        var refTomyImage = document.getElementById("myImage");
+        var randomNo = Math.floor(Math.random() * 100);
+        refTomyImage.style.width = randomNo + "px";
+        refTomyImage.style.height = randomNo + "px";
+      }
+    </script>
+  </body>
+</html>

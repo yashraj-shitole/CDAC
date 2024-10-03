@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <input type="text" id="txtName" value="Sunbeam" />
+    <input type="button" id="btn" value="Click Me" />
+
+    <script>
+      $("#btn").click(function () {
+        console.log("Hi " + $("#txtName").val());
+      });
+
+      // jQuery("#btn").click(function () {
+      //   console.log("Hi " + jQuery("#txtName").val());
+      // });
+
+      //debugger;
+      // jQuery("#btn").click(DoSomething);
+
+      // function DoSomething() {
+      //   console.log("Hi " + jQuery("#txtName").val());
+      // }
+    </script>
+  </body>
+</html>

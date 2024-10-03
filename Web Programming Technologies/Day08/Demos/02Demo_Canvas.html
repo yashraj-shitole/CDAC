@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Demo Canvas</title>
+  </head>
+  <body>
+    <input type="button" value="Click Me" onclick="Draw()" />
+    <br />
+    <canvas
+      id="myCanvas"
+      style="background-color: yellow; height: 1000px; width: 1000px"
+    ></canvas>
+
+    <script>
+      function Draw() {
+        debugger;
+        var refTomyCanvas = document.getElementById("myCanvas");
+        var refToDrawingContext = refTomyCanvas.getContext("2d");
+
+        refToDrawingContext.moveTo(0, 0);
+        refToDrawingContext.lineTo(200, 200);
+        refToDrawingContext.stroke();
+        refToDrawingContext.moveTo(50, 50)
+        refToDrawingContext.lineTo(200,150)
+        refToDrawingContext.stroke();
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //--------------------------------------------------------------
+      //1: Functional Programming : Writing simple function
+      //--------------------------------------------------------------
+
+      //   function SayHi(name) {
+      //     console.log("Hi " + name);
+      //   }
+
+      //   debugger;
+      //   SayHi(); //Observe parameter value passed
+      //   SayHi("mahesh");
+      //   var reply = SayHi("mahesh"); //Observe return value
+      //   console.log(reply);
+
+      //--------------------------------------------------------------
+      //2: Functional Programming : Hoisting
+      //--------------------------------------------------------------
+
+      // debugger;
+
+      //   var v = undefined;
+      //   console.log(v);
+      //   v = 100;
+      //   console.log(v);
+
+      //   console.log(v);
+      //   var v = 100;
+      //   console.log(v);
+
+      //   v = 200;
+      //   console.log(v);
+
+      //--------------------------------------------------------------
+      //3: Functional Programming : Function in a variable
+      //--------------------------------------------------------------
+
+      //   function SayHi(name) {
+      //     console.log("Hi " + name);
+      //   }
+
+      //   var SayHi = function (name) {
+      //     console.log("Hi " + name);
+      //   };
+
+      //   SayHi("mahesh");
+
+      //debugger;
+      //   console.log(typeof SayHi);
+      //   console.log(typeof(SayHi).__proto__.__proto__);
+
+      //--------------------------------------------------------------
+      //4: Functional Programming : Passing Function as Parameter
+      //Callback Functions!
+      //--------------------------------------------------------------
+
+      //   function Check() {
+      //     if (10 > 2) {
+      //       OnSuccess();
+      //     } else {
+      //       OnFailure();
+      //     }
+      //   }
+
+      //   function Check(f1, f2) {
+      //     debugger;
+      //     if (10 > 2) {
+      //       f1();
+      //     } else {
+      //       f2();
+      //     }
+      //   }
+
+      //   debugger;
+      //   Check(OnSuccess, OnFailure);
+
+      //   function OnSuccess() {
+      //     console.log("Badhiya");
+      //   }
+
+      //   function OnFailure() {
+      //     console.log("miracle");
+      //   }
+      //--------------------------------------------------------------
+
+      //5: Functional Programming : Return Function from Function
+      //--------------------------------------------------------------
+
+      //   debugger;
+      //   function DrinkFactory(temp) {
+      //     var GetDrink = null;
+      //     if (temp > 20) {
+      //       GetDrink = function () {
+      //         console.log("Have a Coke");
+      //       };
+      //     } else {
+      //       GetDrink = function () {
+      //         console.log("Have a Tea!");
+      //       };
+      //     }
+
+      //     return GetDrink;
+      //   }
+
+      //   var GetMeSomeDrink = DrinkFactory(30);
+      //   //   var GetMeSomeDrink = DrinkFactory(10);
+      //   GetMeSomeDrink();
+
+      ////Another way of calling:
+      //DrinkFactory(10)();
+
+      ////------------------------------Another example:
+
+      //   function GetMeSomething() {
+      //     var someReply = function () {
+      //       console.log("hello");
+      //     };
+      //     return someReply;
+      //   }
+
+      //   var replyOfSomeType = GetMeSomething();
+
+      //   replyOfSomeType();
+
+      //--------------------------------------------------------------
+      //6: Functional Programming : Writing Object- Literal Syntax
+      //--------------------------------------------------------------
+
+      //   var Person = { No: 100, Name: "Mahesh", Address: "Pune" };
+
+      //   console.log(Person.No);
+      //   console.log(Person.Name);
+      //   console.log(Person.Address);
+
+      //-------------------------------------Another Example
+      // var Person = {
+      //   No: 100,
+      //   Name: "Mahesh",
+      //   Address: "Pune",
+      //   Print: function () {
+      //     console.log(this.No + this.Name + this.Address);
+      //   },
+      // };
+
+      // Person.Phone = 989898; //You can add some member directly
+      // console.log(Person.Phone);
+      // Person.Print();
+
+      // delete Person.Address; //You can remove some member directly
+      // debugger;
+
+      // var Employee = {};
+      // Employee.__proto__ = Person;
+
+      // console.log(Employee.Name);
+
+      //--------------------------------------------------------------
+      //7: Functional Programming : Writing Constructor Function Syntax
+      //--------------------------------------------------------------
+
+      // var Person = function (no, name, address) {
+      //   this.No = no;
+      //   this.Name = name;
+      //   this.Address = address;
+      //   this.Print = function () {
+      //     console.log(this.No + this.Name + this.Address);
+      //   };
+      // };
+
+      // debugger;
+      // var p1 = new Person(10, "Sachin", "Mumbai");
+      // var p2 = new Person(20, "MSD", "Chennai");
+
+      // p1.Print();
+      // p2.Print();
+
+      //--------------------------------------------------------------
+      //8: Functional Programming : Writing Class- Class Syntax: ECMA6
+      //--------------------------------------------------------------
+
+      class Person {
+        constructor(no, name, address) {
+          this.No = no;
+          this.Name = name;
+          this.Address = address;
+        }
+
+        Print() {
+          console.log(this.No + this.Name + this.Address);
+        }
+      }
+
+      //debugger;
+      // var p1 = new Person(10, "Sachin", "Mumbai");
+      // var p2 = new Person(20, "MSD", "Chennai");
+
+      // p1.Print();
+      // p2.Print();
+
+      //--------------------------------------------------------------
+      //9: Functional Programming : Writing Class- Inheritance
+      //--------------------------------------------------------------
+
+      class Employee extends Person {
+        constructor(no, name, address, dept) {
+          super(no, name, address);
+          this.Dept = dept;
+        }
+
+        Print() {
+          console.log(this.No + this.Name + this.Address + this.Dept);
+        }
+      }
+
+      debugger;
+      var e1 = new Employee(9, "Jaspreet", "Delhi", "IT");
+      e1.Print();
+
+      //--------------------------------------------------------------
+    </script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="GetData()">Click Me</button>
+    <script>
+      debugger;
+      var helper = new XMLHttpRequest();
+      // helper.readyState can be 0->1->2->3->4
+
+      console.log("Initial Value of readyState is:" + helper.readyState);
+
+      function GetData() {
+        debugger;
+        helper.onreadystatechange = dosomething;
+
+        //Open means - prepare / create a packet
+        helper.open("GET", "http://127.0.0.1:5500/employees.json");
+
+        //Send means literally send the packet over network
+        helper.send();
+      }
+
+      function dosomething() {
+        console.log("ReadyState is " + helper.readyState);
+        if (helper.readyState == 4 && helper.status == 200) {
+          //readystate 4 means reply is here
+          //status = 200 means reply is successfull
+          var employees = JSON.parse(helper.responseText);
+
+          for (var i = 0; i < employees.length; i++) {
+            var employee = employees[i];
+            console.log(employee.No + employee.Name + employee.Address);
+          }
+          //   debugger;
+        }
+      }
+    </script>
+  </body>
+</html>

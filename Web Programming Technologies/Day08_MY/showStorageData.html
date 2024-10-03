@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Show Local Storage</h1>
+
+    <input type="button" value="Show stored data" onclick="StoreText()">
+
+    <div id="displayStoredText"></div>
+
+
+    <script>
+
+        function StoreText(){
+            var displayStoredText=document.getElementById('displayStoredText')
+            var text=window.localStorage.getItem("storedText")
+
+            displayStoredText.innerText= text
+        }
+
+    </script>
+</body>
+</html>

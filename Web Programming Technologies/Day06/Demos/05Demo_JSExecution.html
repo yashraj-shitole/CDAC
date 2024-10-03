@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="button" value="Start" onclick="Start()" />
+    <input type="button" value="Stop" onclick="Stop()" />
+    <input type="button" value="Disturb" onclick="DoSomethingForNoReason()" />
+    <br />
+    <hr />
+    <h1 id="message"></h1>
+    <hr />
+    <div id="QueNos" style="border: 2px solid black"></div>
+
+    <script>
+      var counter = 0;
+      var QueueNo;
+      function Stop() {
+        window.clearInterval(QueueNo);
+      }
+      function Start() {
+        QueueNo = window.setInterval(ExecuteMe, 1000);
+        var refToDiv = document.getElementById("QueNos");
+
+        refToDiv.innerText = "New Queue Created with Number " + QueueNo;
+      }
+
+      function ExecuteMe() {
+        counter = counter + 1;
+        var refTomessage = document.getElementById("message");
+        refTomessage.innerText = counter;
+
+        // console.log("Counter is " + counter);
+      }
+    </script>
+    <script>
+      function DoSomethingForNoReason() {
+        alert("I am here for no reason!");
+      }
+    </script>
+  </body>
+</html>

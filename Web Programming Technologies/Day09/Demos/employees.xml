@@ -1,0 +1,13 @@
+<?xml ?>
+<employees>
+    <employee>
+        <No>1</No>
+        <Name>mahesh</Name>
+        <Address>pune</Address>
+    </employee>
+    <employee>
+        <No>2</No>
+        <Name>nilesh</Name>
+        <Address>panji</Address>
+    </employee>
+</employees>

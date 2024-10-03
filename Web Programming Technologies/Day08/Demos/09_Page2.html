@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>PAGE 2</title>
+  </head>
+  <body>
+    <h1>PAGE 2</h1>
+
+    <div style="border: 2px solid black" id="myDiv"></div>
+    <script>
+      var refTomyDiv = document.getElementById("myDiv");
+      refTomyDiv.innerText = "Hello " + window.sessionStorage.getItem("myName");
+    </script>
+  </body>
+</html>

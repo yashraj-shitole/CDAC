@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <div id="box" style="width:100px; height:100px; background-color:black; position:absolute;"></div>
+
+<script>
+  let box = document.getElementById('box');
+  let x = 0, y = 0;
+
+  window.addEventListener('keydown', function(e) {
+    switch (e.key) {
+      case 'ArrowUp':
+        y -= 10;
+        break;
+      case 'ArrowDown':
+        y += 10;
+        break;
+      case 'ArrowLeft':
+        x -= 10;
+        break;
+      case 'ArrowRight':
+        x += 10;
+        break;
+    }
+    box.style.transform = `translate(${x}px, ${y}px)`;
+  });
+</script>
+
+
+</body>
+</html>

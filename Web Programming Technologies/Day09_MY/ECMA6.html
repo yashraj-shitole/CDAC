@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>ECMA6</title>
+    </head>
+    <body>
+        
+        <h1>
+            Hello
+        </h1>
+        
+        <button onclick="GetData()">Show data</button>
+        
+        
+        <script>
+        
+    var helper= new XMLHttpRequest();
+        var counter=1
+        function GetData(){
+            
+            helper.onreadystatechange= PrintData
+            helper.open("GET",`"https://reqres.in/api/users?page=${counter}`)
+            helper.send()
+            counter++;
+        }
+            
+            function PrintData(){
+                        console.log("ReadyState is " + helper.readyState);
+               if (helper.readyState == 4 && helper.status == 200) {
+          console.log(helper.responseText)
+          var userData = JSON.parse(helper.responseText);
+
+          for (var i = 0; i < employees.length; i++) {
+            var data = userData[i];
+            console.log(data);
+          }
+        }
+            }
+        </script>
+        
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    Name: <input type="text" id="txtName" value="Mahesh" /><br />
+    Address: <input type="text" id="txtName" value="Pune" /> <br />
+    <input type="button" onclick="DoSomething()" value="Click Me" />
+    <script>
+      function DoSomething() {
+        debugger;
+        // var refToInput = document.getElementById("txtName");
+        // console.log(refToInput.value);
+
+        var arrayOfInputs = document.getElementsByTagName("input");
+
+        for (var i = 0; i < arrayOfInputs.length; i++) {
+          var refOfOneElement = arrayOfInputs[i];
+          console.log(refOfOneElement.value);
+        }
+      }
+    </script>
+  </body>
+</html>

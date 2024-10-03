@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <style>
+      .A {
+        height: 100px;
+        width: 100px;
+        background-color: yellow;
+        border: 1px solid black;
+      }
+      .B {
+        height: 100px;
+        width: 100px;
+        background-color: pink;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+      <input type="button" id="btn" value="Click Me" />
+      <br />
+      <div id="myDiv1" class="A" title="pune">DIV 1</div>
+      <br />
+      <div id="myDiv2" class="B" title="panji">DIV 2</div>
+      <br />
+      <div id="myDiv3" class="A" title="mumbai">DIV 3</div>
+      <br />
+      <div id="myDiv4" class="B" title="karad">DIV 4</div>
+      <br />
+       <section id="mysection" class="A">Section 123 </div>
+      <br />
+    </center>
+
+    <script>
+      $("#btn").click(function () {
+
+        // Find by Attribute Values EX title containing a
+        //$("div[title*='a']").css("background-color", "grey");
+
+        //Find by Attribute Values EX title ends with i
+        // $("div[title$='i']").css("background-color", "grey");
+
+        //Find by Attribute Values EX title starts with p
+        //$("div[title^='p']").css("background-color", "grey");
+
+        //Find by Attribute Values EX title = pune
+        //$("div[title='pune']").css("background-color", "grey");
+
+        //Combination of Tag + class name
+        // $("div.A").css("background-color", "grey");
+
+        //Find by Class Name
+        //  $(".A").css("background-color", "grey");
+
+        //Find by Tag Name
+        //$("div").css("background-color", "grey");
+
+        //Find by ID
+        //$("#myDiv1").css("background-color", "grey");
+      });
+    </script>
+  </body>
+</html>

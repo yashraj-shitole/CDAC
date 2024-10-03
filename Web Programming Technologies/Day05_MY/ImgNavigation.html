@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ImgValidation</title>
+</head>
+<body>
+    <div style="display: flex; flex-direction: column;">
+        
+        <div style="height: 70vh;">
+            <img id="image" style="width: 200px;" src="https://cdn-icons-png.freepik.com/512/16250/16250124.png?ga=GA1.1.1174164178.1727345396" alt="">
+        </div>
+        <!-- buttons -->
+        <div style="display: flex; align-items: center; justify-content: center;">
+            <div id="degrees">0 deg</div>
+        </div>
+
+        <div style="display: flex; gap: 20px; align-items: center; justify-content: center;">
+            <input style=" height: 50px;" type="button" value="Rotate left" onclick="rotateLeft()">
+            
+            <div style="display: flex; flex-direction: column; width: 130px; gap:20px;">
+                <div style="display: flex; align-items: center; justify-content: center; ">
+                    <input style="width:50px; height: 50px;" type="button" value="↑" onclick="up()">
+                </div>
+                <div style="display: flex; align-items: center; justify-content: space-evenly; gap:20px;">
+                    <input style="width:50px; height: 50px;" type="button" value="←" onclick="left()">
+                    <input style="width:50px; height: 50px;" type="button" value="→" onclick="right()">
+                </div>
+                <div style="display: flex; align-items: center; justify-content: center;">
+                    <input style="width:50px; height: 50px;" type="button" value="↓" onclick="down()">
+                </div>
+            </div>
+            <input style=" height: 50px;" type="button" value="Rotate left" onclick="rotateRight()">
+        </div>
+    </div>
+
+
+
+    <script>
+        var image = document.getElementById('image');
+        var rotate=0;
+        var leftMargine=0;
+        var topMargine=0;
+        var degreesDisplay=document.getElementById('degrees');
+
+
+        function  rotateLeft() {
+            rotate-=45;
+            image.style.rotate= rotate+"deg"
+            degreesDisplay.innerText=rotate +" deg"
+        }
+
+        function rotateRight(){
+            rotate+=45;
+            image.style.rotate= rotate+"deg"
+            degreesDisplay.innerText=rotate +" deg"
+        }
+
+        function up(){
+            topMargine-=30;
+            rotate= 0
+            image.style.rotate= rotate+"deg"
+            image.style.marginTop= topMargine+"px"
+            degreesDisplay.innerText=rotate +" deg"
+
+        }
+
+        function down(){
+            topMargine+=50;
+            rotate= 180
+            image.style.rotate= rotate+"deg"
+            image.style.marginTop = topMargine+"px"
+            degreesDisplay.innerText=rotate +" deg"
+
+        }
+
+        function  left(){
+            leftMargine-=50;
+            rotate= -90
+            image.style.rotate= rotate+"deg"
+            image.style.marginLeft = leftMargine+"px"
+            degreesDisplay.innerText=rotate +" deg"
+
+        }
+
+        function right(){
+            leftMargine+=50;
+            rotate=90
+            image.style.rotate= rotate+"deg"
+            image.style.marginLeft = leftMargine+"px"
+            degreesDisplay.innerText=rotate +" deg"
+        }
+
+    </script>
+</body>
+</html>
