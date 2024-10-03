@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-5 Question-1</title>
+
+</head>
+
+<body>
+
+    <div style="position: relative;">
+
+        <div id="car" style="position: absolute; top:0px; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+            <h1 id="dropMessage"></h1>
+            <img height="300px" src="https://files.porsche.com/filestore/image/multimedia/none/992-gt3-rs-modelexplorer/normal/c310eed8-1a15-11ed-80f5-005056bbdc38;sP;twebp/porsche-normal.webp" alt="">
+        </div>
+
+
+        <div style="border: 2px solid #383838; position: absolute; top:270px; height: 20px; background-color: #383838; width: 850px;" ></div>
+        
+        <div style="position: absolute; top:320px; left: 100px; display: flex; flex-direction: column; gap: 10px;">
+            <button style="height: 50px; width: 100px; border-radius: 100px; background-color: rgb(141, 255, 47); font-weight: 800;" onclick="startCar()">Start Car</button>
+            
+            <button style="height: 50px; width: 100px; border-radius: 100px; background-color: red; font-weight: 800;" onclick="stopCar()">Stop Car</button>
+            <label for="xAxis">X Axis</label>
+            <input type="text" name="xAxis" id="xAxis" value="0">
+            <label for="yAxis">Y Axis</label>
+            <input type="text" name="yAxis" id="yAxis" value="0">
+
+        </div>
+
+        
+    </div>
+
+
+
+
+    <script>
+        var intervalId;
+        var counter=0;
+        var rotateCounter=0;
+
+        function startCar(){
+            var car=document.getElementById('car')
+            var carImage = document.querySelector('img');
+            var dropMessage=document.getElementById('dropMessage')
+            dropMessage.innerText=""
+            carImage.src="https://files.porsche.com/filestore/image/multimedia/none/992-gt3-rs-modelexplorer/normal/c310eed8-1a15-11ed-80f5-005056bbdc38;sP;twebp/porsche-normal.webp"
+            counter=0
+            car.style.marginLeft=counter+"px";
+            car.style.marginTop=counter+"px";
+
+            intervalId = window.setInterval(pushCar,5)
+        }
+
+        function pushCar(){
+            counter+=1;
+            var car=document.getElementById('car')
+            car.style.marginLeft=counter+"px";
+            var xAxis=document.getElementById('xAxis')
+            xAxis.value=counter;
+
+            if(car.style.marginLeft == 700+"px"){
+                window.clearInterval(intervalId);
+                counter=0
+                intervalId=window.setInterval(dropCar,1)
+                
+            }
+        }
+
+        function dropCar(){
+            counter+=2;
+            var car=document.getElementById('car')
+            var carImage = document.querySelector('img');
+            car.style.marginTop=counter+"px";
+            var yAxis=document.getElementById('yAxis')
+            yAxis.value=counter;
+
+            car.style.rotate=rotateCounter+"deg";
+            rotateCounter+=1;
+
+            if(car.style.marginTop == 350+"px"){
+                window.clearInterval(intervalId);
+                rotateCounter=0
+                car.style.rotate=rotateCounter+"deg";
+                var dropMessage=document.getElementById('dropMessage')
+                dropMessage.innerText="Car Dropped!!!🔥"
+                carImage.src="https://i.gifer.com/YQDj.gif"
+                setTimeout(changeImg,1500)
+            }
+            
+        }
+
+        function changeImg(){
+            var carImage = document.querySelector('img');
+            carImage.src="https://i.gifer.com/WMDw.gif"
+        }
+        function stopCar(){
+            window.clearInterval(intervalId);
+        }
+        
+    </script>
+</body>
+</html>
