@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <center>
+      <br /><br />
+      <button id="btn">Click Me</button>
+      <hr />
+      <div id="mydiv" style="border: 1px solid black; width: 200px"></div>
+    </center>
+    <script>
+      $("#btn").click(function () {
+        $.ajax({
+          method: "GET",
+          url: "https://reqres.in/api/users",
+          type: "application/json",
+          success: function (result) {
+            var employees = result.data;
+            employees.map(function (employee) {
+              $("#mydiv").append(`<h1>${employee.first_name}</h1><hr/>`);
+              // alert(employee.first_name);
+            });
+            // debugger;
+          },
+          error: function (error) {
+            debugger;
+          },
+        });
+      });
+    </script>
+  </body>
+</html>

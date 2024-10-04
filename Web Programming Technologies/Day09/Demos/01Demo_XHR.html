@@ -6,14 +6,12 @@
   <body>
     <button onclick="GetData()">Click Me</button>
     <script>
-      debugger;
       var helper = new XMLHttpRequest();
       // helper.readyState can be 0->1->2->3->4
 
       console.log("Initial Value of readyState is:" + helper.readyState);
 
       function GetData() {
-        debugger;
         helper.onreadystatechange = dosomething;
 
         //Open means - prepare / create a packet

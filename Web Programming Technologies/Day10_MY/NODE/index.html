@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Served from server</title>
+</head>
+<body>
+    <h1>Hello I Am Served</h1>
+    <div>
+        <p>This is a paragraph</p>
+    </div>
+
+    <button id="btn1" onclick="start()">Click me</button>
+
+
+
+    <script>
+        function start(){
+
+            window.location.href = '/api/newdata';
+        }
+    </script>
+</body>
+</html>

@@ -6,7 +6,6 @@
   <body> <center>
     <button onclick="GetData()">Click Me</button>
     <hr>
-   
       <table id="myTable" border="1" style="width: 200px; text-align: center;">
         <thead>
           <th>No</th>
@@ -14,25 +13,19 @@
           <th>Address</th>
         </thead>
         <tbody id="myTableBody">
-         
         </tbody>
       </table>
     </table>
     </center>
     <script>
-     // debugger;
       var helper = new XMLHttpRequest();
       // helper.readyState can be 0->1->2->3->4
-
       console.log("Initial Value of readyState is:" + helper.readyState);
-
       function GetData() {
-        //debugger;
         helper.onreadystatechange = dosomething;
 
         //Open means - prepare / create a packet
         helper.open("GET", "http://127.0.0.1:5500/employees.json");
-
         //Send means literally send the packet over network
         helper.send();
       }

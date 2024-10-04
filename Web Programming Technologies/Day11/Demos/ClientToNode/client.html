@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Client To Node Server</title>
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+  </head>
+  <body class="container">
+    <br />
+    <br />
+    <div class="table-responsive">
+      <table class="table table-bordered" id="MyTableInputs">
+        <tr>
+          <td>No</td>
+          <td><input type="text" /></td>
+        </tr>
+        <tr>
+          <td>Name</td>
+          <td><input type="text" /></td>
+        </tr>
+        <tr>
+          <td>Address</td>
+          <td><input type="text" /></td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <input type="button" class="btn btn-primary" value="Add Record" />
+            <input
+              type="button"
+              class="btn btn-success"
+              value="Update Record"
+            />
+            <input type="button" class="btn btn-info" value="Clear" />
+          </td>
+        </tr>
+      </table>
+    </div>
+    <hr />
+    <div class="table-responsive">
+      <table class="table table-bordered" id="MyTable"></table>
+    </div>
+    <script>
+      debugger;
+      var url = `http://127.0.0.1:9999/employees`;
+
+      function GetLatestData() {
+        var refToMyTable = document.getElementById("MyTable");
+        var helper = new XMLHttpRequest();
+        helper.onreadystatechange = () => {
+          if (helper.readyState == 4 && helper.status == 200) {
+            var result = JSON.parse(helper.responseText);
+            debugger;
+            if (result.sqlMessage == undefined) {
+              debugger;
+
+              result.map((employee) => {
+                refToMyTable.innerHTML =
+                  refToMyTable.innerHTML +
+                  `<tr>
+                        <td>${employee.No}</td>   
+                        <td>${employee.Name}</td>   
+                        <td>${employee.Address}</td>    
+                        <td>
+                           <button class="btn btn-warning">Edit</button>
+                        </td>
+                          <td>
+                        <button class="btn btn-danger">Delete</button>
+                        </td>
+                    </tr>`;
+              });
+            } else {
+              debugger;
+              //means there is err
+            }
+          }
+        };
+        helper.open("GET", url);
+        helper.send();
+      }
+
+      GetLatestData();
+    </script>
+  </body>
+</html>

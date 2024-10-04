@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Flex UI</title>
+  </head>
+  <body>
+    <button onclick="GetData()">Click Me</button>
+    <hr />
+    <center>
+      <div
+        id="container"
+        style="
+          border: 2px solid black;
+          margin: 5px;
+          display: flex;
+          justify-content: space-around;
+          flex-wrap: wrap;
+        "
+      ></div>
+    </center>
+    <script>
+      function GetData() {
+        var helper = new XMLHttpRequest();
+        helper.onreadystatechange = () => {
+          if (helper.readyState == 4 && helper.status == 200) {
+            var result = JSON.parse(helper.responseText);
+            var employees = result.data;
+            var container = document.getElementById("container");
+
+            employees.map((employee) => {
+              container.innerHTML =
+                container.innerHTML +
+                ` <div
+                   style="
+                    border: 2px solid black;
+                    height: 200px;
+                    width: 200px;
+                    background-color: pink;text-align: center
+                  "
+                >
+                  FirstName : ${employee.first_name} <br/>
+                  LastName : ${employee.last_name} <br/> 
+                  EMail : ${employee.email} <br/>
+                  <img src=${employee.avatar} height="100px" width="100px">; 
+                </div>`;
+            });
+          }
+        };
+        helper.open("GET", "https://reqres.in/api/users");
+        helper.send();
+      }
+    </script>
+  </body>
+</html>

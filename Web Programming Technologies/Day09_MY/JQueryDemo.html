@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery</title>
+
+    <script src="jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <h1>
+
+    </h1>
+
+    <input type="text" id="inputField" value="Hello">
+
+
+    <div style="width: 200px; height: 200px; background-color: beige;" id="coloredDiv">
+    </div>
+    <button id="styleChangeBtn" onclick="changeStyle()">Change style using JQuery</button>
+
+    <button onclick="findTitle()">Change color</button>
+
+    <center>
+        <button onclick="GetData()">Click Me</button>
+        <hr>
+       
+          <table id="myTable" border="1" style="width: 600px; text-align: center;">
+            <thead>
+              <th>ID</th>
+              <th>Full Name</th>
+              <th>EMail Address</th>
+              <th>Photo</th>
+            </thead>
+            <tbody id="myTableBody">
+             
+            </tbody>
+          </table>
+        </table>
+        </center>
+
+
+    <script>
+
+        //Regular JS
+        var  inputField = document.getElementById("inputField");
+        console.log("Message using JS: "+inputField.value);
+        //JQuery                     jQuery() object|getting element using id| use val() to get value from element and val('data') to pass value to element
+        console.log("Message using JQuery: "+ jQuery("#inputField").val());
+        $("#inputField").val("World")
+
+
+        function changeStyle(){
+
+            $("#coloredDiv").css({width:'300px',height:'300px','background-color':'yellow'})
+            //                   .fadeOut() use to fade out the element
+            $("#styleChangeBtn").fadeOut("slow");
+        }
+
+
+        function findTitle(){
+            // find element using title     .css to change style
+            $("td[title='name']").css("background-color","red")
+            $("td[title='id']").css("background-color","yellow").fadeOut("slow")
+            //                             .text() to get innerText from element
+            console.log($("td[title='id']").text() + $("td[title='name']").text() + $("td[title='email']").text())
+        }
+
+
+
+
+
+        //to get data from api
+
+        function GetData() {
+            var helper = new XMLHttpRequest();
+            helper.onreadystatechange =  function () {
+            if (helper.readyState == 4 && helper.status == 200) {
+    
+    
+              var entireResult = JSON.parse(helper.responseText);
+              var employees = entireResult.data  
+              var refToMyTableBody = document.getElementById("myTableBody");
+    
+              refToMyTableBody.innerHTML = "";
+    
+              for (var i = 0; i < employees.length; i++) {
+                var employee = employees[i];
+
+                var row =`<tr>
+                            <td title="id">${employee.id}</td>
+                            <td title="name">
+                              ${employee.first_name} ${employee.last_name}
+                            </td>
+                            <td title="email">
+                              ${employee.email}
+                            </td>
+                            <td title="image"><img src=${employee.avatar}
+                                     height="100px"
+                                     width="100px"/>
+                            </td>
+                          </tr>`;
+    
+                  refToMyTableBody.innerHTML += refToMyTableBody.innerHTML+ row;
+              }
+            }
+          };
+             helper.open("GET", "https://reqres.in/api/users");
+            //helper.open("GET", "https://reqres.in/api/users?page=2");
+            helper.send();
+          }
+
+
+    </script>
+</body>
+</html>
