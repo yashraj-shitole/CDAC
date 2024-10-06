@@ -69,8 +69,6 @@
 
 
 
-
-
         //to get data from api
 
         function GetData() {
@@ -97,8 +95,8 @@
                               ${employee.email}
                             </td>
                             <td title="image"><img src=${employee.avatar}
-                                     height="100px"
-                                     width="100px"/>
+                                    height="100px"
+                                    width="100px"/>
                             </td>
                           </tr>`;
     
@@ -106,7 +104,7 @@
               }
             }
           };
-             helper.open("GET", "https://reqres.in/api/users");
+            helper.open("GET", "https://reqres.in/api/users");
             //helper.open("GET", "https://reqres.in/api/users?page=2");
             helper.send();
           }

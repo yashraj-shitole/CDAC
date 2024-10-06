@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+    <script src="./jquery-3.7.1.min.js"></script>
+
+
+    <style>
+.inputDiv{
+    display: flex;
+    flex-direction: column;
+}
+    </style>
+</head>
+<body>
+    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; ">
+        <div style="display: flex; flex-direction: column; gap: 10px; padding: 20px; border: 1px solid black;">
+    <h1>Student Registration</h1>
+    <div class="inputDiv">
+        <label for="fullName">Name:</label>
+        <input id="name" name="fullName" type="text" placeholder="Enter your full name" >
+        <div id="nameValidate" style="color: red; height:10px; display: none;">Name is required.</div>
+    </div>
+
+    <div class="inputDiv">
+        <label for="fullName">Email:</label>
+        <input id="email" name="fullName" type="email" placeholder="Enter your full name">
+        <div  id="emailValidate" style="color: red; height:10px; display: none;">Email is required.</div>
+    </div class="inputDiv">
+
+    <div class="inputDiv">
+        <label for="fullName">Phone Number:</label>
+        <input id="number" name="fullName" type="number" placeholder="Enter your full name">
+        <div id="numberValidate" style="color: red; height:10px; display: none;">Phone number is required.</div>
+    </div>
+
+    <div class="inputDiv">
+        <label for="fullName">Course:</label>
+        <select name="course" value="" id="course">
+            <option value="">Select option</option>
+            <option id="course" value="DAC">DAC</option>
+            <option value="DMC">DMC</option>
+        </select>
+        <div id="courseValidate" style="color: red; height:10px; display: none;">Please Select course</div>
+    </div>
+
+    <div class="inputDiv">
+        <label for="fullName">Name:</label>
+        <select name="" id="module" >
+            <option id="" value="">Select option</option>
+            
+        </select>
+        <div id="moduleValidate"style="color: red; height:10px; display:none;">Please select module</div>
+    </div>
+
+    <input type="button" onclick="validateForm()" value="Register">
+    
+</div>
+
+    </div>
+
+
+
+
+
+    <script>
+
+        var nameValidate=document.getElementById('nameValidate')
+        
+
+
+        var name=$('#name').val()
+
+        var email=$('#email').val()
+
+        var phoneNumber=$('#number').val()
+
+
+        function validateForm(){
+
+            validateName()
+            validateEmail()
+            validateNumber()
+            validateCourse()
+        }
+    
+        function validateName(){
+            var name=$('#name').val()
+            if(name.length<3){
+                $('#nameValidate').css({
+                    "display":"flex"
+                })
+            }else {
+                $('#nameValidate').css({
+                    "display":"none"
+                })
+            }
+            
+        }
+
+        function validateEmail(){
+            var email=$('#email').val()
+            var contain1=false;
+            var contain2=false;
+            for(var i=0;i<email.length;i++){
+                if(email[i]=='@'){
+                    contain1=true
+                }
+                if(email[i]=="."){
+                    contain2==true
+                }
+            }
+            if (!contain1 && !contain2) {
+                $('#emailValidate').css({
+                    "display":"flex"
+                })
+            } else {
+                $('#emailValidate').css({
+                    "display":"none"
+                })
+            }
+            
+        }
+
+
+        function validateNumber(){
+            var number=$('#number').val()
+            console.log(number.length)
+            if(number.length!=10 ){
+                $('#numberValidate').css({
+                    "display":"flex"
+                })
+            }
+            else if(number.length==10){
+                $('#numberValidate').css({
+                    "display":"none"
+                })
+            }
+        }
+
+        function validateCourse(){
+            var course=$('#course').val()
+            if(course === " "){
+                $("#courseValidate").css({
+                    "display":"flex"
+                })
+            }
+        }
+
+
+        function courseModule(){
+                var course = $("#course").val();
+                var moduleSelect = $("#module");
+                moduleSelect.empty();
+                moduleSelect.append("<option value=''>Select Module</option>");
+                
+                if (course === "DAC") {
+                    moduleSelect.append("<option value='WPT'>WPT</option>");
+                    moduleSelect.append("<option value='Java'>Java</option>");
+                    moduleSelect.append("<option value='DBT'>DBT</option>");
+                } else if (course === "DMC") {
+                    moduleSelect.append("<option value='Android'>Android</option>");
+                    moduleSelect.append("<option value='Hybrid'>Hybrid</option>");
+                    moduleSelect.append("<option value='DBMS'>DBMS</option>");
+                }
+                
+        }
+    
+
+
+
+
+
+
+
+    </script>
+ 
+</body>
+</html>
+
+
+
+
+
+
+
+
+

@@ -8,7 +8,6 @@ var data={
     age: 20
 }
 
-
 //createing server
 var helper= http.createServer((request,response)=>{
 

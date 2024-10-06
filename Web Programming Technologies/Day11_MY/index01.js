@@ -22,8 +22,8 @@ console.log("Connected to database")
 
 //--------------------TO INSERT----------------------------------------------
 
-var insertQuery="insert into employees  values(1,'yashraj',10000)"
-connection.query(insertQuery)
+// var insertQuery="insert into employees  values(1,'yashraj',10000)"
+// connection.query(insertQuery)
 
 //--------------------TO UPDATE----------------------------------------------
 

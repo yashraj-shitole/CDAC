@@ -9,3 +9,4 @@ console.log("Avalaible Free Memory " + freeMemoryDetails);
 
 var cpuArchitectureDetails =  os.arch();
 console.log("Architecture Details " + cpuArchitectureDetails);
+
