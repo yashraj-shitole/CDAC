@@ -1,0 +1,54 @@
+tty
+whoami
+who
+w
+cat /proc/sys/kernel/sched_rr_timeslice_ms 
+man 7 sched 
+cat > numbers.txt
+cat numbers.txt 
+cat -n numbers.txt 
+head numbers.txt 
+tail numbers.txt 
+head -7 numbers.txt 
+tail -4 numbers.txt 
+rev numbers.txt 
+tac numbers.txt 
+sort numbers.txt 
+sort -n numbers.txt 
+uniq numbers.txt 
+sort numbers.txt 
+ls
+ls > lsout.txt
+cat lsout.txt 
+sort numbers.txt 
+sort numbers.txt > sorted.txt 
+cat sorted.txt 
+uniq sorted.txt 
+ls -W
+ls -W 2> lserr.txt
+cat lserr.txt 
+ls
+cat copy.txt 
+wc
+wc < copy.txt 
+wc < copy.txt > out.txt
+wc < copy.txt > out.txt 2> err.txt
+cat out.txt 
+cat err.txt 
+wc -X < copy.txt > out.txt 2> err.txt
+cat out.txt 
+cat err.txt 
+sort numbers.txt | uniq
+head -7 numbers.txt 
+head -7 numbers.txt | tail -4
+echo "Hello DAC"
+echo "Hello DAC" | tr "a-z" "A-Z"
+echo "Hello DAC" | tr "A-Z" "a-z"
+echo "Hello        DAC"
+echo "Hello        DAC" | tr -s " "
+echo "Hello DAC" | tr " " "@"
+echo "DAC DESD DBDA DMC DITISS"
+echo "DAC DESD DBDA DMC DITISS" | cut -d " " -f1
+echo "DAC DESD DBDA DMC DITISS" | cut -d " " -f2
+echo "DAC DESD DBDA DMC DITISS" | cut -d " " -f2,3
+echo "DAC DESD DBDA DMC DITISS" | cut -d " " -f2-4

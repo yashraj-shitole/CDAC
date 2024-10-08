@@ -1,0 +1,1 @@
+require(['core/str','jquery','core/config'],function(str,$,config){$('#portal-link-container a').click(function(e){if("ga" in window){trackers=ga.getAll();$.each(trackers,function(i,tracker){if(tracker){tracker.send('event','SSO Tab','Click','',{transport:'beacon'})}})}})})

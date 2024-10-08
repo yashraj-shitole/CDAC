@@ -1,0 +1,91 @@
+echo $SHELL
+date
+man date
+cal
+cal -y
+man cal
+cal -y 2016
+pwd
+mkdir dir
+ls
+mkdir dir1 dir2 dir3
+ls
+mkdir -p d1/d2/d3/d4
+ls
+ls d1
+ls d1/d2
+ls d1/d2/d3
+ls -R
+ls
+rmdir dir
+ls
+pwd
+cd d1/d2/d3
+pwd
+cd ..
+pwd
+cd ~
+pwd
+cd -
+cd .
+cd ../..
+pwd
+touch file.txt
+ls
+touch file1.txt file2.txt file3.txt 
+ls
+cat > catfile.txt
+ls
+cat catfile.txt 
+cat test.txt
+cat catfile.txt 
+cat > catfile.txt
+cat catfile.txt 
+cat >> catfile.txt
+cat catfile.txt 
+ls
+rm file3.txt 
+ls
+cp catfile.txt file.txt
+cat catfile.txt 
+cat file.txt 
+cp file.txt copy.txt
+ls
+cat copy.txt 
+ls
+cp file.txt dir1
+ls dir1
+cp dir1 copy
+cp -r dir1 copy
+ls 
+ls copy
+ls
+rmdir copy
+rm -r copy
+ls
+mv file.txt moved.txt
+ls
+cat moved.txt 
+mv file1.txt dir1
+ls dir1
+ls
+mv dir1 move
+ls
+ls move
+mv move dir2
+ls
+ls dir2
+ls
+ls -i
+ls -a
+ls
+touch .hidden.txt
+ls
+ls -a
+ls -A
+ls -l
+ls -l -i -a
+alias list="ls -l -i -a"
+list
+unalias list
+list
