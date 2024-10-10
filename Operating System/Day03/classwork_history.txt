@@ -1,0 +1,130 @@
+bc
+cat > input.txt
+cat input.txt
+bc < input.txt 
+bc < input.txt > output.txt
+cat output.txt 
+bc < input.txt > output.txt 2> error.txt
+cat error.txt 
+cat > input.txt
+bc < input.txt > output.txt 2> error.txt
+cat output.txt 
+cat error.txt 
+who
+who | wc
+ls
+pwd
+ls pwd
+ls ; pwd
+ls && pwd
+ls -w && pwd
+ls || pwd
+ls -w || pwd
+ls *.txt
+cat err.txt 
+touch f1.txt f2.txt f3.txt
+cat er?.txt 
+cat er???.txt 
+ls -l f?.txt
+touch fw.txt
+ls -l f?.txt
+ls
+mv f?.txt d1
+ls
+cd d1
+ls
+rename "s/f/file/" *.txt
+ls
+rename "s/.txt/.doc/" *.txt
+ls
+cd ..
+find -name err.txt
+find . -name err.txt
+find .. -name err.txt
+find ~ -name err.txt
+find /home/sunbeam -name err.txt
+find . -type f
+find . -type d
+ls -l
+stat output.txt
+stat -c "%n" output.txt 
+stat -c "name = %n" output.txt 
+stat -c "permissions = %a" output.txt 
+stat -c "permissions = %A" output.txt 
+man stat
+stat output.txt 
+cat > taste.txt
+grep "cake" taste.txt 
+grep "good" taste.txt 
+grep "is" taste.txt 
+grep -w "is" taste.txt 
+grep -c "is" taste.txt 
+grep "is" taste.txt 
+grep -n "is" taste.txt 
+grep -v "is" taste.txt 
+grep "Is" taste.txt 
+grep -i "Is" taste.txt 
+grep -w -c "is" taste.txt 
+grep "^is" taste.txt 
+grep "is$" taste.txt 
+grep "^is$" taste.txt 
+cat taste.txt 
+cat > select.txt
+grep "dc" select.txt 
+grep "dac" select.txt 
+grep "dic" select.txt 
+grep "doc" select.txt 
+grep "d[aio]c" select.txt 
+grep "d[^aio]c" select.txt 
+grep "d.c" select.txt 
+grep "d*c" select.txt 
+grep "d\*c" select.txt 
+grep "d[*]c" select.txt 
+grep -F "d*c" select.txt 
+fgrep "d*c" select.txt 
+cat > repeat.txt
+grep "dac" repeat.txt 
+grep "da*c" repeat.txt 
+grep "da?c" repeat.txt 
+grep -E "da?c" repeat.txt 
+egrep "da?c" repeat.txt 
+egrep "da+c" repeat.txt 
+egrep "da{3}c" repeat.txt 
+egrep "da{5}c" repeat.txt 
+egrep "da{3,5}c" repeat.txt 
+egrep "da{3,}c" repeat.txt 
+egrep "da{,5}c" repeat.txt 
+egrep "daac" repeat.txt 
+egrep "d[aa]c" repeat.txt 
+egrep "d(aa)c" repeat.txt 
+egrep "d(aa){1}c" repeat.txt 
+egrep "d(aa){2}c" repeat.txt 
+egrep "good|cake" taste.txt 
+egrep "(good|cake)" taste.txt 
+egrep "is" taste.txt 
+egrep -R "is" .
+cat > input.txt 
+egrep -R "is" .
+egrep -R "is" *.txt
+mkdir scripts
+cd scripts
+vim script01.sh
+bash script01.sh 
+./script01.sh
+ls -l
+chmod +x script01.sh 
+ls -l
+./script01.sh 
+man expr
+expr 10 + 20
+expr 10 - 20
+expr 20 / 10
+expr 20 * 10
+expr 20 \* 10
+bc
+echo "10 * 4.5"
+echo "10 * 4.5" | bc
+seq 10
+seq 11 20
+seq 11 2 20
+vim script11.sh 
