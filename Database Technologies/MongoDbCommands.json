@@ -1,0 +1,214 @@
+[
+  {
+    "command": "db.collection.insertOne(document)",
+    "description": "Inserts a single document into the specified collection."
+  },
+  {
+    "command": "db.collection.insertMany(documents, options)",
+    "description": "Inserts multiple documents into a collection with optional settings."
+  },
+  {
+    "command": "db.collection.find(query, projection)",
+    "description": "Retrieves documents matching the query criteria with optional field projection."
+  },
+  {
+    "command": "db.collection.findOne(query, projection)",
+    "description": "Returns one document that satisfies the specified query criteria."
+  },
+  {
+    "command": "db.collection.updateOne(filter, update, options)",
+    "description": "Updates a single document that matches the filter criteria."
+  },
+  {
+    "command": "db.collection.updateMany(filter, update, options)",
+    "description": "Updates multiple documents that match the filter criteria."
+  },
+  {
+    "command": "db.collection.replaceOne(filter, replacement, options)",
+    "description": "Replaces a single document that matches the filter criteria."
+  },
+  {
+    "command": "db.collection.deleteOne(filter, options)",
+    "description": "Deletes a single document that matches the filter criteria."
+  },
+  {
+    "command": "db.collection.deleteMany(filter, options)",
+    "description": "Deletes all documents that match the filter criteria."
+  },
+  {
+    "command": "db.collection.aggregate(pipeline, options)",
+    "description": "Performs aggregation operations using an array of pipeline stages."
+  },
+  {
+    "command": "db.collection.countDocuments(query, options)",
+    "description": "Counts the number of documents that match the query criteria."
+  },
+  {
+    "command": "db.collection.distinct(field, query, options)",
+    "description": "Finds the distinct values for a specified field across a single collection."
+  },
+  {
+    "command": "db.collection.createIndex(keys, options)",
+    "description": "Creates an index on the collection for the specified field(s)."
+  },
+  {
+    "command": "db.collection.dropIndex(index)",
+    "description": "Removes the specified index from the collection."
+  },
+  {
+    "command": "db.collection.getIndexes()",
+    "description": "Lists all indexes on the collection."
+  },
+  {
+    "command": "db.collection.renameCollection(newName, dropTarget)",
+    "description": "Renames the collection to newName. Optional dropTarget to drop any existing collection with newName."
+  },
+  {
+    "command": "db.collection.stats(options)",
+    "description": "Provides statistics about the collection."
+  },
+  {
+    "command": "db.createCollection(name, options)",
+    "description": "Creates a new collection with the specified name and options."
+  },
+  {
+    "command": "db.collection.drop()",
+    "description": "Drops the collection from the database."
+  },
+  {
+    "command": "db.collection.bulkWrite(operations, options)",
+    "description": "Performs multiple write operations with control over individual operation order and error handling."
+  },
+  {
+    "command": "db.collection.watch(pipeline, options)",
+    "description": "Opens a change stream cursor on the collection to watch for changes."
+  },
+  {
+    "command": "db.collection.findOneAndUpdate(filter, update, options)",
+    "description": "Atomically finds and updates a single document."
+  },
+  {
+    "command": "db.collection.findOneAndReplace(filter, replacement, options)",
+    "description": "Atomically finds and replaces a single document."
+  },
+  {
+    "command": "db.collection.findOneAndDelete(filter, options)",
+    "description": "Atomically finds and deletes a single document."
+  },
+  {
+    "command": "db.collection.mapReduce(mapFunction, reduceFunction, options)",
+    "description": "Performs a map-reduce operation."
+  },
+  {
+    "command": "db.runCommand(commandObj)",
+    "description": "Runs a database command. For advanced operations."
+  },
+  {
+    "command": "db.adminCommand(commandObj)",
+    "description": "Runs an administrative command on the database."
+  },
+  {
+    "command": "db.collection.validate(options)",
+    "description": "Validates the collection for errors and inconsistencies."
+  },
+  {
+    "command": "db.collection.explain(verb).find(query)",
+    "description": "Provides execution stats and details about how the query is executed."
+  },
+  {
+    "command": "db.getCollectionNames()",
+    "description": "Returns an array of collection names in the current database."
+  },
+  {
+    "command": "db.getSiblingDB(name)",
+    "description": "Accesses another database without switching the current database context."
+  },
+  {
+    "command": "db.dropDatabase()",
+    "description": "Drops the current database."
+  },
+  {
+    "command": "db.getUsers()",
+    "description": "Lists all users in the current database."
+  },
+  {
+    "command": "db.createUser(userDoc)",
+    "description": "Creates a new user with the specified privileges."
+  },
+  {
+    "command": "db.updateUser(username, userDoc)",
+    "description": "Updates an existing user's information."
+  },
+  {
+    "command": "db.removeUser(username)",
+    "description": "Removes a user from the database."
+  },
+  {
+    "command": "db.changeUserPassword(username, password)",
+    "description": "Changes the password of an existing user."
+  },
+  {
+    "command": "db.logout()",
+    "description": "Logs out the current user from the database."
+  },
+  {
+    "command": "db.currentOp()",
+    "description": "Reports on operations currently running."
+  },
+  {
+    "command": "db.killOp(opId)",
+    "description": "Terminates a running operation."
+  },
+  {
+    "command": "db.repairDatabase()",
+    "description": "Repairs and compacts the current database."
+  },
+  {
+    "command": "db.collection.copyTo(newCollection)",
+    "description": "Copies data from the current collection to a new collection."
+  },
+  {
+    "command": "db.collection.reIndex()",
+    "description": "Rebuilds all indexes on the collection."
+  },
+  {
+    "command": "db.collection.save(document)",
+    "description": "Inserts a new document or updates an existing document (deprecated in favor of insertOne, updateOne)."
+  },
+  {
+    "command": "db.collection.group(keys, condition, initial, reduce, finalize)",
+    "description": "Groups documents in a collection by the specified keys (deprecated)."
+  },
+  {
+    "command": "db.collection.getShardDistribution()",
+    "description": "Displays the distribution of data on shards for a sharded collection."
+  },
+  {
+    "command": "db.collection.getShardVersion()",
+    "description": "Reports the version of the shard for a collection."
+  },
+  {
+    "command": "db.collection.getPlanCache()",
+    "description": "Accesses the plan cache for the collection."
+  },
+  {
+    "command": "db.collection.stats()",
+    "description": "Returns statistics about the collection."
+  },
+  {
+    "command": "db.collection.totalIndexSize()",
+    "description": "Returns the total size of all indexes for the collection."
+  },
+  {
+    "command": "db.collection.totalSize()",
+    "description": "Returns the total size in bytes of the collection data and indexes."
+  },
+  {
+    "command": "db.collection.dataSize()",
+    "description": "Returns the size of the uncompressed data held in the collection."
+  },
+  {
+    "command": "db.collection.storageSize()",
+    "description": "Returns the size of the data files used to store the collection on disk."
+  }
+]
