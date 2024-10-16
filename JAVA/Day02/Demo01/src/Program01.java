@@ -1,19 +1,19 @@
 
 class One {
 	public static void main(String[] args) {
-		System.out.println("Hello From class One main)");
+		System.out.println("Hello From class One main()");
 	}
 }
 
 class Two {
 	public static void main(String[] args) {
-		System.out.println("Hello From class Two main)");
+		System.out.println("Hello From class Two main()");
 	}
 }
 
 class Three {
 	public static void main(String[] args) {
-		System.out.println("Hello From class Three main)");
+		System.out.println("Hello From class Three main()");
 	}
 }
 
