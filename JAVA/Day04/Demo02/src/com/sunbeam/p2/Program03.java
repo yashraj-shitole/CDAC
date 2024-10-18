@@ -16,7 +16,7 @@ class Test {
 
 	public void m1() {
 		// n2 = 20; // NOT OK
-		this = new Test();
+//		this =new Test();
 	}
 }
 
@@ -24,7 +24,7 @@ public class Program03 {
 	public static void main(String[] args) {
 		final Test t1;
 		t1 = new Test();
-		t1 = new Test();
+//		t1 = new Test();
 
 	}
 

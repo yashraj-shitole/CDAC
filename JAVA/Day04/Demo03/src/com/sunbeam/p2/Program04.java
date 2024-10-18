@@ -1,5 +1,7 @@
 package com.sunbeam.p2;
 
+import java.util.Scanner;
+
 class BankAccount {
 	// final int accno = ++generate_accno; // OK
 	final int accno;
@@ -8,7 +10,7 @@ class BankAccount {
 	double balance;
 
 	{
-		// accno = ++generate_accno; // OK
+//		 accno = ++generate_accno; // OK
 	}
 
 	BankAccount() {
@@ -26,6 +28,15 @@ class BankAccount {
 		System.out.println("Name - " + name);
 		System.out.println("Balance - " + balance);
 	}
+	
+	public void acceptData() {
+		Scanner sc=new Scanner(System.in);
+		
+		System.out.println("Enter name");
+		this.name=sc.next();
+		System.out.println("Enter balance");
+		this.balance=sc.nextDouble();
+	}
 
 	public static void displayAllAccounts(BankAccount... accounts) {
 		for (BankAccount bankAccount : accounts)
@@ -37,13 +48,23 @@ class BankAccount {
 public class Program04 {
 
 	public static void main(String[] args) {
-		BankAccount accounts[] = new BankAccount[100];
-		BankAccount b1 = new BankAccount();
-		BankAccount b2 = new BankAccount("Anil", 10000);
-		BankAccount b3 = new BankAccount("Mukesh", 20000);
+		BankAccount accounts[] = new BankAccount[5];
+		
 
-		// BankAccount.displayAllAccounts(accounts);
-		BankAccount.displayAllAccounts(b1, b2, b3);
+		for(int i=0;i<5;i++) {
+			accounts[i]=new BankAccount();
+			accounts[i].acceptData();
+		}
+		
+		
+//		BankAccount b1 = new BankAccount();
+//		BankAccount b2 = new BankAccount("Anil", 10000);
+//		BankAccount b3 = new BankAccount("Mukesh", 20000);
+
+		
+		
+		 BankAccount.displayAllAccounts(accounts);
+//		BankAccount.displayAllAccounts(b1, b2, b3);
 
 	}
 
