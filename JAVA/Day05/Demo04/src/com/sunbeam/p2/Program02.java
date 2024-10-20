@@ -17,9 +17,7 @@ final class Super {
 
 }
 
-class Sub extends Super {
 
-}
 
 public class Program02 {
 
