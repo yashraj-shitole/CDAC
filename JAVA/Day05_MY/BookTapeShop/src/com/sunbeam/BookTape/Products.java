@@ -15,20 +15,21 @@ public class Products {
 	protected int id;
 	protected String title;
 	protected double price;
-	static int idAuto=0;
+	static int idAuto=1;
 	
 	public Products() {
-		// TODO Auto-generated constructor stub
-		idAuto++;
+		
 		
 	}
 	
 
 	public void acceptData(Scanner sc) {
-		System.out.println("Enter title");
+		System.out.print("Enter title: ");
 		title=sc.next();
-		System.out.println("Enter Price");
+		System.out.print("Enter Price: ");
 		price=sc.nextDouble();
+		id=idAuto;
+		idAuto++;
 		
 	}
 

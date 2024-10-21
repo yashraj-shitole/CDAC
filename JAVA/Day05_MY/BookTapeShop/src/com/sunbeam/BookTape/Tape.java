@@ -10,31 +10,21 @@ import java.util.Scanner;
 		
 public class Tape extends Products {
 
-	private String artist;
+private String artist;
 	
-	
-	
-	public Tape() {
-		new Products();
-		artist="No Data Available";
-	}
 	
 	@Override
 	public void acceptData(Scanner sc) {
-		System.out.print("Enter title of Tape: ");
-		title=sc.next();
-		System.out.println("Enter artist of Tape: ");
+		super.acceptData(sc);
+		System.out.print("Enter artist: ");
 		artist=sc.next();
-		System.out.println("Enter price of Tape: ");
-		price=sc.nextDouble();
 	}
-	
-	@Override 
+	 
+	@Override
 	public void displayData() {
-		System.out.println("Tape id: "+id);
-		System.out.print("Tape title: "+title);
-		System.out.println("Tape author: "+artist);
-		System.out.println("Tape price: "+price);
+		super.displayData();
+		System.out.println("Artist: "+artist);
+		
 	}
 	
 }
