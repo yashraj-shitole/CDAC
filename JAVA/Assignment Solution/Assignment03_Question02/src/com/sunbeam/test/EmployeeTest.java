@@ -10,6 +10,8 @@ public class EmployeeTest {
 		
 		Employee e2=new Employee("Divyaraj", "Shitole", 110000);
 		
+		Employee e3=new Employee("Aishwarya", "Kadam", 10000);
+		
 		
 		System.out.println("-----------------------------------------------------------------------------------------");
 		System.out.println("|First name \t|Last name \t\t|Salary \t|Yearly salary \t|10% Raise \t|");
@@ -25,6 +27,12 @@ public class EmployeeTest {
 							e2.getEmployeeSalary()+"\t|"+
 							e2.getYearlyEmployeeSalary()+"\t|"+
 							(e2.getYearlyEmployeeSalary()+e2.getYearlyEmployeeSalary()*0.1)+"\t|");
+		
+		System.out.println("|"+e3.getEmployeeFirstName()+"\t|"+
+				e3.getEmployeeLastName()+"\t\t\t|"+
+				e3.getEmployeeSalary()+"\t|"+
+				e3.getYearlyEmployeeSalary()+"\t|"+
+				(e3.getYearlyEmployeeSalary()+e3.getYearlyEmployeeSalary()*0.1)+"\t|");
 		System.out.println("-----------------------------------------------------------------------------------------");
 
 	}
