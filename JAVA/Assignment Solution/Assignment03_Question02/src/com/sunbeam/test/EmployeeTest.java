@@ -19,7 +19,7 @@ public class EmployeeTest {
 		System.out.println("|"+e1.getEmployeeFirstName()+"\t|"+
 							e1.getEmployeeLastName()+"\t\t|"+
 							e1.getEmployeeSalary()+"\t|"+
-							e1.getYearlyEmployeeSalary()+"\t|"+
+							e1.getYearlyEmployeeSalary()+"\t|"+\\
 							(e1.getYearlyEmployeeSalary()+e1.getYearlyEmployeeSalary()*0.1)+"\t|");
 		
 		System.out.println("|"+e2.getEmployeeFirstName()+"\t|"+

@@ -1,4 +1,4 @@
-package com.sunbeam.entity;
+ package com.sunbeam.entity;
 
 import com.sunbeam.exceptions.InvalidTimeException;
 
