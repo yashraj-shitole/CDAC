@@ -1,12 +1,15 @@
 package com.fileio;
 
+import java.io.Serializable;
 import java.util.*;
 
-public class Student {
+public class Student implements Serializable{
 
+	private static final long serialVersionUID = 1L;
+	
 	int rollNo;
 	String name;
-	LinkedHashMap<String,Double> marks=new LinkedHashMap<>(3);
+	ArrayList<Double> marks=new ArrayList<>(3);
 	
 	
 	public Student() {
@@ -17,9 +20,9 @@ public class Student {
 		
 	this.rollNo=rollNo;
 	this.name=name;
-	marks.put("Math", math);
-	marks.put("English", english);
-	marks.put("Science", science);
+	marks.add(math);
+	marks.add(english);
+	marks.add(science);
 		
 	}
 	
@@ -29,11 +32,11 @@ public class Student {
 		System.out.print("Enter name of student");
 		this.name=sc.next();
 		System.out.print("Enter math marks");
-		marks.put("Math", sc.nextDouble());
+		marks.add(sc.nextDouble());
 		System.out.print("Enter english marks");
-		marks.put("English", sc.nextDouble());		
+		marks.add(sc.nextDouble());		
 		System.out.print("Enter science science");
-		marks.put("Science", sc.nextDouble());
+		marks.add(sc.nextDouble());
 	}
 
 	public int getRollNo() {
@@ -52,11 +55,11 @@ public class Student {
 		this.name = name;
 	}
 
-	public LinkedHashMap<String, Double> getMarks() {
+	public ArrayList< Double> getMarks() {
 		return marks;
 	}
 
-	public void setMarks(LinkedHashMap<String, Double> marks) {
+	public void setMarks(ArrayList<Double> marks) {
 		this.marks = marks;
 	}
 
@@ -64,6 +67,9 @@ public class Student {
 	public String toString() {
 		return "Student [rollNo=" + rollNo + ", name=" + name + ", marks=" + marks + "]";
 	}
+
+	
+	
 	
 	
 	

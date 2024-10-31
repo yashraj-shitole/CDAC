@@ -15,6 +15,12 @@ public class StudentTestApp {
 		Scanner sc=new Scanner(System.in);
 		
 		ArrayList<Student> studentArrayList=StudentTestApp.readData();
+		if(studentArrayList==null) {			
+			studentArrayList=new ArrayList<>();
+		}
+		else {
+		}
+		
 		
 		for (Student student : studentArrayList) {
 			System.out.println(student.toString());
@@ -47,25 +53,16 @@ public class StudentTestApp {
 			
 			case 2:
 				
-				for(Student s1:studentArrayList) {
-					s1.getName();
-				}
+				studentArrayList.forEach(System.out::println);
+
 				
 				break;
 			
 			case 3:
 				System.out.println("Enter roll number to search");
+				int roll=sc.nextInt();
 				
-				for(Student s1:studentArrayList) {
-					
-					if(s1.getRollNo()== sc.nextInt()) {
-						System.out.println("Student found");
-						s1.getName();
-					}
-					else {
-						System.out.println("Student not found");
-					}
-				}
+				 
 				
 				break;
 			default:
@@ -79,46 +76,43 @@ public class StudentTestApp {
 		
 		
 		
-		
-		
-		
 		StudentTestApp.writeData(studentArrayList);
 	}
-
-	private static void writeData(ArrayList<Student> studentArrayList) {
-		
-		try(FileOutputStream fos=new FileOutputStream("StudentData.db")){
-			
-			try(ObjectOutputStream oos=new ObjectOutputStream(fos)){
-				
-				oos.writeObject(studentArrayList);
-				
-				
-			}
-			
-		} catch (FileNotFoundException e) {
-		} catch (IOException e) {
-		}
-		
-		
-	}
+	
 
 	private static ArrayList<Student> readData() {
-		
-		try (FileInputStream fis=new FileInputStream("StudentData.db")){
+
+		try {
+			FileInputStream fis=new FileInputStream("students.db");
 			
-			try(ObjectInputStream ois=new ObjectInputStream(fis)){
-				
-				return (ArrayList<Student>) ois.readObject();	
-				
-			} catch (ClassNotFoundException e) {
-			}
-		} catch (IOException e) {
+			ObjectInputStream ois=new ObjectInputStream(fis);
+			
+			return (ArrayList<Student>) ois.readObject();
+			
+			
+		} catch (IOException | ClassNotFoundException e) {
 		}
 		
+		return null;
+	}
+
+
+	private static void writeData(ArrayList<Student> studentArrayList){
 		
-		return new ArrayList<Student>();
+		FileOutputStream fos;
+		try {
+			fos = new FileOutputStream("students.db");
+			ObjectOutputStream oos=new ObjectOutputStream(fos);
+			oos.writeObject(studentArrayList);
+			
+		}catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 		
 	}
+
+	
 
 }
