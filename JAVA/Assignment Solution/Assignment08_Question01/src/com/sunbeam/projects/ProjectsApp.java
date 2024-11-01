@@ -1,9 +1,12 @@
 package com.sunbeam.projects;
 
-import java.io.*;
-import java.text.CollationElementIterator;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.Scanner;
@@ -98,7 +101,7 @@ public class ProjectsApp {
 				System.out.println("HasSet converted to ArrayList");
 				break;
 			case 6:
-				projectArrayList.stream().forEach(System.out::println);
+				projectArrayList.forEach(System.out::println);
 				break;
 			case 7:
 				projectArrayList.stream().sorted((x,y)->Double.compare(x.projectCost, y.projectCost)).forEach(System.out::println);
@@ -108,17 +111,12 @@ public class ProjectsApp {
 				projectArrayList.forEach(System.out::print);
 				break;
 			case 9:
-				System.out.println("Count of projects: "+ projectArrayList.stream().count());
-				
+				System.out.println("Count of projects: "+ projectArrayList.stream().filter(project -> "Java".equals(project.getTechnology())).count());
 				break;
 			}
 			
 			
 		}
-		
-		
-		
-		
 		
 		
 		ProjectsApp.writeData(projectHashSet);

@@ -1,6 +1,6 @@
 package com.sunbeam.projects;
 import java.io.Serializable;
-import java.util.*;
+import java.util.Scanner;
 
 public class Project implements Serializable {
 
