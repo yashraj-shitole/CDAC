@@ -6,6 +6,7 @@ public class Product {
 	private String product_name;
 	private String purchase_date;
 	private double price;
+		
 	public Product(int product_id, String product_name, String purchase_date, double price) {
 		super();
 		this.product_id = product_id;
@@ -13,6 +14,14 @@ public class Product {
 		this.purchase_date = purchase_date;
 		this.price = price;
 	}
+	
+	
+	public Product(int productId) {
+		// TODO Auto-generated constructor stub
+		this.product_id=productId;
+	}
+
+
 	public int getProduct_id() {
 		return product_id;
 	}

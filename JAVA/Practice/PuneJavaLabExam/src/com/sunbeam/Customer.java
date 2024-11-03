@@ -9,10 +9,20 @@ public class Customer {
 	private String cutomer_email;
 	private String password;
 	
-	private ArrayList<Product> productList=new ArrayList<>();
+	private ArrayList<Product> customerProdutList=new ArrayList<>();
+	
+	
+	private double bill=0;
 	
 	
 	
+	public Customer() {
+		
+	}
+	
+	public Customer(int id) {
+		this.customer_id=id;
+	}
 	
 	public Customer(int customer_id, String customer_name, String cutomer_email, String password) {
 		super();
@@ -28,7 +38,7 @@ public class Customer {
 		System.out.print("Enter customer id: ");
 		customer_id=sc.nextInt();
 		System.out.print("Enter customer name: ");
-		customer_name=sc.nextLine();
+		customer_name=sc.next();
 		System.out.print("Enter cutomer email: ");
 		cutomer_email=sc.next();
 		System.out.print("Enter customer password: ");
@@ -37,17 +47,29 @@ public class Customer {
 	}
 	
 	
+	public double getBill() {
+		
+		for(int i=0;i<customerProdutList.size();i++) {
+			
+			bill=bill+customerProdutList.get(i).getPrice();
+			
+		}
+		return bill;
+		
+	}
+		
 	
 	
-	public ArrayList<Product> getProductList() {
-		return productList;
+	public void setBill(double bill) {
+		this.bill = bill;
 	}
 
-
-
+	public ArrayList<Product> getProductList() {
+		return customerProdutList;
+	}
 
 	public void setProductList(ArrayList<Product> productList) {
-		this.productList = productList;
+		this.customerProdutList = productList;
 	}
 
 
@@ -84,7 +106,7 @@ public class Customer {
 	@Override
 	public String toString() {
 		return "Customer [customer_id=" + customer_id + ", customer_name=" + customer_name + ", cutomer_email="
-				+ cutomer_email + ", password=" + password + ", productList=" + productList + "]";
+				+ cutomer_email + ", password=" + password + ", customerProductList=" + customerProdutList + "]";
 	}
 	
 	
