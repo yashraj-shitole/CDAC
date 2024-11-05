@@ -5,7 +5,7 @@ import java.util.*;
 
 public class Cart {
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws productNotFoundException {
 		
 		Scanner sc=new Scanner(System.in);
 		
@@ -69,18 +69,17 @@ public class Cart {
 				break;
 				
 			case sortProduct:
-					productList.stream().sorted((x,y)->Double.compare(x.getPrice(), y.getPrice())).forEach(System.out::println);
+//					productList.stream().sorted((x,y)->Double.compare(x.getPrice(), y.getPrice())).forEach(System.out::println);
+					productList.stream().sorted(Comparator.comparingDouble(Product::getPrice).thenComparing(Product::getPurchase_date)).forEach(System.out::println);
 				break;
 				
 			case searchProduct:
 					System.out.println("Enter product name");
 					String productName=sc.next();
-					if(productList.stream().filter(product->productName.equals(product.getProduct_name())) != null) {						
+					if(productList.stream().anyMatch(product -> productName.equals(product.getProduct_name()))) {						
 						productList.stream().filter(product->productName.equals(product.getProduct_name())).forEach(System.out::println);
 					}else {
-						System.err.println("Not Found");
-						productNotFoundException pe=new productNotFoundException();
-						pe.productNotFound();
+						throw new productNotFoundException();
 					}
 					break;
 					
@@ -146,10 +145,6 @@ enum swichCase{
 class productNotFoundException extends Throwable{
 	
 	public productNotFoundException() {
-		System.out.println("Product Not Found");
-	}
-	
-	public void productNotFound() {
 		System.out.println("Product Not Found");
 	}
 	
