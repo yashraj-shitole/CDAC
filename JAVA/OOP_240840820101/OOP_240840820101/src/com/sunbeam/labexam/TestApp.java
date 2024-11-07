@@ -1,0 +1,164 @@
+package com.sunbeam.labexam;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.util.*;
+
+public class TestApp {
+
+	public static void main(String[] args) {
+		
+		Scanner sc=new Scanner(System.in);
+
+		//arraylist to store Persons
+		LinkedHashSet<Person> personList=new LinkedHashSet<>();
+		
+		int choice=1;
+		
+		
+		while(choice!=0) {
+			System.out.println();
+				System.out.println("-----------------------------------------------");
+				System.out.println("0. Exit");
+	            System.out.println("1. Add new person");
+	            System.out.println("2. Display all persons");
+	            System.out.println("3. Find by name");
+	            System.out.println("4. Save in file");
+	            System.out.println("5. Load from file");
+	            System.out.println("6. Display in sorted order of District");
+	            System.out.println("7. Display in sorted order of Name");
+	            System.out.println("-----------------------------------------------");
+	        System.out.println();
+	            System.out.print("Enter choice: ");
+			System.out.println();
+	            
+	            choice=sc.nextInt();
+			
+			switch(choice){
+			
+			//EXIT
+			case 0:
+				System.out.println("Thank you for using App...");
+				break;
+				
+			//Add new person
+			case 1:
+				 Person p=new Person();
+				 	p.acceptData(sc);
+				 	
+				 	if(personList.stream().anyMatch(person -> person.getName().matches(p.getName()))) {
+				 		System.out.println("Person already present");
+				 	}
+				 	else {
+				 		
+				 		personList.add(p);
+				 		System.out.println(p);
+				 	}
+				break;
+			
+			//Dsiplay all persons
+			case 2:
+				personList.forEach(System.out::println);
+				break;
+				
+			//Find person using name
+			case 3:
+				System.out.print("Enter name to find: ");
+				String name=sc.next();
+				
+		        boolean found = personList.stream().anyMatch(person -> person.getName().matches(name));
+
+		        
+		        if(found) {
+		        	System.out.println("Person found");
+		        }
+		        else {
+		        	System.out.println("Person not found");
+		        }
+				break;
+				
+			//save in file
+			case 4:
+				TestApp.write(personList);
+				System.out.println("File saved");
+				break;
+			
+			//read from file
+			case 5:
+				
+				personList.addAll(TestApp.read());
+				System.out.println("File loaded");
+				break;
+				
+			//display in sorted order of district
+			case 6:				
+				personList.stream().sorted((x,y)->x.getHomeAddr().getDistrict().compareTo(y.getHomeAddr().getDistrict())).forEach(System.out::println);
+				break;
+				
+			//display in sorted order of name
+			case 7:				
+				personList.stream().sorted((x,y)->x.getName().compareTo(y.getName())).forEach(System.out::println);;
+
+				break;
+				
+			
+			//default case
+			default:
+				System.out.println("Wrong choice");
+				break;
+			
+			}
+		}
+		
+		
+		sc.close();
+	}
+
+	private static ArrayList<Person> read() {
+		
+		try(FileInputStream fis =new FileInputStream("persons.db")){
+			
+			try(ObjectInputStream ois=new ObjectInputStream(fis)){
+				
+				
+				return (ArrayList<Person>) ois.readObject();
+				
+				
+			} catch (ClassNotFoundException e) {
+				e.printStackTrace();
+			}
+			
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		return null;
+	}
+
+	private static void write(Set<Person> personList) {
+		
+		try(FileOutputStream fos=new FileOutputStream("persons.db")){
+			
+			try(ObjectOutputStream oos=new ObjectOutputStream(fos)){
+				
+				oos.writeObject(personList);
+				
+			}
+			
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+	}
+	
+	
+	
+
+}

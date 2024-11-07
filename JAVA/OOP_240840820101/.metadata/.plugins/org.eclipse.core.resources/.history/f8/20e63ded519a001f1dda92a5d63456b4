@@ -1,0 +1,195 @@
+import java.io.*;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.*;
+
+public class Main {
+    private static List<Person> personList = new LinkedList<>();
+    private static SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+
+    public static void main(String[] args) throws IOException, ClassNotFoundException {
+        Scanner scanner = new Scanner(System.in);
+        while (true) {
+            System.out.println("\nMenu:");
+            System.out.println("1. Add new person");
+            System.out.println("2. Display all persons");
+            System.out.println("3. Find by name");
+            System.out.println("4. Save in file");
+            System.out.println("5. Load from file");
+            System.out.println("6. Display in sorted order of District");
+            System.out.println("7. Display in sorted order of Name");
+            System.out.println("0. Exit");
+            System.out.print("Choose an option: ");
+            int choice = scanner.nextInt();
+            scanner.nextLine(); // consume newline
+
+            switch (choice) {
+                case 1 -> addNewPerson(scanner);
+                case 2 -> displayAllPersons();
+                case 3 -> findByName(scanner);
+                case 4 -> saveToFile();
+                case 5 -> loadFromFile();
+                case 6 -> displaySortedByDistrict();
+                case 7 -> displaySortedByName();
+                case 0 -> System.exit(0);
+                default -> System.out.println("Invalid choice. Try again.");
+            }
+        }
+    }
+
+    private static void addNewPerson(Scanner scanner) {
+        try {
+            System.out.print("Enter name: ");
+            String name = scanner.nextLine();
+
+            for (Person p : personList) {
+                if (p.getName().equalsIgnoreCase(name)) {
+                    System.out.println("Person with this name already exists!");
+                    return;
+                }
+            }
+
+            System.out.print("Enter birthdate (dd/MM/yyyy): ");
+            Date birthDate = dateFormat.parse(scanner.nextLine());
+
+            System.out.print("Enter area: ");
+            String area = scanner.nextLine();
+            System.out.print("Enter district: ");
+            String district = scanner.nextLine();
+            System.out.print("Enter pin: ");
+            int pin = scanner.nextInt();
+            scanner.nextLine(); // consume newline
+
+            Address address = new Address(area, district, pin);
+            Person person = new Person(name, birthDate, address);
+            personList.add(person);
+            System.out.println("Person added successfully.");
+
+        } catch (ParseException e) {
+            System.out.println("Invalid date format. Please use dd/MM/yyyy.");
+        }
+    }
+
+    private static void displayAllPersons() {
+        if (personList.isEmpty()) {
+            System.out.println("No persons to display.");
+        } else {
+            personList.forEach(System.out::println);
+        }
+    }
+
+    private static void findByName(Scanner scanner) {
+        System.out.print("Enter name to search: ");
+        String name = scanner.nextLine();
+
+        boolean found = personList.stream().anyMatch(p -> p.getName().equalsIgnoreCase(name));
+        System.out.println(found ? "Person found." : "Person not found.");
+    }
+
+    private static void saveToFile() {
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("persons.dat"))) {
+            oos.writeObject(personList);
+            System.out.println("Data saved successfully.");
+        } catch (IOException e) {
+            System.out.println("Error saving data: " + e.getMessage());
+        }
+    }
+
+    private static void loadFromFile() {
+        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream("persons.dat"))) {
+            personList = (List<Person>) ois.readObject();
+            System.out.println("Data loaded successfully.");
+        } catch (IOException | ClassNotFoundException e) {
+            System.out.println("Error loading data: " + e.getMessage());
+        }
+    }
+
+    private static void displaySortedByDistrict() {
+        personList.stream()
+                .sorted(Comparator.comparing(p -> p.getHomeAddr().getDistrict()))
+                .forEach(System.out::println);
+    }
+
+    private static void displaySortedByName() {
+        personList.stream()
+                .sorted(Comparator.comparing(Person::getName))
+                .forEach(System.out::println);
+    }
+}
+
+
+
+import java.io.Serializable;
+
+public class Address implements Serializable {
+    private String area;
+    private String district;
+    private int pin;
+
+    public Address(String area, String district, int pin) {
+        this.area = area;
+        this.district = district;
+        this.pin = pin;
+    }
+
+    public String getArea() {
+        return area;
+    }
+
+    public String getDistrict() {
+        return district;
+    }
+
+    public int getPin() {
+        return pin;
+    }
+
+    @Override
+    public String toString() {
+        return "Address{" +
+                "area='" + area + '\'' +
+                ", district='" + district + '\'' +
+                ", pin=" + pin +
+                '}';
+    }
+}
+
+
+
+import java.io.Serializable;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class Person implements Serializable {
+    private String name;
+    private Date birthDate;
+    private Address homeAddr;
+
+    public Person(String name, Date birthDate, Address homeAddr) {
+        this.name = name;
+        this.birthDate = birthDate;
+        this.homeAddr = homeAddr;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public Date getBirthDate() {
+        return birthDate;
+    }
+
+    public Address getHomeAddr() {
+        return homeAddr;
+    }
+
+    @Override
+    public String toString() {
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", birthDate=" + sdf.format(birthDate) +
+                ", homeAddr=" + homeAddr +
+                '}';
+    }
+}

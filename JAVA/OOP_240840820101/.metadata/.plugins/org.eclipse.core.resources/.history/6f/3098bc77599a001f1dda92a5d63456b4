@@ -1,0 +1,102 @@
+package com.sunbeam.labexam;
+import java.util.*;
+
+public class TestApp {
+
+	public static void main(String[] args) {
+		
+		Scanner sc=new Scanner(System.in);
+
+		//arraylist to store Persons
+		ArrayList<Person> personList=new ArrayList<>();
+		
+		
+		int choice=1;
+		
+		
+		while(choice!=0) {
+			
+			
+				System.out.println("0. Exit");
+	            System.out.println("1. Add new person");
+	            System.out.println("2. Display all persons");
+	            System.out.println("3. Find by name");
+	            System.out.println("4. Save in file");
+	            System.out.println("5. Load from file");
+	            System.out.println("6. Display in sorted order of District");
+	            System.out.println("7. Display in sorted order of Name");
+	            System.out.print("Enter choice: ");
+			
+	            choice=sc.nextInt();
+			
+			switch(choice){
+			
+			case 0:
+				System.out.println("Thank you for using App...");
+				break;
+				
+			case 1:
+				 Person p=new Person();
+				 	p.acceptData(sc);
+				 	personList.add(p);
+				 	System.out.println(p);
+				break;
+			
+			case 2:
+				personList.forEach(System.out::println);
+				break;
+				
+			case 3:
+				System.out.print("Enter name to find: ");
+				String name=sc.next();
+				
+		        boolean found = personList.stream().anyMatch(person -> person.getName().matches(name));
+		        
+		        if(found) {
+		        	System.out.println("Person found");
+		        }
+		        else {
+		        	System.out.println("Person not found");
+		        }
+				break;
+				
+			case 4:
+				
+				break;
+				
+			case 5:
+				
+				break;
+				
+			case 6:
+//				personList.stream().sorted(Comparator.comparing(person1 -> person1.getHomeAddr().getDistrict())).forEach(System.out::println);;
+				
+				
+				personList.stream().sorted((x,y)->x.getHomeAddr().getDistrict().compareTo(y.getHomeAddr().getDistrict())).forEach(System.out::println);
+				break;
+				
+			case 7:				
+				personList.stream().sorted((x,y)->x.getName().compareTo(y.getName())).forEach(System.out::println);;
+
+				break;
+				
+				
+			default:
+				System.out.println("Wrong choice");
+				break;
+			
+			}
+			//
+		}
+		
+		
+		
+		
+		
+		
+	}
+	
+	
+	
+
+}

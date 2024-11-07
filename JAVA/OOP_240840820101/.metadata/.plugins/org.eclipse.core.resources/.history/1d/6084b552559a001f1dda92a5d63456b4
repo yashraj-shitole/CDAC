@@ -1,0 +1,9 @@
+package com.sunbeam.labexam;
+
+public class Address {
+	
+	
+	String area;
+	String district ;
+
+}
