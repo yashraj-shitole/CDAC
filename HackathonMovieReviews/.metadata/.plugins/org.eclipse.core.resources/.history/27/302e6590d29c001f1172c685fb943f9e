@@ -1,0 +1,18 @@
+package com.sunbeam.daos;
+
+import java.util.ArrayList;
+
+import com.sunbeam.entities.Shares;
+
+public interface ShareDao extends AutoCloseable{
+	
+	
+
+	int shareReview(Shares s) throws Exception;
+	ArrayList<Shares> displaySharedReviews(int id) throws Exception; 
+
+
+	
+	
+	
+}

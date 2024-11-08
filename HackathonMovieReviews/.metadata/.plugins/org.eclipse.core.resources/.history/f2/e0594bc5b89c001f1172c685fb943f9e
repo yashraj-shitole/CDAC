@@ -1,0 +1,14 @@
+package com.sunbeam.entities;
+
+import java.sql.Date;
+
+public class Movies {
+
+	String title;
+	Date release;
+	
+	
+	
+	
+	
+}

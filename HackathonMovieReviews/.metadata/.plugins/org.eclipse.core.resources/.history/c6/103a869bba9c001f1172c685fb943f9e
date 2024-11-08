@@ -1,0 +1,8 @@
+package com.sunbeam.daoimplimetation;
+
+import com.sunbeam.daos.DAO;
+import com.sunbeam.daos.MoviesDao;
+
+public class MovieDaoImplimentation extends DAO implements MoviesDao{
+
+}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.lang.AutoCloseable"/>
+    <fullyQualifiedTypeName name="com.sunbeam.daos.MoviesDao"/>
+    <fullyQualifiedTypeName name="com.sunbeam.daos.ReviewsDao"/>
+    <fullyQualifiedTypeName name="com.sunbeam.daos.ShareDao"/>
+    <fullyQualifiedTypeName name="com.sunbeam.daos.DAO"/>
+    <fullyQualifiedTypeName name="com.sunbeam.daos.UserDao"/>
+    <fullyQualifiedTypeName name="java.sql.DriverManager"/>
+    <fullyQualifiedTypeName name="com.sunbeam.entities.User"/>
+    <fullyQualifiedTypeName name="java.lang.Exception"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.sql.Timestamp"/>
+    <fullyQualifiedTypeName name="com.mysql.cj.x.protobuf.MysqlxExpr.ColumnIdentifier"/>
+    <fullyQualifiedTypeName name="com.sunbeam.daoimplimetation.ReviewsDaoImplementation"/>
+    <fullyQualifiedTypeName name="com.sunbeam.application.MovieReviewsApplication"/>
+    <fullyQualifiedTypeName name="com.sunbeam.daoimplimetation.MovieDaoImplimentation"/>
+    <fullyQualifiedTypeName name="java.sql.Date"/>
+    <fullyQualifiedTypeName name="com.sunbeam.entities.Movies"/>
+    <fullyQualifiedTypeName name="com.sunbeam.daoimplimetation.ShareDaoImplimentation"/>
+    <fullyQualifiedTypeName name="com.sunbeam.entities.Shares"/>
+    <fullyQualifiedTypeName name="com.sunbeam.entities.Reviews"/>
+    <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+</qualifiedTypeNameHistroy>

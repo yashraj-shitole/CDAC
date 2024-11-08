@@ -1,0 +1,27 @@
+package com.sunbeam.application;
+
+import com.sunbeam.daoimplimetation.ReviewsDaoImplementation;
+
+public class Testing {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+			
+			try(ReviewsDaoImplementation cdi=new ReviewsDaoImplementation()){
+				
+				ArrayList<Candidate> candidateList=new ArrayList<>();
+				candidateList=cdi.findAllCandidates();
+				candidateList.forEach(System.out::println);
+				
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+		
+
+	}
+
+}

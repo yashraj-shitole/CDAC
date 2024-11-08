@@ -1,0 +1,89 @@
+package com.sunbeam.daoimplimetation;
+
+import java.sql.Date;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Timestamp;
+import java.util.ArrayList;
+
+import com.sunbeam.daos.DAO;
+import com.sunbeam.daos.MoviesDao;
+import com.sunbeam.entities.Movies;
+import com.sunbeam.entities.Reviews;
+
+public class MovieDaoImplimentation extends DAO implements MoviesDao{
+	
+	
+ private PreparedStatement statementFindAllMovies;
+ 
+ 
+	public MovieDaoImplimentation() throws Exception {
+		//Find all 
+				String queryFindAll="Select * from movies";
+				statementFindAllMovies=con.prepareStatement(queryFindAll);
+	}
+	
+	public void close() throws Exception{
+		statementFindAllMovies.close();
+		
+	}
+
+	@Override
+	public ArrayList<Movies> displayAllMovies() throws Exception {
+		ArrayList<Movies> movieList=new ArrayList<>();
+		
+		try(ResultSet rs= statementFindAllMovies.executeQuery()){
+			
+				while (rs.next()) {
+
+					
+					int id= rs.getInt("id");
+					String title=rs.getString("title");
+					Date date=rs.getDate("rel_date");
+					
+					
+					
+					Movies m=new Movies(title, date);
+					
+					movieList.add(m);
+					
+				}
+				
+			}
+		
+		return movieList;
+	}
+	
+	
+	
+	//FIND ALL USERS
+	@Override
+	public ArrayList<User> findAllUsers() throws Exception {
+		ArrayList<User> userList=new ArrayList<>();
+		
+		try(ResultSet rs= statementFindAll.executeQuery()){
+			
+			while (rs.next()) {
+				
+				int id= rs.getInt("id");
+				String first_name=rs.getString("first_name");
+				String last_name=rs.getString("last_name");
+				String email=rs.getString("email");
+				String password=rs.getString("password");
+				Date date=rs.getDate("dob");
+				int status=rs.getInt("status");
+				String role=rs.getString("role");
+				
+				User u=new User(id, first_name, last_name, email, password, date, status, role);
+				
+				userList.add(u);
+				
+			}
+			
+		}
+		
+		return userList;
+	}
+	
+
+}

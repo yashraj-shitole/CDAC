@@ -1,0 +1,14 @@
+package com.sunbeam.daos;
+
+import com.sunbeam.entities.Shares;
+
+public interface ShareDao extends AutoCloseable{
+	
+	
+
+	int saveUser(Shares s) throws Exception;
+
+	
+	
+	
+}

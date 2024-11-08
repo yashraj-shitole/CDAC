@@ -1,0 +1,194 @@
+package com.sunbeam.daoimplimetation;
+
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Timestamp;
+import java.util.ArrayList;
+
+import com.sunbeam.daos.DAO;
+import com.sunbeam.daos.ReviewsDao;
+import com.sunbeam.entities.Reviews;
+
+public class ReviewsDaoImplementation extends DAO implements ReviewsDao {
+	
+	private PreparedStatement statementFindAllReviews;
+	private PreparedStatement statementFindRevieById;
+	private PreparedStatement statementSaveReview;
+	private PreparedStatement statementUpdateReview;
+	private PreparedStatement statementDeleteRevies;
+
+	public ReviewsDaoImplementation() throws Exception {
+		
+		
+		//Find all 
+		String queryFindAll="Select * from reviews";
+		statementFindAllReviews=con.prepareStatement(queryFindAll);
+				
+		//Find by id
+		String queryFindById="Select * from reviews where id= ? ";
+		statementFindRevieById=con.prepareStatement(queryFindById);
+		
+		//Find for user
+				String queryFindByUserId="Select * from reviews where id= ? ";
+				statementFindRevieById=con.prepareStatement(queryFindByUserId);
+		
+		//Save user
+		String querySave="insert into reviews(movie_id,review,rating,user_id,modified) values(?,?,?,?,?);";
+		statementSaveReview=con.prepareStatement(querySave);
+		
+		//Update user
+		String queryUpdate="Update reviews set review=?,rating=? where id= ?";
+		statementUpdateReview=con.prepareStatement(queryUpdate);
+		
+		//Delete user
+		String queryDelete="delete from reviews where id=?";
+		statementDeleteRevies=con.prepareStatement(queryDelete);
+		
+	}
+
+	
+	public void close() throws Exception{
+		statementFindAllReviews.close();
+		statementFindRevieById.close();
+		statementSaveReview.close();
+		statementUpdateReview.close();
+		statementDeleteRevies.close();
+		statementFindRevieById.close();
+	}
+	
+	
+	public ArrayList<Reviews> findAllReviewsByUserId() throws Exception {
+		ArrayList<Reviews> reviewList=new ArrayList<>();
+		
+		try(ResultSet rs= statementFindAllReviews.executeQuery()){
+			
+				while (rs.next()) {
+
+					
+					int id= rs.getInt("id");
+					int movie_id=rs.getInt("movie_id");
+					String review=rs.getString("review");
+					int rating=rs.getInt("rating");
+					int user_id=rs.getInt("user_id");
+					Timestamp timestamp=rs.getTimestamp("modified");
+					
+					
+					
+					Reviews r=new Reviews(id,movie_id, review, rating, user_id, timestamp);
+					
+					reviewList.add(r);
+					
+				}
+				
+			}
+		
+		return reviewList;
+		
+		
+			}
+	
+	
+	@Override
+	public ArrayList<Reviews> findAllReviews() throws Exception {
+		ArrayList<Reviews> reviewList=new ArrayList<>();
+		
+		try(ResultSet rs= statementFindAllReviews.executeQuery()){
+			
+				while (rs.next()) {
+
+					
+					int id= rs.getInt("id");
+					int movie_id=rs.getInt("movie_id");
+					String review=rs.getString("review");
+					int rating=rs.getInt("rating");
+					int user_id=rs.getInt("user_id");
+					Timestamp timestamp=rs.getTimestamp("modified");
+					
+					
+					
+					Reviews r=new Reviews(id,movie_id, review, rating, user_id, timestamp);
+					
+					reviewList.add(r);
+					
+				}
+				
+			}
+		
+		return reviewList;
+		
+		
+			}
+
+	@Override
+	public Reviews findReviewById(int id) throws Exception {
+		statementFindRevieById.setInt(1, id);
+		
+		try(ResultSet rs= statementFindRevieById.executeQuery()){
+			if(rs.next()) {
+				id= rs.getInt("id");
+				int movie_id=rs.getInt("movie_id");
+				String review=rs.getString("review");
+				int rating=rs.getInt("rating");
+				int user_id=rs.getInt("user_id");
+				Timestamp timestamp=rs.getTimestamp("modified");
+			
+			Reviews r=new Reviews(id,movie_id, review, rating, user_id, timestamp);
+			
+			return r;
+			
+			}
+		}
+		return null;
+		
+	}
+
+	@Override
+	public int saveReview(Reviews c) throws Exception {
+//		String querySave="insert into reviews(movie_id,review,rating,user_id,modified) values(?,?,?,?,?);";
+
+		statementSaveReview.setInt(1, c.getMovie_id());
+		statementSaveReview.setString(2, c.getReview());
+		statementSaveReview.setInt(3,c.getRating());
+		statementSaveReview.setInt(4, c.getUser_id());
+		statementSaveReview.setTimestamp(5, c.getModified());
+		
+		int count=statementSaveReview.executeUpdate();
+		return count;
+		
+	}
+
+	@Override
+	public int updateReview(Reviews c,int userid) throws Exception {
+//		String queryUpdate="Update reviews set review=?,rating=? where id= ?";
+
+		
+		Reviews rs=findReviewById(c.getId());
+		
+		if(rs.getUser_id()==userid) {
+			statementUpdateReview.setString(1, c.getReview());
+			statementUpdateReview.setInt(2,c.getRating());
+			statementUpdateReview.setInt(3, c.getId());
+			
+			int count=statementUpdateReview.executeUpdate();
+			
+			return count;
+		}else {
+			System.out.println("Your are not eligible to edit this review");
+		}
+		
+		return 0;
+		
+		
+	}
+
+	@Override
+	public int deleteReviewById(int id) throws Exception {
+		
+		statementDeleteRevies.setInt(1, id);
+		
+		int count= statementDeleteRevies.executeUpdate();
+
+		return count;
+	}
+
+}

@@ -1,0 +1,65 @@
+package com.sunbeam.daoimplimetation;
+
+import java.sql.Date;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+
+import com.sunbeam.daos.DAO;
+import com.sunbeam.daos.ShareDao;
+import com.sunbeam.entities.Movies;
+import com.sunbeam.entities.Shares;
+
+public class ShareDaoImplimentation extends DAO implements ShareDao {
+
+	
+	 private PreparedStatement statementFindAllMovies;
+
+	 
+	public ShareDaoImplimentation() throws Exception {
+		
+		//Find all 
+		String queryFindAll="Select * from movies";
+		statementFindAllMovies=con.prepareStatement(queryFindAll);
+	}
+
+	
+	
+	public void close() throws Exception{
+		statementFindAllMovies.close();
+		
+	}
+	
+	
+	@Override
+	public int shareReview(Shares s) throws Exception {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public ArrayList<Shares> displaySharedReviews(int userid) throws Exception {
+ArrayList<Shares> movieList=new ArrayList<>();
+		
+		try(ResultSet rs= statementFindAllMovies.executeQuery()){
+			
+				while (rs.next()) {
+
+					
+					int id= rs.getInt("review_id");
+					 userid=rs.getInt("user_id");
+					
+					
+					
+					Shares m=new Shares(id, id)
+					
+					movieList.add(m);
+					
+				}
+				
+			}
+		
+		return movieList;
+	}
+
+}

@@ -1,0 +1,76 @@
+package com.sunbeam.daoimplimetation;
+
+import java.sql.Date;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+
+import com.sunbeam.daos.DAO;
+import com.sunbeam.daos.ShareDao;
+import com.sunbeam.entities.Movies;
+import com.sunbeam.entities.Shares;
+
+public class ShareDaoImplimentation extends DAO implements ShareDao {
+
+	
+	 private PreparedStatement statementFindAllMovies;
+	 private PreparedStatement statementSaveShare;
+
+	 
+	public ShareDaoImplimentation() throws Exception {
+		
+		//Find all 
+		String queryFindAll="Select * from movies";
+		statementFindAllMovies=con.prepareStatement(queryFindAll);
+		
+		
+		//Save share
+		String querySaveShare="Insert into shares";
+		statementSaveShare=con.prepareStatement(querySaveShare);
+	}
+
+	
+	
+	public void close() throws Exception{
+		statementFindAllMovies.close();
+		statementSaveShare.close();
+		
+	}
+	
+	
+	@Override
+	public int shareReview(int movieid,int userid) throws Exception {
+		statementSaveShare.setInt(1, movieid);
+		statementSaveShare.setInt(2, userid);
+		
+		int count= statementSaveShare.executeUpdate();
+		
+		return count;
+	}
+
+	@Override
+	public ArrayList<Shares> displaySharedReviews(int userid) throws Exception {
+ArrayList<Shares> sharesList=new ArrayList<>();
+		
+		try(ResultSet rs= statementFindAllMovies.executeQuery()){
+			
+				while (rs.next()) {
+
+					
+					int id= rs.getInt("review_id");
+					userid=rs.getInt("user_id");
+					
+					
+					
+					Shares m=new Shares(id, userid);
+					
+					sharesList.add(m);
+					
+				}
+				
+			}
+		
+		return sharesList;
+	}
+
+}
