@@ -2,66 +2,43 @@ package Assignment02_Question01;
 
 import java.util.*;
 
-//1. Create an array of integers. Reverse the array using stack
-
+//Modify the insertion sort algorithm to sort the array in descending order
 
 public class Assignment02_Question01 {
 
 	public static void main(String[] args) {
 		
 		
-		int[] arr= {1,2,3,4,5,6,7,8,9,10};
-		MyStack stack=new MyStack(arr.length);
+		int[] arr= {55,44,22,66,11,33};
 		
-		for(int i=0;i<arr.length;i++) {
-			stack.push(arr[i]);
-		}
-		
-		for(int i=0;i<arr.length;i++) {
-			arr[i]=stack.pop();
-		}
-
 		System.out.println(Arrays.toString(arr));
+		
+		InsirtionSort is=new InsirtionSort();
+		
+		is.insertionSort(arr, arr.length);
+		
+		System.out.println(Arrays.toString(arr));
+		
 	}
-
+	
 }
 
-class MyStack{
+
+class InsirtionSort{
 	
-	
-	int[] arr;
-	int top=-1;
-	
-	
-	public MyStack(int size) {
-		arr=new int[size];
-	}
-	
-	public void push(int element) {
+	public void insertionSort(int arr[], int length) {
 		
-		if(top==arr.length-1) {
-			System.out.println("Stack full");
-		}else {
-			top++;
-			arr[top]=element;
-			System.out.println(element+" added");
+		for(int i=1;i<length;i++) {
+			
+			int temp=arr[i];
+			int j;
+			
+			for(j=i-1;j>=0 && arr[j] < temp;j-- ) {
+				arr[j+1]=arr[j];
+			}
+			
+			arr[j+1]=temp;
+			
 		}
-		
-		
-		
 	}
-	
-	public int pop() {
-		
-		int element=arr[top];
-		top--;
-		System.out.println(element+"deleted");
-		return element;
-	}
-	
-	
-	
-	
 }
-
-
