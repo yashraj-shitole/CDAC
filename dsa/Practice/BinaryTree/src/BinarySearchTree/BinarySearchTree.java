@@ -123,6 +123,71 @@ public class BinarySearchTree {
 	}
 	
 	
+	public Node[] binarySearchWithParent(int key) {
+		//1. start from root
+		Node trav = root;
+		Node parent = null;
+		while(trav != null) {
+			//2. if key is equal to current node data then return current node address
+			if(key == trav.data)
+				break;
+
+			parent = trav;
+			//3. if key is less than current node data then serach key into left sub tree
+			if(key < trav.data)
+				trav = trav.left;
+			//4. if key is greater or equal than current node data then serach key into right sub tree
+			else
+				trav = trav.right;
+		}//5. repeat above 3 steps till key is not found
+		//6. if key is not found
+		if(trav == null)
+			parent = null;
+		return new Node[]{trav, parent};
+	}
+	
+	public void deleteNode(int key) {
+		//1. search node for given key along with its parent
+		Node arr[] = binarySearchWithParent(key);
+		Node temp = arr[0], parent = arr[1];
+		//2. if key is not found
+		if(temp == null)
+			return;
+		//3. if node has 2 childs
+		if(temp.left != null && temp.right != null){
+			//1. find predecessor of temp.data
+			Node pred = temp.left;
+			parent = temp;
+			while(pred.right != null){
+				parent = pred;
+				pred = pred.right;
+			}
+			//2. replace temp's data by predecessor's data
+			temp.data = pred.data;
+			//3. delete predecessor
+			temp = pred;
+		}
+		//4. if node has single child (right child)
+		if(temp.left == null){
+			if(temp == root)
+				root = temp.right;
+			else if(temp == parent.left)
+				parent.left = temp.right;
+			else if(temp == parent.right) 
+				parent.right = temp.right;
+		}
+		//5. if node has single child (left child)		
+		else {//if(temp.right == null){
+			if(temp == root)
+				root = temp.left;
+			else if(temp == parent.left)
+				parent.left = temp.left;
+			else if(temp == parent.right)
+				parent.right = temp.left;
+		}
+	}
+	
+	
 	public Node search(int data) {
 		Node trav=root;
 		

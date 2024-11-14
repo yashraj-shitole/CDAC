@@ -182,6 +182,7 @@ public class BST {
 			//2. if key is equal to current node data then return current node address
 			if(key == trav.data)
 				break;
+
 			parent = trav;
 			//3. if key is less than current node data then serach key into left sub tree
 			if(key < trav.data)
@@ -223,7 +224,7 @@ public class BST {
 				root = temp.right;
 			else if(temp == parent.left)
 				parent.left = temp.right;
-			else if(temp == parent.right)
+			else if(temp == parent.right) 
 				parent.right = temp.right;
 		}
 		//5. if node has single child (left child)		

@@ -19,9 +19,13 @@ public class TestMain {
 
 		bst.preOrder();
 		System.out.println();
-		bst.inOrder();
-		System.out.println();
-		bst.postOrder();
+		
+		bst.deleteNode(523);
+		bst.preOrder();
+//		System.out.println();
+//		bst.inOrder();
+//		System.out.println();
+//		bst.postOrder();
 		
 		System.out.println();
 		
