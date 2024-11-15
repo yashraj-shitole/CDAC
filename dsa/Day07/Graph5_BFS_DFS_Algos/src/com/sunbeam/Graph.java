@@ -144,13 +144,11 @@ public class Graph {
 					st.push(v);
 					marked[v] = true;
 					System.out.print("(" + u + "," + v + ")");
-					
 				}
 			}
 		}
 		System.out.println();
 	}
-	
 	public void BFSSpannigTree(int start) {
 		//0. create a queue to push vertices
 		Queue<Integer> q = new LinkedList<Integer>();

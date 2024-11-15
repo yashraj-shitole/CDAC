@@ -1,7 +1,7 @@
 package com.sunbeam;
 
 import java.util.Scanner;
-
+//unweighted graph
 public class Graph {
 	private int edgeCount, vertexCount;
 	private boolean adjmat[][];

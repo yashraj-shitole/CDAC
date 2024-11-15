@@ -4,6 +4,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
 
+// implementation using ArrayList
 public class Graph {
 	private int edgeCount, vertexCount;
 	private List<Integer> adjlist[];

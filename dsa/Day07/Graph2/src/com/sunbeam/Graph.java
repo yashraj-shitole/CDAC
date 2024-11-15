@@ -1,7 +1,7 @@
 package com.sunbeam;
 
 import java.util.Scanner;
-
+//weighted graph
 public class Graph {
 	private final int INF = 999;
 	private int edgeCount, vertexCount;
