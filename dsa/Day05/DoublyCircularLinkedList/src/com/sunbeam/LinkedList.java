@@ -95,7 +95,7 @@ public class LinkedList {
 					trav = trav.next;
 				after = trav;
 				before = trav.next;
-			}			
+			}
 			nn.next = before;
 			nn.prev = after;
 			before.prev = nn;

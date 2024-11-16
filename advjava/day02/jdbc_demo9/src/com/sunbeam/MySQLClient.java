@@ -51,7 +51,6 @@ public class MySQLClient {
 						}
 					}
 					else {
-						// get update count from stmt and print
 						int cnt = stmt.getUpdateCount();
 						System.out.println("Rows Affected: " + cnt);
 					}

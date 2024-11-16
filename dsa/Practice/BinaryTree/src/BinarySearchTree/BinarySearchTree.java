@@ -44,11 +44,10 @@ public class BinarySearchTree {
 			// go into right of current node
 		//3.4 repeat step 3.2 and 3.3 till node is not getting added into BSTree
 	
-	
+
+
 	public void addNode(int data) {
-		
 		Node newNode=new Node(data);
-		
 		if(root==null) {
 			root=newNode;
 		}else {
@@ -71,7 +70,7 @@ public class BinarySearchTree {
 						current=current.right;
 					}
 				}
-			}	
+			}
 		}
 	}
 	

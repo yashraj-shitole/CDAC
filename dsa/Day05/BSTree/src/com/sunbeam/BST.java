@@ -227,7 +227,7 @@ public class BST {
 			else if(temp == parent.right) 
 				parent.right = temp.right;
 		}
-		//5. if node has single child (left child)		
+		//5. if node has single child (left child)
 		else {//if(temp.right == null){
 			if(temp == root)
 				root = temp.left;
@@ -244,16 +244,3 @@ public class BST {
 		root = null;
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
