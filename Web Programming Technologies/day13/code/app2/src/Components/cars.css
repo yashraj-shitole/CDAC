@@ -1,0 +1,9 @@
+.car {
+  background-color: beige;
+  margin: 10px;
+  padding: 20px;
+  border: solid 1px black;
+  float: left;
+  box-shadow: 0px 5px 5px gray;
+  border-radius: 10px;
+}

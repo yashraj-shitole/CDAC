@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Client To Node Server</title>
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+  </head>
+  <body class="container">
+    <br />
+    <button onclick="Logout()" class="btn btn-primary" style="float: right">
+      Log out
+    </button>
+    <br />
+    <div class="table-responsive">
+      <table class="table table-bordered" id="MyTableInputs">
+        <tr>
+          <td>No</td>
+          <td><input type="text" id="txtNo" /></td>
+        </tr>
+        <tr>
+          <td>Name</td>
+          <td><input type="text" id="txtName" /></td>
+        </tr>
+        <tr>
+          <td>Address</td>
+          <td><input type="text" id="txtAddress" /></td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <input
+              type="button"
+              class="btn btn-primary"
+              value="Add Record"
+              onclick="Add()"
+            />
+            <input
+              type="button"
+              class="btn btn-success"
+              value="Update Record"
+              onclick="Update()"
+            />
+            <input
+              type="button"
+              class="btn btn-info"
+              value="Clear"
+              onclick="Clear()"
+            />
+          </td>
+        </tr>
+      </table>
+    </div>
+    <hr />
+    <center>
+      <div id="messageDiv" class="alert-warning"></div>
+    </center>
+    <hr />
+    <div class="table-responsive">
+      <table class="table table-bordered" id="MyTable">
+        <thead>
+          <th>No</th>
+          <th>Name</th>
+          <th>Address</th>
+          <th>Edit Here</th>
+          <th>Delete Here</th>
+        </thead>
+        <tbody id="MyTableBody"></tbody>
+      </table>
+    </div>
+    <script>
+      function Logout() {
+        window.sessionStorage.removeItem("token");
+        window.location.href = "login.html";
+      }
+    </script>
+    <script>
+      debugger;
+      var url = `http://127.0.0.1:9999/employees`;
+
+      CheckToken();
+      function CheckToken() {
+        debugger;
+        var token = window.sessionStorage.getItem("token");
+        if (token == undefined) {
+          window.location.href = "login.html";
+        } else {
+          //Call to GET
+          GetLatestData();
+        }
+      }
+
+      //POST
+      function Add() {
+        debugger;
+        var employeeToBeAdded = GetDataFromTextBoxes();
+        var helper = new XMLHttpRequest();
+        helper.onreadystatechange = () => {
+          if (helper.readyState == 4 && helper.status == 200) {
+            var result = JSON.parse(helper.responseText);
+
+            if (
+              result.isUserValid != undefined &&
+              result.isUserValid == false
+            ) {
+              window.sessionStorage.removeItem("token");
+              window.location.href = "login.html";
+            }
+
+            if (result.affectedRows > 0) {
+              GetLatestData();
+              SetDataToTextBoxes("", "", "");
+              SetMessageDiv("Record added successfully!");
+            } else {
+              SetMessageDiv("Something went wrong with adding record!");
+            }
+          }
+        };
+        var token = window.sessionStorage.getItem("token");
+        helper.open("POST", url);
+        helper.setRequestHeader("Authorization", token);
+        helper.setRequestHeader("Content-Type", "application/json");
+        helper.send(JSON.stringify(employeeToBeAdded));
+      }
+
+      //Clear text boxes
+      function Clear() {
+        SetDataToTextBoxes("", "", "");
+      }
+
+      //Get data from textboxes in object format
+      function SetDataToTextBoxes(no, name, address) {
+        var refToTxtNo = document.getElementById("txtNo");
+        var refToTxtName = document.getElementById("txtName");
+        var refToTxtAddress = document.getElementById("txtAddress");
+
+        refToTxtNo.value = no;
+        refToTxtName.value = name;
+        refToTxtAddress.value = address;
+      }
+
+      //Get data from textboxes in object format
+      function GetDataFromTextBoxes() {
+        var refToTxtNo = document.getElementById("txtNo");
+        var refToTxtName = document.getElementById("txtName");
+        var refToTxtAddress = document.getElementById("txtAddress");
+
+        var employee = {
+          No: parseInt(refToTxtNo.value),
+          Name: refToTxtName.value,
+          Address: refToTxtAddress.value,
+        };
+
+        return employee;
+      }
+
+      //Set Error Message on Screen
+      function SetMessageDiv(message) {
+        debugger;
+        if (message != "") {
+          var refTomessageDiv = document.getElementById("messageDiv");
+          refTomessageDiv.innerText = message;
+
+          setTimeout(() => {
+            refTomessageDiv.innerText = "";
+          }, 3000);
+        }
+      }
+
+      //GET
+      function GetLatestData() {
+        var refToMyTableBody = document.getElementById("MyTableBody");
+        refToMyTableBody.innerHTML = "";
+
+        var helper = new XMLHttpRequest();
+        helper.onreadystatechange = () => {
+          if (helper.readyState == 4 && helper.status == 200) {
+            var result = JSON.parse(helper.responseText);
+            debugger;
+            if (
+              result.isUserValid != undefined &&
+              result.isUserValid == false
+            ) {
+              window.sessionStorage.removeItem("token");
+              window.location.href = "login.html";
+            }
+
+            if (result.sqlMessage == undefined) {
+              debugger;
+
+              result.map((employee) => {
+                refToMyTableBody.innerHTML =
+                  refToMyTableBody.innerHTML +
+                  `<tr>
+                        <td>${employee.No}</td>
+                        <td>${employee.Name}</td>
+                        <td>${employee.Address}</td>
+                        <td>
+                           <button class="btn btn-warning"
+                           onclick="Edit(${employee.No})">Edit</button>
+                        </td>
+                          <td>
+                        <button class="btn btn-danger"
+                        onclick="Delete(${employee.No})">Delete</button>
+                        </td>
+                    </tr>`;
+              });
+            } else {
+              debugger;
+              //means there is err
+              SetMessageDiv("Something went wrong!");
+            }
+          }
+        };
+
+        var token = window.sessionStorage.getItem("token");
+        helper.open("GET", url);
+        helper.setRequestHeader("Authorization", token);
+        helper.send();
+      }
+
+      //GET by No
+      function Edit(no) {
+        var helper = new XMLHttpRequest();
+        helper.onreadystatechange = () => {
+          if (helper.readyState == 4 && helper.status == 200) {
+            var result = JSON.parse(helper.responseText);
+            if (
+              result.isUserValid != undefined &&
+              result.isUserValid == false
+            ) {
+              window.sessionStorage.removeItem("token");
+              window.location.href = "login.html";
+            }
+
+            if (result.sqlMessage == undefined) {
+              //even if its edit by no
+              //Node returns us single record in array format
+              //hence we will pick up zero'th record
+              var employeeToEdit = result[0];
+              SetDataToTextBoxes(
+                employeeToEdit.No,
+                employeeToEdit.Name,
+                employeeToEdit.Address
+              );
+              SetMessageDiv("Record Found!!");
+            } else {
+              SetMessageDiv("Something went wrong while editing!");
+            }
+          }
+        };
+        var token = window.sessionStorage.getItem("token");
+        helper.open("GET", url + `/${no}`);
+        helper.setRequestHeader("Authorization", token);
+
+        helper.send();
+      }
+
+      //DELETE
+      function Delete(no) {
+        var helper = new XMLHttpRequest();
+        helper.onreadystatechange = () => {
+          if (helper.readyState == 4 && helper.status == 200) {
+            var result = JSON.parse(helper.responseText);
+
+            if (
+              result.isUserValid != undefined &&
+              result.isUserValid == false
+            ) {
+              window.sessionStorage.removeItem("token");
+              window.location.href = "login.html";
+            }
+
+            if (result.affectedRows > 0) {
+              GetLatestData();
+              SetMessageDiv("Record Deleted!!");
+            } else {
+              SetMessageDiv("Something went wrong while deleting!");
+            }
+          }
+        };
+        var token = window.sessionStorage.getItem("token");
+        helper.open("Delete", url + `/${no}`);
+        helper.setRequestHeader("Authorization", token);
+
+        helper.send();
+      }
+
+      //PUT
+      function Update() {
+        debugger;
+        var employeeToBeUpdated = GetDataFromTextBoxes();
+        var helper = new XMLHttpRequest();
+        helper.onreadystatechange = () => {
+          if (helper.readyState == 4 && helper.status == 200) {
+            var result = JSON.parse(helper.responseText);
+
+            if (
+              result.isUserValid != undefined &&
+              result.isUserValid == false
+            ) {
+              window.sessionStorage.removeItem("token");
+              window.location.href = "login.html";
+            }
+
+            if (result.affectedRows > 0) {
+              GetLatestData();
+              SetDataToTextBoxes("", "", "");
+              SetMessageDiv("Record Updated!!");
+            } else {
+              SetMessageDiv("Something went wrong with updation!");
+            }
+          }
+        };
+        var token = window.sessionStorage.getItem("token");
+        helper.open("PUT", url + `/${employeeToBeUpdated.No}`);
+        helper.setRequestHeader("Authorization", token);
+        helper.setRequestHeader("Content-Type", "application/json");
+        helper.send(JSON.stringify(employeeToBeUpdated));
+      }
+    </script>
+  </body>
+</html>

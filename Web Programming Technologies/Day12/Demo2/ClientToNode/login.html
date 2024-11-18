@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+  </head>
+  <body class="container">
+    <br /><br /><br /><br /><br /><br /><br /><br />
+    <center>
+      <div class="table-responsive">
+        <table class="table table-bordered" style="width: 30%">
+          <tr>
+            <td>User Name</td>
+            <td>
+              <input type="text" id="txtUserName" />
+            </td>
+          </tr>
+          <tr>
+            <td>Password</td>
+            <td>
+              <input type="password" id="txtPassword" />
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <input
+                type="button"
+                value="Sign In"
+                id="btnLogin"
+                class="btn btn-primary"
+                onclick="Login()"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <div class="alert-warning"></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </center>
+    <script>
+      function Login() {
+        debugger;
+        var refTotxtUserName = document.getElementById("txtUserName");
+
+        var refTotxtPassword = document.getElementById("txtPassword");
+
+        var credentials = {
+          username: refTotxtUserName.value,
+          password: refTotxtPassword.value,
+        };
+
+        var helper = new XMLHttpRequest();
+        helper.onreadystatechange = () => {
+          if (helper.readyState == 4 && helper.status == 200) {
+            debugger;
+            var result = JSON.parse(helper.responseText);
+            if (result.isUserValid) {
+              window.sessionStorage.setItem("token", result.token);
+              window.location.href = "client.html";
+            } else {
+              alert("credenatials are invalid!");
+            }
+            debugger;
+          }
+        };
+
+        helper.open("POST", "http://127.0.0.1:9999/login");
+        helper.setRequestHeader("Content-Type", "application/json");
+        helper.send(JSON.stringify(credentials));
+      }
+    </script>
+  </body>
+</html>
