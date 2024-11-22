@@ -20,7 +20,7 @@ export async function signup(firstName, lastName, email, password, phone) {
 }
 
 export async function signin(email, password) {
-  try {
+  try { 
     const body = { email, password }
     const url = createUrl('admin/signin')
     const response = await axios.post(url, body)
