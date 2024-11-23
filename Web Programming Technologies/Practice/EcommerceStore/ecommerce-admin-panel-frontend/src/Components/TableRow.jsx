@@ -18,7 +18,9 @@ function TableRow({ id, title, details, onDelete }) {
           >Edit</button>
         <button
           className="px-3 py-1 rounded-full border border-[#ff0000] hover:bg-[#ff0000] hover:text-white " 
-          onClick={onDelete(id)}
+          onClick={() => {
+            onDelete(id)
+          }}
           >
           Delete
         </button>

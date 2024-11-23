@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
-import { getBrandList } from "../util/brands";
+import { deleteBrand, getBrandList } from "../util/brands";
 import TableRow from "../Components/TableRow";
 import { deleteCategory } from "../util/category";
 
@@ -25,11 +25,11 @@ const Brand = () => {
 
 
     
-            const onDeleteCategory = async (id) => {
-                const result = await deleteCategory(id)
+            const onDeleteBrand = async (id) => {
+                const result = await deleteBrand(id)
                 if (result['status'] == 'success') {
                   toast.success('Successfully deleted selected category')
-            
+                    onLoadbrands()
                 } else {
                   toast.error(result['error'])
                 }
@@ -69,7 +69,7 @@ const Brand = () => {
                 id={category['id']}
                 title={category['title']}
                 details={category['details']}
-                onDelete={onDeleteCategory}
+                onDelete={onDeleteBrand}
               />
             )
           })}

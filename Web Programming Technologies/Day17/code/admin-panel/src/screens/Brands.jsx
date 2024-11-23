@@ -1,8 +1,8 @@
-import { Link } from 'react-router-dom'
-import Navbar from '../components/Navbar'
 import { useEffect, useState } from 'react'
-import Row from '../components/Row'
+import { Link } from 'react-router-dom'
 import { toast } from 'react-toastify'
+import Navbar from '../components/Navbar'
+import Row from '../components/Row'
 import { deleteBrand, getBrandList } from '../services/brand'
 
 function Brands() {
@@ -22,6 +22,8 @@ function Brands() {
     // load all brands when this component is loaded on the screen
     onLoadBrands()
   }, [])
+
+ 
 
   const onDeleteBrand = async (id) => {
     const result = await deleteBrand(id)

@@ -32,7 +32,8 @@ const AddBrand = () => {
       navigate(-1)
     }
 
-  return <div >
+  return(
+<div >
   <div className='flex flex-col p-5 items-center justify-center'>
     <h2 className='text-3xl p-3 font-bold'>Add Brand</h2>
 
@@ -66,7 +67,9 @@ const AddBrand = () => {
     </div>
   </div>
   </div>
-</div>;
+</div>
+
+  )
 };
 
 export default AddBrand;
