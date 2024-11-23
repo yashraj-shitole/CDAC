@@ -1,10 +1,10 @@
 import axios from 'axios'
 import { createUrl } from '../utils'
 
-export async function addBrands(title, details) {
+export async function addCategory(title, details) {
   try {
     const body = { title, details }
-    const url = createUrl('brand/')
+    const url = createUrl('category/')
     const response = await axios.post(url, body)
     return response.data
   } catch (ex) {
@@ -12,9 +12,9 @@ export async function addBrands(title, details) {
   }
 }
 
-export async function getBrandList() {
+export async function getCategoryList() {
   try {
-    const url = createUrl('brand/')
+    const url = createUrl('category/')
     const response = await axios.get(url)
     return response.data
   } catch (ex) {
@@ -22,9 +22,9 @@ export async function getBrandList() {
   }
 }
 
-export async function deleteBrand(id) {
+export async function deleteCategory(id) {
   try {
-    const url = createUrl('brand/' + id)
+    const url = createUrl('category/' + id)
     const response = await axios.delete(url)
     return response.data
   } catch (ex) {

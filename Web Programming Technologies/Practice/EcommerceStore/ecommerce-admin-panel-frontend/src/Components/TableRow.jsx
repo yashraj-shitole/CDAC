@@ -1,18 +1,9 @@
 import { toast } from 'react-toastify'
-import { delete } from '../util/category'
+import { deleteCategory } from '../util/category'
 
 
-function Row({ id, title, details, onDelete }) {
-  const onDelete = async () => {
-    const result = await delete(id)
-    if (result['status'] == 'success') {
-      toast.success('Successfully deleted selected category')
+function TableRow({ id, title, details, onDelete }) {
 
-      onDelete()
-    } else {
-      toast.error(result['error'])
-    }
-  }
 
   return (
     <tr>
@@ -27,7 +18,7 @@ function Row({ id, title, details, onDelete }) {
           >Edit</button>
         <button
           className="px-3 py-1 rounded-full border border-[#ff0000] hover:bg-[#ff0000] hover:text-white " 
-          onClick={onDeleteCategory}
+          onClick={onDelete(id)}
           >
           Delete
         </button>
@@ -37,4 +28,4 @@ function Row({ id, title, details, onDelete }) {
   )
 }
 
-export default Row
+export default TableRow

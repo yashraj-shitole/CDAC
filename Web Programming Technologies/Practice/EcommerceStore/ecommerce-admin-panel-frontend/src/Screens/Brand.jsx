@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
-import Row from "../Components/Row";
 import { getBrandList } from "../util/brands";
+import TableRow from "../Components/TableRow";
+import { deleteCategory } from "../util/category";
 
 
 const Brand = () => {
@@ -23,11 +24,23 @@ const Brand = () => {
     }, [])
 
 
+    
+            const onDeleteCategory = async (id) => {
+                const result = await deleteCategory(id)
+                if (result['status'] == 'success') {
+                  toast.success('Successfully deleted selected category')
+            
+                } else {
+                  toast.error(result['error'])
+                }
+              }
+        
+
   return<div>
   <div className='flex flex-col items-center'>
     <h2 className='text-3xl p-3 font-bold'>Brands</h2>
 
-    <Link className=" rounded-full w-fit border shadow-[#38383860] shadow-md hover:bg-[#222831] hover:text-white  px-5 py-2 font-extrabold border-accent" to='/home/addcategory'>
+    <Link className=" rounded-full w-fit border shadow-[#38383860] shadow-md hover:bg-[#222831] hover:text-white  px-5 py-2 font-extrabold border-accent" to='/home/addbrand'>
       Add
     </Link>
     {brands.length == 0 && (
@@ -52,11 +65,11 @@ const Brand = () => {
         <tbody>
           {brands.map((category,i) => {
             return (
-              <Row key={i}
+              <TableRow key={i}
                 id={category['id']}
                 title={category['title']}
                 details={category['details']}
-                onDelete={onLoadbrands}
+                onDelete={onDeleteCategory}
               />
             )
           })}

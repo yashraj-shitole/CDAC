@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
-import Row from "../Components/Row";
 import { getCategoryList } from "../util/category";
+import TableRow from "../Components/TableRow";
 
 const Category = () => {
 
@@ -52,7 +52,7 @@ const Category = () => {
             <tbody>
               {categories.map((category,i) => {
                 return (
-                  <Row key={i}
+                  <TableRow key={i}
                     id={category['id']}
                     title={category['title']}
                     details={category['details']}

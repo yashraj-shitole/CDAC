@@ -11,9 +11,9 @@ import Register from './Screens/Register'
 import Products from './Screens/Products'
 import Brand from './Screens/Brand'
 import { AddProduct } from './Screens/AddProduct'
-import { AddBrand } from './Screens/AddBrand'
 import Orders from './Screens/Orders'
 import Customers from './Screens/Custoers'
+import AddBrand from './Screens/AddBrand'
 
 
 function App() {

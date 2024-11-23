@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { createUrl } from '../utils'
 
-export async function addBrands(title, details) {
+export async function addBrand(title, details) {
   try {
     const body = { title, details }
     const url = createUrl('brand/')
