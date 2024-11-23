@@ -1,3 +1,3 @@
 module.exports = {
-  secret: '0987654321anysecretkey',
+  secret: '23234353534435',
 }

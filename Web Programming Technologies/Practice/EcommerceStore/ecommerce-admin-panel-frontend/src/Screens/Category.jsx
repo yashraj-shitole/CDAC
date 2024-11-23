@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
-import CategoryRow from "../Components/CategoryRow";
-import Navbar from "../Components/Navbar";
+import Row from "../Components/Row";
 import { getCategoryList } from "../util/category";
 
 const Category = () => {
@@ -25,11 +24,10 @@ const Category = () => {
   return (
 
     <div>
-      <Navbar />
       <div className='flex flex-col items-center'>
         <h2 className='text-3xl p-3 font-bold'>Categories</h2>
 
-        <Link className="border  rounded-full w-fit border shadow-[#38383860] shadow-md hover:bg-[#222831] hover:text-white  px-5 py-2 font-extrabold border-accent" to='/addcategory'>
+        <Link className="border  rounded-full w-fit border shadow-[#38383860] shadow-md hover:bg-[#222831] hover:text-white  px-5 py-2 font-extrabold border-accent" to='/home/addcategory'>
           Add
         </Link>
         {categories.length == 0 && (
@@ -54,7 +52,7 @@ const Category = () => {
             <tbody>
               {categories.map((category,i) => {
                 return (
-                  <CategoryRow key={i}
+                  <Row key={i}
                     id={category['id']}
                     title={category['title']}
                     details={category['details']}

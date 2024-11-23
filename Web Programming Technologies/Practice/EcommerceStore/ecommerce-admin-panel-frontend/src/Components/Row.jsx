@@ -1,10 +1,10 @@
 import { toast } from 'react-toastify'
-import { deleteCategory } from '../util/category'
+import { delete } from '../util/category'
 
 
-function CategoryRow({ id, title, details, onDelete }) {
-  const onDeleteCategory = async () => {
-    const result = await deleteCategory(id)
+function Row({ id, title, details, onDelete }) {
+  const onDelete = async () => {
+    const result = await delete(id)
     if (result['status'] == 'success') {
       toast.success('Successfully deleted selected category')
 
@@ -37,4 +37,4 @@ function CategoryRow({ id, title, details, onDelete }) {
   )
 }
 
-export default CategoryRow
+export default Row

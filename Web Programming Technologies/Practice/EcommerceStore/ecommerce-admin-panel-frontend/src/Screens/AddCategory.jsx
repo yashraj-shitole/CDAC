@@ -35,7 +35,6 @@ const AddCategory = () => {
     }
 
   return <div >
-  <Navbar />
   <div className='flex flex-col p-5 items-center justify-center'>
     <h2 className='text-3xl p-3 font-bold'>Add Category</h2>
 

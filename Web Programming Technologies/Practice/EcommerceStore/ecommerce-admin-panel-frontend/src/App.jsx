@@ -8,6 +8,12 @@ import Category from './Screens/Category'
 import Home from './Screens/Home'
 import Login from './Screens/Login'
 import Register from './Screens/Register'
+import Products from './Screens/Products'
+import Brand from './Screens/Brand'
+import { AddProduct } from './Screens/AddProduct'
+import { AddBrand } from './Screens/AddBrand'
+import Orders from './Screens/Orders'
+import Customers from './Screens/Custoers'
 
 
 function App() {
@@ -20,10 +26,22 @@ function App() {
             <Route path="/" element={<Login/>}/>
             <Route path="/signup" element={<Register/>}/>
 
-            <Route path="/home" element={<Home/>}/>
-            <Route path="/categories" element={<Category/>}/>
-            <Route path="/addcategory" element={<AddCategory/>}/>
+            <Route path="home" element={<Home/>}>
             
+              <Route path="categories" element={<Category/>}/>
+              <Route path="addcategory" element={<AddCategory/>}/>
+
+              <Route path="products" element={<Products/>}/>
+              <Route path="addproducts" element={<AddProduct/>}/>
+
+              <Route path="Brand" element={<Brand/>}/>
+              <Route path="addBrand" element={<AddBrand/>}/>
+            
+              <Route path="orders" element={<Orders/>}/>
+              <Route path="customers" element={<Customers/>}/>
+            
+            </Route>
+
           </Routes>
 
 

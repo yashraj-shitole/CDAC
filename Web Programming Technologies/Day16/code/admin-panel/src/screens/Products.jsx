@@ -23,6 +23,7 @@ function Products() {
     onLoadProducts()
   }, [])
 
+
   return (
     <div>
       <Navbar />
