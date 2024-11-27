@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myapp
+spec:
+  containers:
+    - name: myfrontend
+      image: pythoncpp/frontend
+      ports:
+        - containerPort: 80
+    - name: mybackend
+      image: pythoncpp/backend
+      ports:
+        - containerPort: 3000
