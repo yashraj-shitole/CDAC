@@ -102,9 +102,9 @@
 apiVersion: v1
 kind: Pod
 metadata:
-    name: pod1
+    name: asdpod1
 spec:
-    containers
+    containers:
     - name: container1
       image: httpd
 
@@ -135,7 +135,7 @@ kind: Pod
 metadata:
     name: pod2
 spec:
-    containers
+    containers:
     - name: container1
       image: httpd
       ports:

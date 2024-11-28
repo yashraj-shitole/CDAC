@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: reactreplica
+spec:
+  replicas: 10
+  selector:
+    matchLabels:
+      app: reactimage
+  template:
+    metadata:
+      labels:
+        app: reactimage
+    spec:
+      containers:
+        - name: react-container
+          image: yashrajshitole/reactimage
+          ports:
+            - containerPort: 3000

@@ -1,0 +1,61 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: replica-set-frontend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      type: frontend
+  template:
+    metadata:
+      labels:
+        type: frontend
+    spec:
+      containers:
+        - name: container1
+          image: pythoncpp/frontend
+          ports:
+            - containerPort: 80
+
+---
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: replica-user-service
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      type: user-service
+  template:
+    metadata:
+      labels:
+        type: user-service
+    spec:
+      containers:
+        - name: container1
+          image: pythoncpp/user-service
+          ports:
+            - containerPort: 80
+
+---
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: replica-order-service
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      type: order-service
+  template:
+    metadata:
+      labels:
+        type: order-service
+    spec:
+      containers:
+        - name: container1
+          image: pythoncpp/order-service
+          ports:
+            - containerPort: 80

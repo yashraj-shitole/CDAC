@@ -1,0 +1,22 @@
+# list of services (projects) to automate
+services:
+  frontend:
+    image: app1-frontend
+    ports:
+      - 8000:80
+    deploy:
+      replicas: 2
+
+  user-service:
+    image: app1-user-service
+    ports:
+      - 4200:4000
+    deploy:
+      replicas: 2
+
+  order-service:
+    image: app1-order-service
+    ports:
+      - 4100:4000
+    deploy:
+      replicas: 2

@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: asdpod1
+spec:
+  containers:
+  - name: container1
+    image: httpd

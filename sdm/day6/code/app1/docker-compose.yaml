@@ -1,0 +1,19 @@
+# list of services (projects) to automate
+services:
+  frontend:
+    # where to find the Dockerfile to build this project
+    build: frontend/
+
+    # expose the required ports
+    ports:
+      - 8000:80
+
+  user-service:
+    build: user-service/
+    ports:
+      - 4200:4000
+
+  order-service:
+    build: order-service/
+    ports:
+      - 4100:4000
