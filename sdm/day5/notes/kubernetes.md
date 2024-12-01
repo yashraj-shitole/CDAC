@@ -141,7 +141,6 @@ spec:
       ports:
       - containerPort: 80
 
-
 ```
 
 ## replica set
@@ -172,6 +171,7 @@ spec:
           ports:
             - containerPort: 80
 ```
+
 
 ```bash
 

@@ -1,0 +1,3 @@
+sudo usermod -aG docker jenkins
+sudo systemctl restart jenkins
+ls -l /var/run/docker.sock

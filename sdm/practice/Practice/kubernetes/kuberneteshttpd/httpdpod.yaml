@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: httpd-app
+spec: 
+ containers:
+ - name: httpd-container1
+   image: kubeimagehttpd
+   imagePullPolicy: Never
+   ports:
+   - containerPort: 80

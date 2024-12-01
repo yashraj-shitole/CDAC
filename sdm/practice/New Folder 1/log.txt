@@ -1,0 +1,4 @@
+Erro: File not found
+Error: Low disk
+Info:Backup complee
+Error: No backup
