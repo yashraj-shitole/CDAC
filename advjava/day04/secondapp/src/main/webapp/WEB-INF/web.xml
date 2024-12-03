@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+	id="WebApp_ID" version="4.0">
+	<display-name>secondapp</display-name>
+	<welcome-file-list>
+		<welcome-file>home.html</welcome-file>
+	</welcome-file-list>
+	<servlet>
+		<servlet-name>JdbcDemo</servlet-name>
+		<servlet-class>com.sunbeam.Demo2Servlet</servlet-class>
+		<init-param>
+			<param-name>jdbc.driver</param-name>
+			<param-value>com.mysql.cj.jdbc.Driver</param-value>
+		</init-param>
+		<init-param>
+			<param-name>jdbc.url</param-name>
+			<param-value>jdbc:mysql://localhost:3306/kdacdb</param-value>
+		</init-param>
+		<init-param>
+			<param-name>jdbc.user</param-name>
+			<param-value>kdac</param-value>
+		</init-param>
+		<init-param>
+			<param-name>jdbc.password</param-name>
+			<param-value>kdac</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>JdbcDemo</servlet-name>
+		<url-pattern>/demo2</url-pattern>
+	</servlet-mapping>
+	
+</web-app>
+
