@@ -1,7 +1,8 @@
 package com.sunbeam.servlet;
 
 import java.io.*;
-
+import javax.servlet.http.HttpSession;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
@@ -31,13 +32,27 @@ public class LogoutServlet extends HttpServlet {
 		resp.addCookie(c2);
 		
 		
+		// destroy the session
+				HttpSession session = req.getSession();
+				session.invalidate();
+		
+		
+		
+		
+				ServletContext app = this.getServletContext();
 		resp.setContentType("text/html");
 		PrintWriter out = resp.getWriter();
 		out.println("<html>");
 		out.println("<head>");
 		out.println("<title>Logout</title>");
 		out.println("</head>");
-		out.println("<body>");
+		String color=app.getInitParameter("app.color");
+		out.println("<body style='background-color:"+color+";'>");
+		
+		// get app title from ctx param and display it
+				String appTitle = app.getInitParameter("app.title");
+				out.printf("<h1>%s</h1>", appTitle);
+				
 		out.println("<h2>Thank you</h2>");
 		out.println("<p>See you after 5 years.</p>");
 		out.println("<p><a href='index.html'>Login Again</a></p>");

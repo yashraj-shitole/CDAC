@@ -15,4 +15,6 @@ public interface UserDao extends AutoCloseable {
 	User findById(int id) throws Exception;
 	User findByEmail(String email) throws Exception;
 	int save(User u) throws Exception;
+	int update(User u) throws Exception;
+
 }

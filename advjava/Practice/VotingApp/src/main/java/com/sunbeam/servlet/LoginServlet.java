@@ -3,6 +3,7 @@ package com.sunbeam.servlet;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.annotation.WebServlet;
@@ -14,6 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.sunbeam.daos.UserDao;
 import com.sunbeam.daos.UserDaoImpl;
 import com.sunbeam.entity.User;
+import javax.servlet.http.HttpSession;
 
 
 @WebServlet("/login")
@@ -48,6 +50,10 @@ public class LoginServlet extends HttpServlet {
 				c2.setMaxAge(3600);
 				resp.addCookie(c2);
 				
+				// store logged in user into session
+				HttpSession session = req.getSession();
+				session.setAttribute("curUser", dbUser);
+				
 				if(dbUser.getRole().equals("admin")) {
 					resp.sendRedirect("result");
 				}
@@ -56,13 +62,21 @@ public class LoginServlet extends HttpServlet {
 				}
 			}
 			else {
+				ServletContext app = this.getServletContext();
+				String appTitle = app.getInitParameter("app.title");
+				
 				resp.setContentType("text/html");
 				PrintWriter out = resp.getWriter();
 				out.println("<html>");
 				out.println("<head>");
 				out.println("<title>Login</title>");
 				out.println("</head>");
-				out.println("<body>");
+				
+				String color=app.getInitParameter("app.color");
+				out.println("<body style='background-color:"+color+";'>");
+				
+				out.printf("<h1>%s</h1>", appTitle);
+				
 				out.println("<h2>Login Failed</h2>");
 				out.println("<p>Sorry, Invalid email or password.</p>");
 				out.println("<p><a href='index.html'>Login Again</a></p>");

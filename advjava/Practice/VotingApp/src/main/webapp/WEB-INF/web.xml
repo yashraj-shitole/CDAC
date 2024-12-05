@@ -9,4 +9,18 @@
     <welcome-file>default.jsp</welcome-file>
     <welcome-file>default.htm</welcome-file>
   </welcome-file-list>
+  <session-config>
+  	<session-timeout>2</session-timeout>
+  	<cookie-config>
+  		<name>SID</name></cookie-config>
+  	<tracking-mode>COOKIE</tracking-mode>
+  </session-config>
+  <context-param>
+  	<param-name>app.title</param-name>
+  	<param-value>Online Voting System</param-value>
+  </context-param>
+  <context-param>
+  	<param-name>app.color</param-name>
+  	<param-value>#E5E3D4</param-value>
+  </context-param>
 </web-app>

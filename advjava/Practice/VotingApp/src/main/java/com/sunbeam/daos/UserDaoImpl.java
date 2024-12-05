@@ -19,6 +19,8 @@ public class UserDaoImpl extends Dao implements UserDao {
 	private PreparedStatement stmtFindById;
 	private PreparedStatement stmtFindByEmail;
 	private PreparedStatement stmtSave;
+	private PreparedStatement stmtUpdate;
+
 	
 	public UserDaoImpl() throws Exception {
 		String sqlFindAll = "SELECT * FROM users";
@@ -29,15 +31,37 @@ public class UserDaoImpl extends Dao implements UserDao {
 		stmtFindByEmail = con.prepareStatement(sqlFindByEmail);
 		String sqlSave = "INSERT INTO users (first_name, last_name, email, password, dob, status, role) VALUES(?, ?, ?, ?, ?, ?, ?)";
 		stmtSave = con.prepareStatement(sqlSave);
+		String sqlUpdate = "UPDATE users SET first_name=?, last_name=?, email=?, password=?, dob=?, status=?, role=? WHERE id=?";
+		stmtUpdate = con.prepareStatement(sqlUpdate);
 	}
 	
 	public void close() throws Exception {
 		stmtSave.close();
 		stmtFindByEmail.close();
 		stmtFindById.close();
+		stmtUpdate.close();
 		stmtFindAll.close();
 		super.close();
 	}
+	
+	
+	
+	@Override
+	public int update(User u) throws Exception {
+		stmtUpdate.setString(1, u.getFirstName());
+		stmtUpdate.setString(2, u.getLastName());
+		stmtUpdate.setString(3, u.getEmail());
+		stmtUpdate.setString(4, u.getPassword());
+		stmtUpdate.setDate(5, u.getBirth());
+		stmtUpdate.setInt(6, u.getStatus());
+		stmtUpdate.setString(7, u.getRole());
+		stmtUpdate.setInt(8, u.getId());
+		int count = stmtUpdate.executeUpdate();
+		return count;
+	}
+	
+	
+	
 	
 	@Override
 	public List<User> findAll() throws Exception {
