@@ -23,6 +23,7 @@
 	<%-- add a variable in given scope --%>
 	<c:if test="${count == null}">
 		<c:set var="count" value="0" scope="session"/>
+		
 	</c:if>
 	<%-- reassign value to variable --%>
 	<c:set var="count" value="${count + 1}" scope="session"/>
