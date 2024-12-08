@@ -1,0 +1,15 @@
+Day 8
+1. Revise the development steps
+2. You have already imported test_hibernate_basic.
+Continue with the same
+
+2.1 Create HibernateUtils to create session factory
+2.2 Create Team POJO(Entity class)  for IPL team , for the following table n then add mapping entry.
+
+ teams table -
+team_id bigint primary key auto_increment,name varchar(100) unique ,abbreviation varchar(10) unique,owner varchar(20) not null,max_player_age int,
+batting_avg double,wickets_taken int)
+
+2.3 Create Team DAO interface n implementation class , for adding new IPL team
+
+2.4. Write a Tester for this n test  it 

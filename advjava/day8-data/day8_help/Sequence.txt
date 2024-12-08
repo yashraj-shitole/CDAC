@@ -1,0 +1,79 @@
+Welcome 2 Hibernate !
+What is Hibernate ?
+Provider of Automatic persistence (CRUD)
+ORM tool
+JPA (Java Persistence API) implementor
+JPA - specification , i.e part of Java EE
+Hibernate - a very popular JPA implementor
+Other JPA implementors - iBatis, JDO , Kodo, EclipseLink ....
+
+Why Hibernate ?
+1. Programmer DOES NOT have to go to DB layer n
+establish DB connection ,create PSTs(PrepareStatemment) , set IN params
+,execute queries , process ResultSets n perform ORM , clean up DB resources
+Instead hibernate performs it !
+2. It offers complete DB independence
+(since in DAO layer , JPQL will be used , hibernate will translate DB independent JPQL -> DB specific SQL)
+3. Uses internal DBCP (DB connection pool).
+It's not meant for production level , to be used in dev env.\
+Supplies scaliabilty to the application.
+4. It does Exception transalation 
+(translates checked SQLException -> un checked HibernateExcetption)
+5. Supports method chaining
+6. Supports caching
+L1 cache - session level cache (implicitly available)
+L2 cache - session factory cache (has to be configured explicitly)
+Query level cache - (has to be configured explicitly)
+7. Supports OOP features -
+inheritance n association , abstraction....
+Objective 
+Set up hibernate
+Development Steps 
+1. Create Maven based project , from scratch , to add hibernate dependencies
+OR import existing Maven project
+2. Add hibernate config xml file (hibernate.cfg.xml)
+hibernate.hbm2ddl.auto  - update
+Meaning - Hibernate will auto create a table for the POJO (Entity) if it doesn't exist
+If exists - continues with the existing one !
+
+3. Create Hibernate Utils 
+to create hibernate configuration -> build SessionFactory(SF)
+-> get session from SF
+
+4. Test it with TestHibernate - tester
+
+5. Create a POJO class
+Add annotations
+
+6. Create DAO interface n implementation class
+For saving entity in DB
+
+7. Write a Tester to test insertion of a record in DB
+
+
+Core Java Help
+Use static import syntax - to directyl access static members
+syntax - import static F.Q className.* | . member
+eg :
+
+import static java.lang.System.*;
+import static java.lang.Math.PI;
+out.println("Hello !");
+out.println(PI);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

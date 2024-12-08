@@ -7,6 +7,7 @@
 <title>Login</title>
 </head>
 <body>
+	<div style="display: flex; align-items: center; justify-content: center; flex-direction: column;">
 
 <h1>VOTING</h1>
  
@@ -19,6 +20,7 @@
 			<a href="signup.jsp">Sign Up</a>
 		</p>
 	</form>
+	</div>
 
 </body>
 </html>

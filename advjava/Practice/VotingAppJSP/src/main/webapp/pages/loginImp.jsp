@@ -16,17 +16,36 @@
 <jsp:setProperty property="password" param="password" name="loginBean"/>
 <% boolean isloggedin=loginBean.loggedIn(); %>
 
-	 <c:choose>
-        <c:when test="${loginBean.loggedIn()}">
-            <c:set var="user" value="${loginBean.u}" scope="session"/>
-            <h1>Successfully Logged In</h1>
-            
-            <c:redirect url="vote.jsp"/>
-        </c:when>
-        <c:otherwise>
-            <h1>Login Failed</h1>
-        </c:otherwise>
-    </c:choose>
+    
+    <c:choose>
+		<c:when test="${loginBean.u != null}">
+			
+			<c:choose>
+				<c:when test="${loginBean.u.role == 'admin'}">
+					<c:redirect url="result.jsp"/>	
+						<c:set var="user" value="${loginBean.u}" scope="session"/>
+					
+				</c:when>
+				
+				<c:when test="${loginBean.u.role == 'voter'}">
+					<c:redirect url="vote.jsp"/>
+			            <c:set var="user" value="${loginBean.u}" scope="session"/>
+					
+				</c:when>
+				
+			</c:choose>
+		</c:when>
+		<c:otherwise>
+			<h2>Login Failed</h2>
+			<p>
+			Invalid email or password.
+			</p>
+			<p>
+			<a href="index.jsp">Login Again</a>
+			</p>
+		</c:otherwise>
+	</c:choose>
+	
 	
 </body>
 </html>

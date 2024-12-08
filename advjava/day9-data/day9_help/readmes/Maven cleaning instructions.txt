@@ -1,0 +1,20 @@
+Basic cleaning instructions(If required) 
+1. Copy the Maven project under your workspace
+2. Import it  , as existing Maven project , in your workspace
+3. Then Force update maven project 
+
+If it does not work , 
+4.Run Maven  Goals - clean  compile
+R click on project --Run as --Maven Build --Goals : clean compile
+
+5. Project clean
+This should download the  dependencies.
+
+ 
+
+If this doesn't work :
+Exit from STS(IDE)
+Delete <repository> from under .m2
+Re enter IDE.
+Then Force update maven project , Maven clean n project clean
+This should download maven dependencies.

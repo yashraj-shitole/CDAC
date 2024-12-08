@@ -1,0 +1,67 @@
+1. Create from scratch , hibernate n maven based Java SE application. Test the same.
+OR 
+today simply copy from hibernate template project : test_hibernate n start from step 4 onwards.
+
+Steps for Hibernate + Java SE
+1. Change perspective to Java
+
+2. Create Maven Project ---skip archetype selection --
+grp id,artifact id , packaging option : jar --finish
+
+3. Creates default pom.xml . Add <build> n <dependencies> tags from day8_help\hibernate-help\config-files\pom.xml
+
+4. Update the project .
+R click on the project --> Maven --> Update Project -->select Force update checkbox -->Finish
+
+OR 
+5. Simply import existing Maven project in your workspace.
+How ?
+Copy test_hibernate_basic under your workspace folder.
+From IDE
+Click on File --> import --> Maven --> Existing Maven Project --> Browse n select test_hibernate_basic project --> Finish.
+
+
+Edit DB password from hibernate.cfg.xml , as per your DB settings.
+
+6. Create HibernateUtils class to create singleton , immutable , inherently thrd safe SessionFactory instance.
+
+7. Create a class TestHibernate under <tester> package.
+Add following code. 
+
+import static utils.HibernateUtils.*;
+import org.hibernate.*;
+
+public class TestHibernate {
+
+	public static void main(String[] args) {
+		try(SessionFactory sf=getSf())
+		{
+			System.out.println("Hibernate booted.....");
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+
+}
+
+8. Run this as "java application" , check console to see , 
+sf created & hib booted .
+
+Above confirms bootstrapping of hibernate framework.
+
+9. Create a POJO n test auto table creation
+
+
+9.2 Add <mapping> entry per POJO in hibernate.cfg.xml
+Run TestHibernate to confirm auto table creation.
+
+10. Create Hibernate based DAO layer , to insert a record.
+10.1 DAO layer i/f
+String registerUser(User user);
+10.2 Hibenrate based DAO implementation class
+no data mebers, no constr,no clean up
+ CRUD method
+
+11. Create a main(...) based tester to test entire application , for user registration.
+
