@@ -1,0 +1,17 @@
+com\cdac\entities\UserRole.class
+com\cdac\tester\GetUserDetailsById.class
+com\cdac\tester\GetSelectedUserDetailsByRoleAndDob.class
+com\cdac\tester\RestoreImageFromDB.class
+com\cdac\tester\TestBulkUpdations.class
+com\cdac\tester\UserRegistration.class
+com\cdac\dao\UserDao.class
+com\cdac\tester\TestJPQLCtorExpression.class
+com\cdac\entities\User.class
+com\cdac\tester\ChangePassword.class
+com\cdac\tester\SaveImage.class
+com\cdac\tester\TestHibernate.class
+com\cdac\dao\UserDaoimpl.class
+com\cdac\tester\DeleteUserDetailsById.class
+com\cdac\tester\DisplayLastNames.class
+com\cdac\utils\HibernateUtils.class
+com\cdac\tester\DisplayUserDetails.class

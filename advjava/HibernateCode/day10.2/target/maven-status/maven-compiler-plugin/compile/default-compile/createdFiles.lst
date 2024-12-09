@@ -1,0 +1,5 @@
+com\cdac\entities\UserRole.class
+com\cdac\dao\UserDao.class
+com\cdac\entities\User.class
+com\cdac\entities\BaseEntity.class
+com\cdac\utils\HibernateUtils.class
