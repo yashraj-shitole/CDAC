@@ -1,0 +1,6 @@
+com\sunbeam\entities\IPLTeam.class
+com\sunbeam\tester\TeamTester.class
+com\sunbeam\dao\TeamDaoImp.class
+com\sunbeam\tester\TestHibernate.class
+com\sunbeam\utils\HibernateUtils.class
+com\sunbeam\dao\TeamDao.class

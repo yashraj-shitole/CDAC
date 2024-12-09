@@ -113,7 +113,7 @@ public class UserDaoimpl implements UserDao {
 		Transaction tx = session.beginTransaction();
 		try {
 			users = session.createQuery(jpql, User.class).setParameter("rl", userRole).setParameter("date", dob)
-					.getResultList();
+					.getResultList();	
 			// list of persistent entities
 			tx.commit();
 		} catch (RuntimeException e) {
