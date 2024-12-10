@@ -1,0 +1,121 @@
+Day 8
+1. Revise the development steps
+2. You have already imported test_hibernate_basic.
+Continue with the same
+
+2.1 Create HibernateUtils to create session factory
+2.2 Create Team POJO(Entity class)  for IPL team , for the following table n then add mapping entry.
+
+ teams table -
+team_id bigint primary key auto_increment,name varchar(100) unique ,abbreviation varchar(10) unique,owner varchar(20) not null,max_player_age int,
+batting_avg double,wickets_taken int)
+
+2.3 Create Team DAO interface n implementation class , for adding new IPL team
+
+2.4. Write a Tester for this n test  it 
+
+Day 9
+
+1. import day9.1 in your workspace , as existing Maven Project 
+Edit DB password
+Force update Maven project
+
+2. We will revise CRUD with user scenario
+
+3. Hands on
+3.1 Add multiple IPL teams in DB
+3.2 Display all teams
+3.3 Display all teams , requiring 
+max age requirement of the player < specified age
+batting average required > specified average
+I/P - age n batting average
+
+3.4 Display team owner names n team abbreviations
+ requiring 
+max age requirement of the player < specified age
+batting average > specified average
+I/P - age n batting average
+o/p - list of teams
+
+3.5 Update max age requirement
+i/p - IPL team name
+o/p - message (success | failure)
+
+3.6 Delete team details
+i/p - team id
+o/p - message (success | failure)
+
+
+Day 10
+1. Install lombok JAR for your STS 3 IDE
+(Refer - "day10-data\day10_help\readmes\Regarding Lombok.txt")
+I will get all the steps done , but 
+We will not spend too much time here.
+If in case it doesn't work , continue by generating ctors , getters,setters , toString etc.
+
+2. Revision
+2.1 Copy n  import day10.2 in your workspace , as existing Maven Project 
+Edit DB password
+Force update Maven project
+Maven - clean compile
+
+2.2 We will revise advanced hibernate part here.
+inheritance n associations
+
+
+3. Hands on - Continue with your IPL assignment
+
+3.1 Create BaseEntity -
+add common fields 
+id , creationDate, updatedOn
+
+3.2 Update Team POJO (extends BaseEntity)
+
+3.3 Create Player POJO 
+for the players table 
+Refer - 
+players(id bigint primary key auto_increment,first_name varchar(20),last_name varchar(20),dob date,batting_avg double,wickets_taken int,team_id int ,constraint fk_teams foreign key (team_id) references teams(id)
+
+3.4 Establish Team 1 <-----> * Player , a bi directional association between the entities.
+Hint 
+Use JPA annotations n mappedBy
+Team - one , parent table , inverse
+Player - many , child table , owning (FK)
+
+Day 11
+1. Revision
+1.1 Copy n  import day11.1 (from last commit) in your workspace , as existing Maven Project 
+Edit DB password
+Force update Maven project
+Maven - clean compile
+
+1.2 Revise via code
+all associations.
+
+2. Add User 1----->1 AdhaarCard
+(Entity - Composite Value Type)
+
+3. Add User 1---->* Languages
+private List<String> languages=newArrayList<>();
+Configure it as Collection of basic value types.
+
+Run TestHibernate , to understand
+
+4. Solve 
+
+4.1 Add Player to the team
+i/p - player details (first_name,last_name, dob,batting_avg,wickets_taken) n team id
+o/p a message (success or failure)
+DB action - player record should be added with FK set.
+
+
+4.2 Display team n player details
+i/p - team id
+o/p - team + list of players displayed
+
+4.3 Remove the player from team
+i/p - team id , player id 
+o/p - a message (success or failure)
+DB action - player record should be reoved
+
+

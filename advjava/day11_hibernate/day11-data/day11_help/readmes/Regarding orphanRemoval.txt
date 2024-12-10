@@ -1,0 +1,15 @@
+Regarding orphanRemoval
+
+What is orphanRemoval ?
+A boolean property of @OneToMany / @OneToOne annotation.
+default value - false
+
+It states - 
+Whether to apply the remove operation to entities that have been removed from the relationship and to cascade the remove operation to those entities.
+We had already added - cascade=CascadeType.ALL (which includes - REMOVE)
+BUT still it wasn't working.
+
+So after enabling the orphanRemoval=true , after removing the post from the category 
+(using removeBlogPost) , we are telling hibernate to remove the orphan post record . 
+
+
