@@ -1,0 +1,1 @@
+insert into customers values(default,1000,'a1@gmail.com','a1 b1','12345','2024-05-20','customer');

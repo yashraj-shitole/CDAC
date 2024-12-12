@@ -85,7 +85,7 @@ Player - many , child table , owning (FK)
 Day 11
 1. Revision
 1.1 Copy n  import day11.1 (from last commit) in your workspace , as existing Maven Project 
-Edit DB password
+Edit DB password	
 Force update Maven project
 Maven - clean compile
 

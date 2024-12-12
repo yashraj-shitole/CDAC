@@ -1,0 +1,23 @@
+Spring MVC Flow 
+(Refer to the diagram)
+
+1. Client Request: The flow begins when a client (usually a web browser or later front end app) sends a request to the Spring MVC application. The request is typically an HTTP request, such as a GET or POST, targeting a specific URL or endpoint.
+
+2. DispatcherServlet: The DispatcherServlet is the entry point for handling requests in Spring MVC. It acts as a front controller, receiving all requests and dispatching them to the appropriate components for processing. 
+It's used in MVC model II . It  is a common web-application pattern where a single servlet delegates responsibility for incoming request to other components of an application to perform the actual processing. 
+
+The DispatcherServlet is typically configured in the application's web.xml or later through Spring Boot's auto-configuration.
+
+3. Handler Mapping: The DispatcherServlet consults the configured handler mappings to determine the appropriate controller to handle the request. Handler mapping map the incoming request URL to a specific handler(=request handling controller) class n it's method.
+
+4. Controller(Request handling controller=handler): Once the appropriate controller is determined, the DispatcherServlet invokes the corresponding controller method to handle the request. The controller method performs the necessary processing based on the request parameters, path variables, and other inputs.
+
+5. Model and View: The controller method prepares the model data(results) that will be used by the view for rendering the response. The model represents the data to be displayed, and it can be populated by the controller method or by invoking services or other components.
+
+6. View Resolution: After the controller method has processed the request and prepared the model, the DispatcherServlet consults the configured view resolver to determine the appropriate view for rendering the response. The view resolver resolves the logical view name from the controller to the actual view name.
+
+7.View Rendering: The resolved view is responsible for rendering the response. It combines the model data with the view template(Thymeleaf) or markup(JSP with HTML 5 ) to generate the final response, such as an HTML page. The view may use technologies like JSP, Thymeleaf, or other templating engines to render the response.
+
+8. Response: Once the view has rendered the response, the DispatcherServlet sends the response back to the client over the network.
+
+Additional components can also be involved in processing the request and response, such as interceptors, validators, and exception handlers. Additionally, the Spring MVC framework provides extensive support for request mapping, data binding, validation, and other features to simplify web application development.

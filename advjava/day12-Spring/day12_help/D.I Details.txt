@@ -1,0 +1,36 @@
+Modes of wiring (D.I) suppoted by SC
+1.Explicit wiring
+Meaning prog has to supply - java code(setters | parameterized ctors | factory method)
++ xml configuration
+1.1 Constructor Based D.I
+Used for mandatory dependencies(i.e dependency is created first n then dependent)
+1. In dependent bean class - add parameterized ctor (ard per /dependency)
+2. In xml file
+<constructor-arg name|type|index value|ref/> 
+one per dependency
+use value -for injecting prim types
+use ref - for injecting depcy bean refs.
+
+1.2 Setter based D.I
+Used for optional dependencies(i.e dependent is created first n then dependency)
+1. In dependent bean class - add a setter / per dependency
+2. In xml file
+<property name value|ref/> 
+one per dependency
+use value -for injecting prim types
+use ref - for injecting depcy bean refs.
+
+1.3 Factory method based D.I
+SC can provide the dependecies even w/o any paramterized ctor or setters , using factory method
+factory method=public static method returning bean instance
+1. Add factory method in bean class
+2. In xml 
+add factory-method="nameOfFactroyMethod" attribute in the <bean> tag.
+To supply args , to the factory method
+ <constructor-arg name|type|index value|ref/> 
+
+
+
+
+
+

@@ -1,0 +1,38 @@
+Continue with  Integration of Spring MVC with Hibernate
+
+1. Un comment importing of hibernate-persistence.xml from Matster spring config file(i.e spring-servlet.xml)
+2. Copy from "Spring Reference Material\Spring MVC\spring-hibernate-templates" folder 
+2.1 database.properties
+Edit DB name to blogs2 n DB password
+2.2 hibernate-persistence.xml"
+Edit p:packages-to-scan : com.blogs.pojos
+
+3. Copy from day11.1 , Maven project ,
+com.blogs.pojos package under src/main/java
+
+4. Maven Force Update
+Run Maven Goals - clean compile
+R click on project - Run On server
+It should show you on console , "in ctor" of controllers n Hibernate framework up n running.
+
+5. We will continue with 
+DAO n Service n integrate whole application
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

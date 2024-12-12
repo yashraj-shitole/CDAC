@@ -1,0 +1,105 @@
+Shortforms 
+F.C - Front Controller
+D.S - DispatcherServlet
+H.M - HandlerMapping bean
+V.R - ViewResolver
+SC - Spring container
+LVN - logical view name
+AVN - Actual view name
+
+
+Steps for Spring MVC 
+1. Copy n import from "Template Projects\spring_mvc_template" , to download spring MVC n hibernate dependencies, force update it.
+
+2. Configure the entry point(common interceptor) - Front Controller , supplied by Spring web frmwork
+o.s.w.s.DispatcherServlet -Can Intercept ANY request coming fron ANY client
+Configure it in web.xml
+Important config
+url-pattern / 
+servlet name spring
+servlet-class o.s.w.s.DispatcherServlet
+load-on-startup 1
+
+3. Job of D.S (DispatcherServlet)
+init() -> start the SC , in a dynamic web application.
+Creates the instance of - XmlWebApplicationContext , represents SC within web application
+Default xml config 
+file - servletName-servlet.xml (eg - spring-servlet.xml)
+location - WEB-INF
+consists of XML tags for launching the SC.
+
+4. Create request handing controller (=handler) - prog supplied spring bean
+Add class level annotation - @Controller
++ 
+Add method level annotation - @RequestMapping (equivalent - service)
+@GetMapping = RequestMapping + method=GET (doGet)
+@PostMapping = RequestMapping + method=POST (doPost)
+.....
+5. SC creates n populates map to store the entries
+Map i/f - HandlerMapping
+IMplementation class - RequestMappingHandlerMapping
+Key - value of @RequestMapping
+Value -  F.Q controller cls Name + method name
+It's a spring bean - singleton n eager
+
+6. Using spring-servlet.xml , configure ViewResolver spring bean.
+singleton n eager
+Job - Translation from Logical view Name (LVN) -> Actual view Name(AVN)
+, using the prefix n suffix properties.
+AVN = prefix+LVN+suffix
+
+7. All of above blocks (D.S , HandlerMapping-H.M , Handler , ViewResolver-V.R) are ready , right at the web app deployment time.
+
+8. Create JSP based view layer
+name - welcome.jsp
+location - /WEB-INF/views
+
+9. Test Spring MVC flow .
+
+10. Render index page also using Spring MVC ,via D.S
+Clnt sends URL - http://host:port/ctx_path/ , method=GET
+-> intercepted by Front controller (D.S)
+->D.S sends the key / to -> H.M -> sends back the value (HelloWorldController.renderIndexPage)
+-> D.S invokes handler's method -> rets LVN to D.S
+-> D.S sends it -> V.R ->rets AVN 
+-> D.S forwards the clnt to view layer 
+-> renders the view
+
+11. Render results along with view layer.
+How to share results between Handler n View layer
+Ans - Using ModelAttributes
+Handler sends the model attributes -> D.S -> adds them under request scope -> sends them to JSP
+Access these using EL syntax.
+
+12. How to add model attributes ?
+12.1 Using o.s.w.s.ModelAndView class
+Constructor 
+ModelAndView(String LVN , String modelAttrName,Object modelAttrValue)
+OR
+12.2Using o.s.ui.Model - i/f 
+Map of model attributes
+Instead of handler method creating this Model map , simply ask SC to provide it. => IoC
+HOW ? Add Model Map as the method argument , SC will create EMPTY model map n pass it to the method (D.I)
+API for adding model attributes
+public Model addAttribute(String attrName,Object attrValue)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

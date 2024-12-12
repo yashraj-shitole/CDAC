@@ -35,7 +35,7 @@ public class IPLTeam extends BaseEntity {
 	@Column(name = "wickets_taken")
 	private int wicketsTaken;
 	
-	 @OneToMany (mappedBy="playerTeam")
+	 @OneToMany (mappedBy="playerTeam",orphanRemoval = true,cascade = CascadeType.ALL)
 	   private List<Player> players=new ArrayList<>();
 
 	

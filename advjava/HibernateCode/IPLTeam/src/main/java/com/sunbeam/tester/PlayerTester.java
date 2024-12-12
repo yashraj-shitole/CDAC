@@ -28,11 +28,8 @@ public class PlayerTester {
 				System.out.println("0. EXIT\n"
 								+ "1. Add Player\n"
 								+ "2. Display all players\n"
-								+ "3. Get all players from specified team\n"
-								+ "4. Display team owner names requiring max age, batting average\n"
-								+ "5. Display team owner names and team abbreviations requiring max age, batting average\n"
-								+ "6. Update max age requirement\r\n"
-								+ "7. Delete team details");
+								+ "3. Display team And player details\n"
+								+ "4. Remove the player from team i/p - team id , player id \n");
 				
 					
 				
@@ -56,6 +53,7 @@ public class PlayerTester {
 					break;
 					
 				case 4:
+					removePlayerFromTeam();
 					break;
 					
 				case 5:
@@ -83,10 +81,34 @@ public class PlayerTester {
 
 	}
 
+	private static void removePlayerFromTeam() {
+		
+		PlayerDao playerDao=new PlayerDaoImp();
+		
+		Scanner sc=new Scanner(System.in);
+		
+		
+		System.out.println("Enter player id to remove");
+		Long playerId=sc.nextLong();
+		
+		System.out.println("Enter players team id ");
+		Long teamId=sc.nextLong();
+		
+		
+		System.err.println( playerDao.removePlayer(teamId, playerId));
+		
+		
+	}
+
 	private static void displayPlayersFromTeam() {
 		
 		PlayerDao playerdao=new PlayerDaoImp();
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter Team id");
+		Long teamId=sc.nextLong();
 		
+		
+		playerdao.getPlayerFromTeam(teamId).forEach(System.out::println);;
 				
 		
 	}
@@ -119,9 +141,11 @@ public class PlayerTester {
 		Long teamId=sc.nextLong();
 		
 		
+		
 		Player player=new Player(firstName, lastName, dob, battingAvg, wicketTaken, null);
 		
-		playerDao.addPlayer(player,teamId);
+		
+		System.err.println(playerDao.addPlayer(player,teamId));
 		
 		
 //	    Player player1 = new Player("Rohit", "Sharma", LocalDate.of(1987, 4, 30), 48.0, 150, null);
