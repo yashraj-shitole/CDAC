@@ -1,0 +1,78 @@
+Steps
+
+1. File --New --Spring starter project -- add project name , group id ,artifact id ,base pkg name , keep packaging as JAR for Spring MVC web application.
+
+
+2. Add dependencies 
+web -- web 
+sql -- Spring Data JPA, MYSQL
+dev -- DevTools
+Lombok
+validation
+
+2.5 Modify pom.xml -
+spring boot parent version - 2.7.18
+JDK - 11
+Force update.
+
+
+3. Copy the entries from supplied application.properties & edit DB configuration.
+
+3.5 Spring MVC ViewResolver related
+spring.mvc.view.prefix=/WEB-INF/views
+spring.mvc.view.suffix=.jsp
+
+4.For Spring MVC (with JSP view layer demo) using spring boot project
+
+Add following  dependencies ONLY for Spring MVC with JSP as View Layer in pom.xml
+
+	<!-- Additional dependencies for Spring MVC -->
+		<dependency>
+			<groupId>org.apache.tomcat.embed</groupId>
+			<artifactId>tomcat-embed-jasper</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+		</dependency>
+
+
+5. Create under src/main  : /webapp/WEB-INF/views   folder
+
+6. R Click on the spring boot project --Run As --Spring Boot App 
+
+OR 
+Instead of doing all of above steps , 
+simply copy n import "Template Projects\spring_boot_template_mvc"
+Force update Maven Project
+Edit DB password(settings) in the application.properties (kept under <resources>)
+n quickly start with the main development.
+
+
+
+
+7. Port earlier spring MVC app , observe the problems.
+& fix it.
+Any problems : Yes 
+
+org.hibernate.HibernateException: No CurrentSessionContext configured!
+Reason : Spring boot DOES NOT auto support hibernate native APIs
+(i.e org.hibernate.SessionFactory , Session , Transaction....)
+
+Solution : Replace hibernate's native API (org.hibernate) by JPA (javax.persistence)
+
+(refer : "day16-data\day16_help\spring boot\diagrams\jpa-entitymgr-session-layers.png")
+
+In DAO layer : replace native hibernate API by JPA
+i.e instead of auto wiring SF in DAO layer : inject JPA' EntityManager directly in DAO.
+
+How ?
+@PersistenceContext  
+//OR can continue to use @AutoWired : spring supplied annotation
+private EntityManager mgr;
+//uses def persistence unit , created auto by spring boot using db setting added //in application.properties file , 1 per app / DB
+
+Use directly EntityManager API (refer : )
+
+8. Test Entire application.

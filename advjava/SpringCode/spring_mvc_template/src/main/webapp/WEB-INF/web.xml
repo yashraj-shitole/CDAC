@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    <display-name>spring_mvc_template</display-name>
+    
+    <!-- remove this so that index file is not available publically -->
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+    
+    
+    
+    <!--  configure dispatch servlet as common interceptor  -->
+    <servlet>
+		<servlet-name>spring</servlet-name>
+		<!-- spring supplied class -->
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<!-- so that spring container will run on startup (default is -1 which meand lazy load) -->
+		<load-on-startup>1</load-on-startup> 
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>spring</servlet-name>
+		<!-- global interceptor pattern - so that any request from any machine can be recieved -->
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+</web-app>
