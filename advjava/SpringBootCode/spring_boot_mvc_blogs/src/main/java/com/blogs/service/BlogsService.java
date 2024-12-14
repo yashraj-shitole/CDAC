@@ -6,7 +6,7 @@ import com.blogs.pojos.BlogPost;
 
 public interface BlogsService {
 
-	boolean addBlog(String title, String content, String description, Long categoryId);
+	boolean addBlog(String title, String content, String description, Long categoryId,Long userId);
 
 	
 		

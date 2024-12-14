@@ -1,0 +1,16 @@
+
+Steps to add lombok support - 
+1. Add lombok dependency : pom.xml (already done !)
+2. install lombok jar , from 
+<home dir> \.m2\repository\org\projectlombok\lombok\1.18.x
+OR open terminal/cmd prompt
+java -jar lombok-1.18.x.jar
+Specify location : IDE (STS : IDE app)
+2.5 Maven force update +  cleaning steps
+3. use annotations.
+
+To Locate IDE installation : 
+From STS IDE  --Help --Installation Details -- Configuration
+eg :C:\STS 4.4.17.2\sts-4.17.2.RELEASE\SpringToolSuite4.exe
+n Install Lombok JAR.
+

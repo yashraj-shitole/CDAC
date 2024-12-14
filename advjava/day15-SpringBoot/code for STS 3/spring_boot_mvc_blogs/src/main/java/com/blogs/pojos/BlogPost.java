@@ -26,6 +26,8 @@ public class BlogPost extends BaseEntity {
 	private String description;
 	@Column(length = 500)
 	private String content;
+	//to support soft delete - add status field
+	private boolean status;
 	//BlogPost *--->1 Category
 	//BlogPost - many, child , owning
 	@ManyToOne 
@@ -41,12 +43,5 @@ public class BlogPost extends BaseEntity {
 		this.title = title;
 		this.description = description;
 		this.content = content;
-	}
-
-		public BlogPost(String title2, String description2, String content2, Category category, User user) {
-			this.title = title2;
-			this.description = description2;
-			this.content = content2;
-			this.blogCategory=category;
-		}	
+	}	
 }

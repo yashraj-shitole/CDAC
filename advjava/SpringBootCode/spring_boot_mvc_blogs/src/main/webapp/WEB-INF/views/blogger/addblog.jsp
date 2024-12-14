@@ -35,6 +35,11 @@
 	<div>
 	<label for="categoryId">Category id</label>
 	<input type="number" name="categoryId">
+	 </div>
+	 	
+	<div>
+	<label for="uderId">User id</label>
+	<input type="number" name="userId">
 	 </div>	
 
 	</div>

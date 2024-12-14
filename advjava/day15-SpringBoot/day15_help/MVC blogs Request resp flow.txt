@@ -1,0 +1,61 @@
+Request resp flow
+1. request -> http://host:port/ctx/
+resp -> login.jsp
+
+
+2. After submitting login form 
+req - http://host:port/ctx/user/login , method=POST
+in case of failure ,  redirect to  - login.jsp with err mesg
+in case of successful blogger login  ,  redirect to - blogger's home page(in the next request)
+in case of successful admin login  ,  redirect to - admin's home page(in the next request)
+
+3. In case of a blogger , 
+Clnt browser sends redirect request(automatically)   - http://host:port/ctx/blogger/home , method=GET
+resp - home page of blogger with greeting
++
+Display all available blog posts
+(Add Update n Delete links only if blogger is the author of the blog post) - conditional rendering
+Steps
+1. BlogPostDao -get list of available (status =true)
+List<BP> findByStatusTrue()
+2. BlogPostService 
+invoke method
+3. BloggerController
+modelMap.addAttribute("aval_posts",service.getAvlPosts());
+return "/blogger/home";
+
+
+
+4. For blog updation 
+
+
+5. For soft deletion of a blog
+http://localhost:8080/spring_mvc_blogs/blogger/delete?postId=2
+Steps
+1. BlogPostDao - no change
+2. BlogPostService - post Id 
+findById -> orElseThrow(resnotfoundexc)
+post : persistent
+post.setStatus(false)
+3. BloggerController
+mesg - deleted blog post
+redirect -> home page
+
+
+
+6. For logout , when user clicks on the Logout link
+URL - http://host:port/ctx/user/logout
+D.S --> H.M --> null !
+Steps 
+UserController
+add new method
+for 
+invalidate session
+logout mesg - Hello name!
+n redirect clnt to login page after delay 
+
+
+
+
+
+
