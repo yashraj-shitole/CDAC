@@ -5,6 +5,8 @@ import java.time.LocalDate;
 import com.blogs.pojos.User;
 
 
+
+
 public interface UserService {
 	
 	User authenticateUser(String email, String password);

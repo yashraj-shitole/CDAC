@@ -1,0 +1,35 @@
+Regarding Lombok library
+
+Why -  
+
+To reduce boilerplate code from the entities Layer , add Lombok annotations
+
+Good Ref : https://www.baeldung.com/intro-to-project-lombok
+
+What is Lombok ?
+It's helper 3rd party library , to reduce boilerplate code from java classes(mainly form POJO layer)  , using annotations
+Steps 
+1. Add lombok dependency, during creation of spring boot project.
+2. Install Lombok library , to IDE location.
+3. Use class level annotations
+eg : @NoArgsConstructor , @AllArgsConstructor, @RequiredArgsConstructor
+@Getter
+@Setter
+@ToString(exclude = ...,callSuper = true)
+@Data n many more
+
+Steps 
+1. Add lombok dependency : pom.xml (already done !)
+2. install lombok jar , from 
+<home dir> \.m2\repository\org\projectlombok\lombok\1.18.30
+OR open terminal/cmd prompt
+java -jar lombok-1.18.30.jar
+Specify location : IDE (STS : IDE app)
+2.5 Maven force update +  cleaning steps
+3. use annotations.
+
+To Locate IDE installation : 
+From STS IDE  --Help --Installation Details -- Configuration
+eg : C:\sts-bundle\sts-3.9.18.RELEASE\STS.exe 
+n Install Lombok JAR.
+

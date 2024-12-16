@@ -1,0 +1,31 @@
+@CrossOrigin
+Class/Method level annotation , in RestController , to allow cross-origin HTTP requests from JavaScript clients with CORS.
+
+
+What is CORS ?
+Cross-Origin Resource Sharing (CORS)
+
+A cross-origin HTTP request is a request to a specific resource, which is located at a different origin, namely a domain, protocol and port, than the one of the client performing the request.
+
+CORS is an HTTP-header based mechanism that allows a server to indicate any origins (domain, scheme, or port) other than its own from which a browser should permit loading of resource(response) 
+
+
+Browsers can request several cross-origin resources, including images, CSS, JavaScript files , JSONs etc.  By default, a browser’ security model will deny any cross-origin HTTP request performed by client-side scripts.
+
+While this behavior is desired,  to prevent different types of Ajax-based attacks, sometimes we need to instruct the browser to allow cross-origin HTTP requests from JavaScript clients with CORS.
+
+eg :  React  client running on http://localhost:3000, and a Spring Boot RESTful web service API listening at http://host:port/products
+
+In such a case, the client should be able to consume the REST API, which by default would be forbidden. 
+
+To make this work ,  enable CORS  by simply annotating the class / methods of the RESTful web service API responsible for handling client requests with the @CrossOrigin annotation
+
+eg : @CrossOrigin(origins = "http://localhost:3000")
+@RestController
+public class ProductController{....}
+
+
+
+
+
+

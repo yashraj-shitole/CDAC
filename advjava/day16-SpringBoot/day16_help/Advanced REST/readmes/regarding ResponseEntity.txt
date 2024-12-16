@@ -1,0 +1,13 @@
+Standard design practice for back end : DO NOT directly send response body content , instead wrap it in ResponseEntity object, which represents ENTIRE HTTP response(status code,header/s, body)
+
+1.1 Introduction to ResponseEntity
+o.s.http.ResponseEntity<T>  : a generic class
+T : type of the response body
+
+1.2 o.s.http.ResponseEntity<T>
+Ctor : ResponseEntity(T body, HttpStatus status);
+HttpStatus : enum containing Resp status codes
+
+OR Methods
+ResponseEntity.status(HttpStatus status).body(T body)
+

@@ -1,0 +1,34 @@
+1. Regarding Swagger : 
+
+Standard testing n documentation tool for REST APIs : OAS (Open API specification n Swagger)
+
+OpenAPI Specification (OAS):
+
+The OAS, is an open standard(spec) for describing and documenting n testing RESTful APIs.
+
+It provides a machine-readable representation of an API, allowing developers to understand its endpoints, request/response data formats(payloads) , authentication methods etc.. 
+
+The specification is written in YAML(Yet Another Markup Language) or JSON format and serves as a contract between the API provider(REST server) n it's  consumer(REST clnt) 
+
+It is widely used in the industry to build, test, and consume APIs, supplying better communication and collaboration between development teams.
+
+Swagger:
+ Swagger is a collection of open-source tools(eg. swagger-ui) that support this specification and provide additional functionalities like API documentation and code generation.
+Swagger is an open-source set of tools built around the OpenAPI Specification.
+
+How to use ?
+ 
+1.1 Add swagger dependency in pom.xml
+(Already added in spring boot backend template project)
+<!-- Swagger UI -->
+		
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-ui</artifactId>
+			<version>1.7.0</version>
+		</dependency>
+
+1.2 From web browser , access swagger endpoint
+http://localhost:8080/swagger-ui/index.html
+
+

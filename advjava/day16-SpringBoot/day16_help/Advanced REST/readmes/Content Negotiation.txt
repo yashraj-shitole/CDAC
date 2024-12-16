@@ -1,0 +1,46 @@
+REST resources can have multiple presentations (e.g. JSON or XML) as different clients can request different representation. 
+
+The mechanism for selecting a correct representation is known as content negotiation.
+
+By default it uses application/json (unless modified)
+
+Content negotiation allows clients to request specific content type(s) to be returned by the server. 
+
+With content negotiation, we enable a single endpoint to support different types of resource representations
+
+Content Negotiation Strategies
+
+Content Negotiation can be done in following ways
+
+1. Using Path Extension This has the highest preference. In the request we specify the required response type using the extension like .json,.xml or .txt.
+
+2. 
+Using url parameter This has the second highest preference. In the request we specify the required response type using the url parameter like format=xml or format=json.
+
+
+3. Using Accept Headers (request header) When making a request using HTTP we specify required response by setting the Accept header property.
+
+
+Another important point regarding conversion
+
+
+As we know ,  SC (using Jackson=Spring boot's default vendor for marshalling n un marshalling support)
+It uses :
+getters : During serialization(=marshalling , java---> json)
+setters : During de-serialization (=un marshalling , json --> java)
+
+Default  access :  BOTH (i.e allows - read(getter) n write(setter))
+
+To customize the names of serialization n de-ser props
+@JsonProperty : Jackson annotation
+eg : @JsonProperty(value="mesg")
+private String message;
+
+
+
+How to control the property/field access during serialization/de-serialization ?
+
+@JsonProperty(access = Access.WRITE_ONLY) : It  means that the property may only be written for de-serialization(skipped during ser.)
+
+@JsonProperty(access = Access.READ_ONLY) :  It  means that the property may only be read for serialization(skipped during de-ser)
+

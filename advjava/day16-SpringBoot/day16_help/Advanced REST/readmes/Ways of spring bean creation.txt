@@ -1,0 +1,35 @@
+1. Which are the different ways of configuring a java class as  a spring bean?
+1. In pure xml approach 
+bean-config.xml
+<bean id , class..../>
+
+OR
+2. Spring boot : no xml approach
+bean-config.xml --> replaced by Java configuration class (@Configuration)
+<bean id , class..../> : @Component | @Service | @Controller...
+It's possible to use these stereotype anno --while developing your own spring beans
+
+OR
+3. 
+For  the 3rd party classes (eg : ModelMapper , PasswordEncoder...) to be configured as spring bean : 
+Use  @Bean as  method level annotation , that can be added under spring config class
+eg - 
+
+@Bean 
+public ModelMapper modelMapper()
+{
+  ModelMapper mapper=new ModelMapper();
+ configure ModelMapper - set matching policy as  STRICT => in case of  matching names transfer the values from src object to destination n do not transfer  null values of the property from src to destination.
+  return mapper;
+}
+
+2. In a Spring boot application ,
+What are the defaults ?
+The package under which a main class is created is by default the base-package
+(This is the name that you specify while creating the spring starter project)
+
+This application class is auto annotated with : 
+@SpringBootApplication
+It's a composed annotation.
+
+It implies that it's a configuration class that declares one or more @Bean methods and also triggers auto-configuration and component scanning.

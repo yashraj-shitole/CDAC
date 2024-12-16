@@ -1,0 +1,56 @@
+Objective : Invoking one REST API from another REST API
+Refer - https://restful-api.dev/
+Example - Get single object
+
+To get details of object with given id 
+URL : https://api.restful-api.dev/objects/{id}
+
+Objective - Continue with our blogs-api
+Add a RestController , with GET to accept id
+URL - http://localhost:8080/rest_clnt/{id}
+
+This end point should call the - https://restful-api.dev/
+n get details n send it to the client.
+
+More 3rd party APIs
+https://apiclub.readme.io/reference/ifsc-code-lookup-api
+
+
+
+How to make a REST call from one web app to another  ?
+Use : org.springframework.web.client.RestTemplate
+Other alternative  : WebClient
+
+The RestTemplate class in Spring Framework is a synchronous HTTP client for making HTTP requests to consume RESTful web services. 
+
+It exposes a simple and easy-to-use template method API for sending an HTTP request and also handling the HTTP response. 
+
+The RestTemplate class also provides aliases for all supported HTTP request methods, such as GET, POST, PUT, PATCH , DELETE, and OPTIONS. 
+
+
+Steps - 
+1. Configure RestTemplate as a spring bean (@Bean) in the Spring boot application class.
+
+@Bean
+public RestTemplate restTemplate(){
+    return new RestTemplate();
+}
+2. Inject it as a dependency in the service Layer
+@Autowired
+private RestTemplate restTemplate;
+
+3. Instead of hard coding the URLs , add them in application.properties file
+# REST Client URL
+get.url=https://api.restful-api.dev/objects/{id}
+
+4. Using SpEL , inject it in the service layer
+
+@Value("${get.url}")
+	private String getURL;
+
+5. Make REST API call using methods of the RestTemplate class.
+public <T> T getForObject(String url,Class<T> responseType,Object... uriVariables)
+throws RestClientException
+T - type of the response
+
+

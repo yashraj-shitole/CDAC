@@ -1,0 +1,341 @@
+Day 8
+1. Revise the development steps
+2. You have already imported test_hibernate_basic.
+Continue with the same
+
+2.1 Create HibernateUtils to create session factory
+2.2 Create Team POJO(Entity class)  for IPL team , for the following table n then add mapping entry.
+
+ teams table -
+team_id bigint primary key auto_increment,name varchar(100) unique ,abbreviation varchar(10) unique,owner varchar(20) not null,max_player_age int,
+batting_avg double,wickets_taken int)
+
+2.3 Create Team DAO interface n implementation class , for adding new IPL team
+
+2.4. Write a Tester for this n test  it 
+
+Day 9
+
+1. import day9.1 in your workspace , as existing Maven Project 
+Edit DB password
+Force update Maven project
+
+2. We will revise CRUD with user scenario
+
+3. Hands on
+3.1 Add multiple IPL teams in DB
+3.2 Display all teams
+3.3 Display all teams , requiring 
+max age requirement of the player < specified age
+batting average required > specified average
+I/P - age n batting average
+
+3.4 Display team owner names n team abbreviations
+ requiring 
+max age requirement of the player < specified age
+batting average > specified average
+I/P - age n batting average
+o/p - list of teams
+
+3.5 Update max age requirement
+i/p - IPL team name
+o/p - message (success | failure)
+
+3.6 Delete team details
+i/p - team id
+o/p - message (success | failure)
+
+
+Day 10
+1. Install lombok JAR for your STS 3 IDE
+(Refer - "day10-data\day10_help\readmes\Regarding Lombok.txt")
+I will get all the steps done , but 
+We will not spend too much time here.
+If in case it doesn't work , continue by generating ctors , getters,setters , toString etc.
+
+2. Revision
+2.1 Copy n  import day10.2 in your workspace , as existing Maven Project 
+Edit DB password
+Force update Maven project
+Maven - clean compile
+
+2.2 We will revise advanced hibernate part here.
+inheritance n associations
+
+
+3. Hands on - Continue with your IPL assignment
+
+3.1 Create BaseEntity -
+add common fields 
+id , creationDate, updatedOn
+
+3.2 Update Team POJO (extends BaseEntity)
+
+3.3 Create Player POJO 
+for the players table 
+Refer - 
+players(id bigint primary key auto_increment,first_name varchar(20),last_name varchar(20),dob date,batting_avg double,wickets_taken int,team_id int ,constraint fk_teams foreign key (team_id) references teams(id)
+
+3.4 Establish Team 1 <-----> * Player , a bi directional association between the entities.
+Hint 
+Use JPA annotations n mappedBy
+Team - one , parent table , inverse
+Player - many , child table , owning (FK)
+
+Day 11
+1. Revision
+1.1 Copy n  import day11.1 (from last commit) in your workspace , as existing Maven Project 
+Edit DB password
+Force update Maven project
+Maven - clean compile
+
+1.2 Revise via code
+all associations.
+
+2. Add User 1----->1 AdhaarCard
+(Entity - Composite Value Type)
+
+3. Add User 1---->* Languages
+private List<String> languages=newArrayList<>();
+Configure it as Collection of basic value types.
+
+Run TestHibernate , to understand
+
+4. Solve 
+
+4.1 Add Player to the team
+i/p - player details (first_name,last_name, dob,batting_avg,wickets_taken) n team id
+o/p a message (success or failure)
+DB action - player record should be added with FK set.
+
+
+4.2 Display team n player details (in a single join query)
+i/p - team id
+o/p - team + list of players displayed
+
+4.3 Remove the player from team
+i/p - team id , player id 
+o/p - a message (success or failure)
+DB action - player record should be reoved
+
+
+
+Optional assignments for more practice
+
+1. Configure uni directional association (from scratch) 
+
+Comment *--->1 User(Commenter)
+Comment * ---> BlogPost
+
+Add required details in Entity layer 
+
+2. Post new comment
+i/p - comment text , rating , commenter(user) id n blog post id
+o/p - a mesg indicating success or failure
+DB action - new child record should get added in comments table.
+
+
+3. Update Comment text n rating
+i/p - comment id n new  text , new rating 
+o/p - mesg
+
+
+4. Delete all the comments by given commenter
+i/p - commenter id
+o/p - mesg (indicating how many comments were deleted)
+
+5. Add New Tag
+i/p - tag name)
+o/p - created tag details indicating tag id
+
+6. Assign post to the tag
+i/p - tag name n post title
+o/p - mesg
+
+7. Remove the post from a tag.
+i/p - tag id n post id
+o/p - mesg
+
+8. Assign user address
+i/p - user id n address details
+o/p - message
+
+9. Display user address
+i/p - user id
+o/p - address details or error message
+
+10. Display all the comments by specific commenter
+i/p - commenter's email
+o/p - list of comments
+
+
+Day 12
+1.Copy n  import day12.1 in your workspace.
+Force update Maven project
+Run Maven goals - clean compile
+
+1.1 Revise spring bean life cycle
+1.2 Constructor based D.I
+
+Solve Objective - 
+Single public school created only after 1st demand coming from client(only 1 instance)
+Use - Maths teacher : subject teacher.
+
+Solve Objective -
+Public school - single instance shared across multiple demands(must be available at the start up)
+mandatory depcy - football coach (created one per demand)
+mandatory depcy - funds
+optional depcy - eng teacher (created on 1st demand lazily)
+No other beans instantiated in heap of app ctx(spring app)
+BUT science teacher , maths teacher , cricket coach , swimming coach should be available in the configuration .
+
+
+2. Copy n  import day12.2 in your workspace.
+Force update Maven project
+2.1  Setter based D.I
+
+3. Use factory based D.I , to inject 
+subject teacher in public school.
+
+4. Revise Hibernate association 
+one-one (User 1--->1 Address)
+eg In User class - owning side (FK)
+@OneToOne
+@JoinColumn("name="adr_id)
+private Address myAddress;
+
+4.1 Solve 
+Assign user address
+i/p - user id n address details
+o/p - message
+
+6. Optional Exercise (for more practice)
+Establish uni dir association in IPL scenario
+Owner 1---->1 Team
+What will you add in Owner ?
+name , email , company +
+......
+private Team myTeam;
+What will you add/remove from Team ? 
+remove - owner name
+Confirm auto table creation
+
+
+
+Day 13
+1. Copy n import spring_mvc_template project in your workspace.
+You will find it under - "git\advjava\Template Projects\spring_mvc_template.zip"
+Force update Maven project.
+Confirm that your Tomcat Server is working fine.
+
+
+2. Objectives (will be solved in combined lab)
+2.1 Test Spring MVC Flow
+2.2 Test Model And View
+2.3 Test Model Map
+2.4 Test Spring MVC n Hibernate integration 
+Display all categories in JSP
+
+3. Optional assignment(BUT recommended !)
+Display All IPL teams.
+
+
+Day 14
+
+1. Copy n import "day14-data\code\spring_boot_mvc_blogs" in your workspace.
+Force update Maven project.
+Run Maven goals - clean compile
+This should download all spring boot n spring data JPA dependencies, in your Maven local repo.
+1.1 Edit DB password from application.properties file(from under <resources> folder)
+1.2 Run this spring boot app
+R click on the project --> Run as --> Spring Boot App
+Check the server console.
+It should show you Hikari Pool Starting n Tomcat embedded container starting on 8080 port.
+
+
+2. Then we will do a code walk through n continue to 
+user sign ---> sign out
+(in combined lab session)
+
+3. In the individual labs 
+Solve IPL assignment(completely on your own , using Spring Boot n Spring Data)
+Starting point will be - spring_boot_mvc_template
+
+OR 
+
+Revise with - spring boot blogs project
+
+Day 15
+
+1. Refer - "day15-data\day15_help\Spring Boot REST Steps.txt"
+1.1 Launch new workspace for STS 4
+1.2 Add JRE - JDK 17
+1.3 Install Lombok Jar
+1.4 Create from scratch - Spring Boot project
+spring_boot_ipl ,as a RESTful web service
+
+1.5 
+Copy only BaseEntity  n Team from your earlier project.
+1.6 Replace javax by Jakarta
+1.7 Remove List<Player> field .
+1.8 Develop end point
+Add new Team
+Get All Teams
+
+Rules -
+You must return ResponseEntity from the RestController , with suitable Status Codes (REST compliant)
+201 - created
+200 - ok
+204 - no content
+
+
+Day 16
+1. Use react app (emp app)
+npm install n start it
+
+Write emp CRUD back end n test the full stack integration
+
+2. import blogs_api , to revise 
+advanced REST concepts.
+
+
+
+Day 17
+1. Copy n import , as existing Maven project 
+blogs_api
+
+1.1 Write a finder method in DAO to get all available posts by specified blogger under specified category
+1.2 Write DAO layer unit test
+1.3 Complete assign user address end point (as already discussed)
+1.4 Write it's integration test case
+
+2. Add server side validations for
+User sign in
+email n password must be supplied n they should be having valid email format n 
+alpha numeric password , with special character .
+
+3. Add Centralized custom exception handler.
+
+4. Optional exercise for Lab exam practice
+
+Scenario - Placing an order in eCommerce (a small part of eCommerce)
+Entities - user(admin|customer) , products , orders
+Identify the associations correctly.
+
+Add 1 admin n 2 customer records using insert query or service layer test case.
+
+Requirements
+1. Admin should be able to add a product
+2. Admin should be able to delete product (soft delete)
+3. Customer should be able to view all available products.
+4. Customer should be able to place order for a specific product.
+i/p - customer id , product id  , quantity
+o/p - in case of success - order should be placed n customer should be able to see the order details
+including total order amount.
+if the quantity is in sufficient - give suitable error message.
+
+5. Admin should be able to check all the orders placed within a specific period
+i/p - start date n end date
+
+
+ 

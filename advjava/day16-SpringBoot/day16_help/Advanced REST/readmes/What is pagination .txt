@@ -1,0 +1,38 @@
+What is pagination ?
+Dividing larger no of results (eg : products , users, reviews , blogs ...) into fixed size pages/slices.
+
+How will you add it's support ?
+
+Steps 
+ The Dao i/fs extends from JpaRepository ----> PagingAndSortingRepository -->CrudRepository --> Repository
+
+PagingAndSortingRepository Methods
+package : o.s.data.repository
+1. 
+Page<T> findAll(Pageable pageable)
+Returns a Page of entities meeting the paging restriction provided in the Pageable object.
+
+i/p : Pageable : i/f for pagination
+Implementation class : PageRequest
+
+2. Method of PageRequest class 
+public static PageRequest of(int pageNumber,int pageSize)
+Creates a new unsorted PageRequest.
+Parameters:
+pageNumber - zero-based page number
+pageSize - the size of the page to be returned(>0)
+
+3. Page<T> : i/f 
+It's inherited method for Slice<T>
+List<T> getContent()
+Returns the page content as List.
+T : type of the entity
+
+eg : 
+	
+Pageable pageable = PageRequest.of(pageNumber, pageSize);
+// fetch the Page of Entity --> getContent() --> List<Entity>
+List<Entity> empList = empDao.
+				findAll(pageable).getContent();
+		
+
