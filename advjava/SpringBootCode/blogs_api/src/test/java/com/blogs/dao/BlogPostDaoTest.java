@@ -11,20 +11,19 @@ import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabas
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 
 import com.blogs.pojos.BlogPost;
-import com.blogs.pojos.UserRole;
 
-@DataJpaTest
-@AutoConfigureTestDatabase(replace = Replace.NONE)//DB - MySQL
+@DataJpaTest//enables Entity n DAO layer
+@AutoConfigureTestDatabase(replace = Replace.NONE) // continue to use same database , 
+//(Mysql) as configured in the main app
 class BlogPostDaoTest {
-	//depcy - dao 
+	//depcy 
 	@Autowired
 	private BlogPostDao blogPostDao;
 
 	@Test
-	void testFindAvailableBlogPostsByBlogger() {
-		//invoker dao's method
-		List<BlogPost> posts = blogPostDao.findByStatusTrueAndBloggerId(1l);
-		assertEquals(2,posts.size());
+	void testFindByStatusTrueAndBloggerIdAndBlogCategoryId() {
+		List<BlogPost> posts = blogPostDao.findByStatusTrueAndBloggerIdAndBlogCategoryId(2l, 1l);
+		assertEquals(2, posts.size());
 	}
 
 }

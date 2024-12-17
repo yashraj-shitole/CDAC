@@ -37,7 +37,7 @@ public class User extends BaseEntity {
 	@Enumerated(EnumType.STRING) // create column of type
 	// varchar to store the name of constant
 	@Column(length = 30) // varchar(30)
-	private UserRole role;
+	private UserRole role; 
 	@Lob // => large object , Mysql - uses longblob
 	private byte[] image;
 	//User 1--->1 Address

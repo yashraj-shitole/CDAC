@@ -1,0 +1,55 @@
+ Regarding logging framework in Java : project objective
+
+Spring Boot being highly opinionated framework , it has it's own mindset.
+It allows us to forget about the majority of the configuration settings, many of which it auto-configures.
+
+It understands the need of logging , in a typical web application.
+
+In the case of logging, we don't have to explicitly import it's starter , since a starter, like our spring-boot-starter-web, depends on spring-boot-starter-logging, which automatically  pulls in JCL (Jakarta Commons Logging API) 
+
+Simple Logging framework(facade) in Java : SLF4J
+
+There are different logging levels , in asc order of severity
+trace , debug , info , warn , error
+Default logging level in spring boot app : info
+Meaning : spring boot app  will auto display : info , warn , error
+
+How to add logging in controller /service classes ?
+Add one field : 
+org.slf4j.Logger logger = LoggerFactory.getLogger(LoggingController.class);
+OR simply use Lombok annotation
+@Slf4j : at the class level -- It will auto inject a Logger in the field : log
+
+eg : 
+@RestController
+@Slf4j  
+public class LoggingController {
+
+
+    @RequestMapping("/")
+    public String index() {
+//it's in asc manner of severity : logging levels
+        log.trace("A TRACE Message");
+        log.debug("A DEBUG Message");
+        log.info("An INFO Message");
+        log.warn("A WARN Message");
+        log.error("An ERROR Message");
+
+        return "Testing logging here....";
+    }
+}
+
+Note : 
+Default setting in application.properties file : 
+logging.level.root=info
+To change it to error (in deployment phase)
+logging.level.root=error
+
+To enable logging of debugging message , for a particular module/package :  
+eg : debug=true
+logging.level.org.springframework.orm.hibernate5=debug
+logging.level.com.app.service=debug
+
+After complete testing of the project, to suppress , info , debug messages , set :
+logging.level.root=error
+

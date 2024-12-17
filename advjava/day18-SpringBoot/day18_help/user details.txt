@@ -1,0 +1,20 @@
+{
+  "firstName": "a1",
+  "lastName": "b1",
+  "email": "a1@gmail.com",
+  "password": "123456",
+  "dob": "1990-12-17",
+  "regAmount": 0,
+  "role": "ROLE_ADMIN"
+}
+
+
+{
+  "firstName": "a2",
+  "lastName": "b2",
+  "email": "a2@gmail.com",
+  "password": "1456",
+  "dob": "1993-12-17",
+  "regAmount": 1000,
+  "role": "ROLE_CUSTOMER"
+}

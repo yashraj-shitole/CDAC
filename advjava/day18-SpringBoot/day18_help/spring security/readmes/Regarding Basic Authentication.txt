@@ -1,0 +1,23 @@
+What is Basic Authentication scheme of HTTP?
+
+1. Any time client sends a request to any protected resource -spring security uses by default : basic authentication
+Meaning - It  sends resp header : WWW-Autheticate , with the realm=Basic 
+2. Client has to send username:password using base64 encoding.
+(Note - It can be automatically  sent by postman , using Basic Authentication scheme)
+3. In case of successful , authentication , access to end point is given.
+
+
+How Basic Auth processing is done by Spring Security ?
+Ans - Using BasicAuthenticationFilter
+
+It processes a HTTP request's BASIC authorization headers, putting the result into the SecurityContextHolder.
+
+This filter is responsible for processing any request that has a HTTP request header of Authorization with an authentication scheme of Basic and a Base64-encoded username:password token
+ 
+
+If authentication is successful, the resulting Authentication object will be placed into the SecurityContextHolder.
+
+
+Basic authentication is an attractive protocol because it is simple and widely deployed. 
+BUT  it still transmits a password in clear text so is undesirable in many situations.
+

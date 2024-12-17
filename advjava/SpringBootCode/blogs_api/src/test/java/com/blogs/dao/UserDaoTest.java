@@ -25,8 +25,8 @@ class UserDaoTest {
 		//invoke method
 		User user =
 				userDao.findByEmailAndPassword
-				("a2@gmail.com", "23456").orElseThrow();
-		assertEquals(UserRole.ADMIN,user.getRole());
+				("yashrajs927@gmail.com", "123").orElseThrow();
+		assertEquals(UserRole.BLOGGER,user.getRole());
 	}
 
 }
