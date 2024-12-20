@@ -3,8 +3,11 @@ package com.store.pojo;
 import java.time.LocalDate;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
@@ -28,13 +31,16 @@ public class User extends BaseEnitity {
 	private String name;
 	@Column(length = 20)
 	private String password;
-	@Column(length = 50)
+	@Column(length = 50, unique = true)
 	private String email;
 
 	private LocalDate dob;
 	
-	@OneToMany
-	@JoinColumn
+	private String role;
+	
+	@OneToMany(fetch = FetchType.EAGER)
+	@JsonIgnore
+	@JoinColumn(name = "user_id")
 	private List<Order> orders;
 	
 	@OneToOne

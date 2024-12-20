@@ -1,0 +1,37 @@
+How to make a REST call from one microservice to another ?
+Use : org.springframework.web.client.RestTemplate
+Other modern alternative  : WebClient | OpenFeign 
+
+The RestTemplate class in Spring Framework is a synchronous HTTP client for making HTTP requests to consume RESTful web services. 
+
+It exposes a simple and easy-to-use template method API for sending an HTTP request and also handling the HTTP response. 
+
+The RestTemplate class also provides aliases for all supported HTTP request methods, such as GET, POST, PUT, PATCH , DELETE, and OPTIONS. 
+
+
+Steps - 
+1. Configure RestTemplate as a spring bean (@Bean) in the Spring boot application class.
+
+@Bean
+public RestTemplate restTemplate(){
+    return new RestTemplate();
+}
+2. Inject it as a dependency in the service Layer
+@Autowired
+private RestTemplate restTemplate;
+
+3. Instead of hard coding the URLs , add them in application.properties file
+# REST Client URL
+get.url=....
+
+4. Using SpEL , inject it in the service layer
+
+@Value("${get.url}")
+	private String getURL;
+
+5. Make REST API call using methods of the RestTemplate class.
+public <T> T getForObject(String url,Class<T> responseType,Object... uriVariables)
+throws RestClientException
+T - type of the response
+
+

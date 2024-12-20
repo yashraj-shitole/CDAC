@@ -32,4 +32,7 @@ public class Product extends BaseEnitity{
 	
 	private double price;
 	
+	@Column(name = "product_status")
+	private boolean productStatus;
+	
 }

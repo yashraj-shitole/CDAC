@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+
+</head>
+<body>
+	<h4 th:text="#{hello}"></h4>
+	
+	<button type="button" th:text="#{switch-en}"
+		onclick="window.location.href='http://localhost:8080/hello2?localeData=en'"></button>
+	
+	<button type="button" th:text="#{switch-mr}"
+		onclick="window.location.href='http://localhost:8080/hello2?localeData=mr_IN'"></button>
+
+</body>
+</html>
