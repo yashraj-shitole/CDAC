@@ -51,6 +51,8 @@ public class GlobalExceptionHandler {
 		System.out.println("in catch-all " + e);
 		return new ApiResponse(e.getMessage());
 	}
+
+	
 	// method level anno to tell SC , following is an exc handling method : to
 		// handle : AuthenticationException
 		@ExceptionHandler(AuthenticationException.class)
