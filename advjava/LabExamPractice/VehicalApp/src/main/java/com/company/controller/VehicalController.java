@@ -58,11 +58,11 @@ public class VehicalController {
 	@GetMapping("/")
 	public ResponseEntity<?> getAllVehical() {
 		
-		if (vehicalService.getUserByDate(date).isEmpty()) {
+		if (vehicalService.getAllVehical().isEmpty()) {
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new ApiResponse(LocalDateTime.now(),"No vehical found"));
 		}
 		
-		return ResponseEntity.ok(vehicalService.getUserByDate(date));
+		return ResponseEntity.ok(vehicalService.getAllVehical());
 	}
 	
 	

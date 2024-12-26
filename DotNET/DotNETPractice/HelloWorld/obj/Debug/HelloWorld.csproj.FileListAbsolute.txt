@@ -1,0 +1,7 @@
+Y:\CDACSunbeam\CDAC\DotNET\DotNETPractice\HelloWorld\bin\Debug\HelloWorld.exe.config
+Y:\CDACSunbeam\CDAC\DotNET\DotNETPractice\HelloWorld\bin\Debug\HelloWorld.exe
+Y:\CDACSunbeam\CDAC\DotNET\DotNETPractice\HelloWorld\bin\Debug\HelloWorld.pdb
+Y:\CDACSunbeam\CDAC\DotNET\DotNETPractice\HelloWorld\obj\Debug\HelloWorld.csproj.AssemblyReference.cache
+Y:\CDACSunbeam\CDAC\DotNET\DotNETPractice\HelloWorld\obj\Debug\HelloWorld.csproj.CoreCompileInputs.cache
+Y:\CDACSunbeam\CDAC\DotNET\DotNETPractice\HelloWorld\obj\Debug\HelloWorld.exe
+Y:\CDACSunbeam\CDAC\DotNET\DotNETPractice\HelloWorld\obj\Debug\HelloWorld.pdb

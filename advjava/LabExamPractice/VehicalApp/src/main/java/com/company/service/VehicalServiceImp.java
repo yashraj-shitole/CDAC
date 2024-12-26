@@ -102,6 +102,17 @@ public class VehicalServiceImp implements VehicalService {
 	}
 	
 	
+
+	
+	@Override
+	public List<Vehical> getAllVehical() {
+		
+		
+		
+		return vehicalDao.findAll();
+	}
+	
+	
 	
 
 }
