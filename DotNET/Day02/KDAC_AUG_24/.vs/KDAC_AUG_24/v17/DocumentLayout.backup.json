@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "Y:\\CDACSunbeam\\CDAC\\DotNET\\Day02\\KDAC_AUG_24\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{192EAAE7-9554-47E1-A450-586049DDF0E4}|01DemoBasics\\01DemoBasics.csproj|y:\\cdacsunbeam\\cdac\\dotnet\\day02\\kdac_aug_24\\01demobasics\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{192EAAE7-9554-47E1-A450-586049DDF0E4}|01DemoBasics\\01DemoBasics.csproj|solutionrelative:01demobasics\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2965C821-D51E-490C-B363-5B62B237C24D}|00DemoBasics\\00DemoBasics.csproj|y:\\cdacsunbeam\\cdac\\dotnet\\day02\\kdac_aug_24\\00demobasics\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2965C821-D51E-490C-B363-5B62B237C24D}|00DemoBasics\\00DemoBasics.csproj|solutionrelative:00demobasics\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "Y:\\CDACSunbeam\\CDAC\\DotNET\\Day02\\KDAC_AUG_24\\01DemoBasics\\Program.cs",
+              "RelativeDocumentMoniker": "01DemoBasics\\Program.cs",
+              "ToolTip": "Y:\\CDACSunbeam\\CDAC\\DotNET\\Day02\\KDAC_AUG_24\\01DemoBasics\\Program.cs",
+              "RelativeToolTip": "01DemoBasics\\Program.cs",
+              "ViewState": "AgIAAEwAAAAAAAAAAAA3wBYAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-27T09:38:41.461Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "Y:\\CDACSunbeam\\CDAC\\DotNET\\Day02\\KDAC_AUG_24\\00DemoBasics\\Program.cs",
+              "RelativeDocumentMoniker": "00DemoBasics\\Program.cs",
+              "ToolTip": "Y:\\CDACSunbeam\\CDAC\\DotNET\\Day02\\KDAC_AUG_24\\00DemoBasics\\Program.cs",
+              "RelativeToolTip": "00DemoBasics\\Program.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAzwCwAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-27T09:35:22.664Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
