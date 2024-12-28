@@ -1,0 +1,9 @@
+Create an editor like Notepad.
+Along with basic editing functionalities this editor has:
+Unique functionality of spell check.
+
+Spell check needs to be done in various languages.
+One should be able write and extend language support.
+Default language for spell check would be English.
+
+ 

@@ -1,0 +1,21 @@
+Aditya is software developer at Infosys.
+Aditya belongs to a project from a client Wolter Kluver. Aditya's manager Chaitanya has conveyed to build a robust application using SOLID principles. Requirements conveyed by Walter Kluver are:
+
+Build a report builder application which accepts input from end user in form of text data. 
+
+Given a choice application would build a PDF like report. 
+
+While building a report few steps are compulsory like:
+
+a) Report file needs to be created.
+b) Data needs to be parsed for valid characters
+c) Report needs to be validated against rules conveyed by Walter Kluver
+d) Report needs to be saved.
+
+All above to be followed in Sequence.
+
+
+
+
+
+

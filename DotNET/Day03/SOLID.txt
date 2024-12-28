@@ -1,0 +1,5 @@
+S ingle Responsibility Principle
+O pen Close Principle
+L iskov's Substitution Principle
+I nterface Segregation Principle 
+D ependency Inversion Principle
