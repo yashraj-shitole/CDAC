@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MathsLib;
-namespace _00DemoBasics
+﻿namespace _00DemoBasics
 {
     internal class Program
     {

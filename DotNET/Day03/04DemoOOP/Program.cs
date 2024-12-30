@@ -71,7 +71,7 @@ namespace _04DemoOOP
     }
     public class SpellCheckerFactory
     {
-        public ISpellChecker GetChecker(string choice)
+        public ISpellChecker GetChecker(string choice) //takes input from implimenter which SpellChecker should be called
         {
             if (choice==null)
             {
