@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "Y:\\CDACSunbeam\\CDAC\\DotNET\\Day04\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FA3487BB-254F-4D67-943C-904EB076A7B3}|11DemoCollection\\11DemoCollection.csproj|y:\\cdacsunbeam\\cdac\\dotnet\\day04\\11democollection\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA3487BB-254F-4D67-943C-904EB076A7B3}|11DemoCollection\\11DemoCollection.csproj|solutionrelative:11democollection\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "Y:\\CDACSunbeam\\CDAC\\DotNET\\Day04\\11DemoCollection\\Program.cs",
+              "RelativeDocumentMoniker": "11DemoCollection\\Program.cs",
+              "ToolTip": "Y:\\CDACSunbeam\\CDAC\\DotNET\\Day04\\11DemoCollection\\Program.cs",
+              "RelativeToolTip": "11DemoCollection\\Program.cs",
+              "ViewState": "AgIAAHIAAAAAAAAAAAAQwIoAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-30T10:10:15.55Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

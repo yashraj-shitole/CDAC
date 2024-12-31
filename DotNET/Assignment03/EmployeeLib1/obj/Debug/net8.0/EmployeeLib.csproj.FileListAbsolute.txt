@@ -1,0 +1,12 @@
+Y:\CDACSunbeam\CDAC\DotNET\Assignment03\EmployeeLib\bin\Debug\net8.0\EmployeeLib.deps.json
+Y:\CDACSunbeam\CDAC\DotNET\Assignment03\EmployeeLib\bin\Debug\net8.0\EmployeeLib.dll
+Y:\CDACSunbeam\CDAC\DotNET\Assignment03\EmployeeLib\bin\Debug\net8.0\EmployeeLib.pdb
+Y:\CDACSunbeam\CDAC\DotNET\Assignment03\EmployeeLib\obj\Debug\net8.0\EmployeeLib.GeneratedMSBuildEditorConfig.editorconfig
+Y:\CDACSunbeam\CDAC\DotNET\Assignment03\EmployeeLib\obj\Debug\net8.0\EmployeeLib.AssemblyInfoInputs.cache
+Y:\CDACSunbeam\CDAC\DotNET\Assignment03\EmployeeLib\obj\Debug\net8.0\EmployeeLib.AssemblyInfo.cs
+Y:\CDACSunbeam\CDAC\DotNET\Assignment03\EmployeeLib\obj\Debug\net8.0\EmployeeLib.csproj.CoreCompileInputs.cache
+Y:\CDACSunbeam\CDAC\DotNET\Assignment03\EmployeeLib\obj\Debug\net8.0\EmployeeLib.sourcelink.json
+Y:\CDACSunbeam\CDAC\DotNET\Assignment03\EmployeeLib\obj\Debug\net8.0\EmployeeLib.dll
+Y:\CDACSunbeam\CDAC\DotNET\Assignment03\EmployeeLib\obj\Debug\net8.0\refint\EmployeeLib.dll
+Y:\CDACSunbeam\CDAC\DotNET\Assignment03\EmployeeLib\obj\Debug\net8.0\EmployeeLib.pdb
+Y:\CDACSunbeam\CDAC\DotNET\Assignment03\EmployeeLib\obj\Debug\net8.0\ref\EmployeeLib.dll
