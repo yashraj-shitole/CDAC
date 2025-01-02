@@ -1,0 +1,5 @@
+Y:\CDACSunbeam\CDAC\DotNET\Day05\Demos\13DemoFileIO\obj\Debug\net6.0\13DemoFileIO.GeneratedMSBuildEditorConfig.editorconfig
+Y:\CDACSunbeam\CDAC\DotNET\Day05\Demos\13DemoFileIO\obj\Debug\net6.0\13DemoFileIO.AssemblyInfoInputs.cache
+Y:\CDACSunbeam\CDAC\DotNET\Day05\Demos\13DemoFileIO\obj\Debug\net6.0\13DemoFileIO.AssemblyInfo.cs
+Y:\CDACSunbeam\CDAC\DotNET\Day05\Demos\13DemoFileIO\obj\Debug\net6.0\13DemoFileIO.csproj.CoreCompileInputs.cache
+Y:\CDACSunbeam\CDAC\DotNET\Day05\Demos\13DemoFileIO\obj\Debug\net6.0\13DemoFileIO.sourcelink.json

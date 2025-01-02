@@ -7,7 +7,7 @@ namespace _16DemoReflection
     {
         static void Main(string[] args)
         {
-            string path = "C:\\KDAC Dot Net\\KDAC_AUG_24\\POCO\\bin\\Debug\\net6.0\\POCO.dll";
+            string path = "Y:\\CDACSunbeam\\CDAC\\DotNET\\Day05\\Demos\\POCO\\bin\\Debug\\net6.0\\POCO.dll";  
             string queryFile = "C:\\KDAC Dot Net\\Queries.sql";
 
             Assembly assembly = Assembly.LoadFrom(path);

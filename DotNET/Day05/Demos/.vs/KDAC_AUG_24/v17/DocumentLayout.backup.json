@@ -1,0 +1,173 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "Y:\\CDACSunbeam\\CDAC\\DotNET\\Day05\\Demos\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2778EFF9-B238-460F-B598-6108D4320D39}|13DemoFileIO\\13DemoFileIO.csproj|y:\\cdacsunbeam\\cdac\\dotnet\\day05\\demos\\13demofileio\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2778EFF9-B238-460F-B598-6108D4320D39}|13DemoFileIO\\13DemoFileIO.csproj|solutionrelative:13demofileio\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3B07710E-CBFE-465E-9240-0751BF31D32C}|16DemoReflection\\16DemoReflection.csproj|y:\\cdacsunbeam\\cdac\\dotnet\\day05\\demos\\16demoreflection\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3B07710E-CBFE-465E-9240-0751BF31D32C}|16DemoReflection\\16DemoReflection.csproj|solutionrelative:16demoreflection\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AA14B29-560B-4306-85CD-7A9EF7F95186}|MathsLib\\MathsLib.csproj|y:\\cdacsunbeam\\cdac\\dotnet\\day05\\demos\\mathslib\\maths.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AA14B29-560B-4306-85CD-7A9EF7F95186}|MathsLib\\MathsLib.csproj|solutionrelative:mathslib\\maths.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4FA0F291-65FF-4600-AE90-E234AD57F70C}|POCO\\POCO.csproj|y:\\cdacsunbeam\\cdac\\dotnet\\day05\\demos\\poco\\emp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4FA0F291-65FF-4600-AE90-E234AD57F70C}|POCO\\POCO.csproj|solutionrelative:poco\\emp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB179B62-4C95-4E07-A29D-B3C4BEEB59B9}|ORMAttributes\\ORMAttributes.csproj|y:\\cdacsunbeam\\cdac\\dotnet\\day05\\demos\\ormattributes\\ormattributes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB179B62-4C95-4E07-A29D-B3C4BEEB59B9}|ORMAttributes\\ORMAttributes.csproj|solutionrelative:ormattributes\\ormattributes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB179B62-4C95-4E07-A29D-B3C4BEEB59B9}|ORMAttributes\\ORMAttributes.csproj|y:\\cdacsunbeam\\cdac\\dotnet\\day05\\demos\\ormattributes\\ormattributes.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{DB179B62-4C95-4E07-A29D-B3C4BEEB59B9}|ORMAttributes\\ORMAttributes.csproj|solutionrelative:ormattributes\\ormattributes.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{930A4831-209A-464D-BBF0-0793250E2BF7}|15DemoReflection\\15DemoReflection.csproj|y:\\cdacsunbeam\\cdac\\dotnet\\day05\\demos\\15demoreflection\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{930A4831-209A-464D-BBF0-0793250E2BF7}|15DemoReflection\\15DemoReflection.csproj|solutionrelative:15demoreflection\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3B07710E-CBFE-465E-9240-0751BF31D32C}|16DemoReflection\\16DemoReflection.csproj|y:\\cdacsunbeam\\cdac\\dotnet\\day05\\demos\\16demoreflection\\16demoreflection.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{3B07710E-CBFE-465E-9240-0751BF31D32C}|16DemoReflection\\16DemoReflection.csproj|solutionrelative:16demoreflection\\16demoreflection.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96E3F2ED-5C2A-44D0-A0F2-F49A5F108A9D}|14DemoReflection\\14DemoReflection.csproj|y:\\cdacsunbeam\\cdac\\dotnet\\day05\\demos\\14demoreflection\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96E3F2ED-5C2A-44D0-A0F2-F49A5F108A9D}|14DemoReflection\\14DemoReflection.csproj|solutionrelative:14demoreflection\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "Y:\\CDACSunbeam\\CDAC\\DotNET\\Day05\\Demos\\16DemoReflection\\Program.cs",
+              "RelativeDocumentMoniker": "16DemoReflection\\Program.cs",
+              "ToolTip": "Y:\\CDACSunbeam\\CDAC\\DotNET\\Day05\\Demos\\16DemoReflection\\Program.cs",
+              "RelativeToolTip": "16DemoReflection\\Program.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAQwBYAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-31T10:22:38.793Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Maths.cs",
+              "DocumentMoniker": "Y:\\CDACSunbeam\\CDAC\\DotNET\\Day05\\Demos\\MathsLib\\Maths.cs",
+              "RelativeDocumentMoniker": "MathsLib\\Maths.cs",
+              "ToolTip": "Y:\\CDACSunbeam\\CDAC\\DotNET\\Day05\\Demos\\MathsLib\\Maths.cs",
+              "RelativeToolTip": "MathsLib\\Maths.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-31T10:27:45.079Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ORMAttributes.cs",
+              "DocumentMoniker": "Y:\\CDACSunbeam\\CDAC\\DotNET\\Day05\\Demos\\ORMAttributes\\ORMAttributes.cs",
+              "RelativeDocumentMoniker": "ORMAttributes\\ORMAttributes.cs",
+              "ToolTip": "Y:\\CDACSunbeam\\CDAC\\DotNET\\Day05\\Demos\\ORMAttributes\\ORMAttributes.cs",
+              "RelativeToolTip": "ORMAttributes\\ORMAttributes.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-31T10:26:09.055Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ORMAttributes",
+              "DocumentMoniker": "Y:\\CDACSunbeam\\CDAC\\DotNET\\Day05\\Demos\\ORMAttributes\\ORMAttributes.csproj",
+              "RelativeDocumentMoniker": "ORMAttributes\\ORMAttributes.csproj",
+              "ToolTip": "Y:\\CDACSunbeam\\CDAC\\DotNET\\Day05\\Demos\\ORMAttributes\\ORMAttributes.csproj",
+              "RelativeToolTip": "ORMAttributes\\ORMAttributes.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-12-31T10:26:06.076Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Emp.cs",
+              "DocumentMoniker": "Y:\\CDACSunbeam\\CDAC\\DotNET\\Day05\\Demos\\POCO\\Emp.cs",
+              "RelativeDocumentMoniker": "POCO\\Emp.cs",
+              "ToolTip": "Y:\\CDACSunbeam\\CDAC\\DotNET\\Day05\\Demos\\POCO\\Emp.cs",
+              "RelativeToolTip": "POCO\\Emp.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAC0AAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-31T10:25:46.135Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "Y:\\CDACSunbeam\\CDAC\\DotNET\\Day05\\Demos\\15DemoReflection\\Program.cs",
+              "RelativeDocumentMoniker": "15DemoReflection\\Program.cs",
+              "ToolTip": "Y:\\CDACSunbeam\\CDAC\\DotNET\\Day05\\Demos\\15DemoReflection\\Program.cs",
+              "RelativeToolTip": "15DemoReflection\\Program.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAsAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-31T10:12:40.664Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "Y:\\CDACSunbeam\\CDAC\\DotNET\\Day05\\Demos\\14DemoReflection\\Program.cs",
+              "RelativeDocumentMoniker": "14DemoReflection\\Program.cs",
+              "ToolTip": "Y:\\CDACSunbeam\\CDAC\\DotNET\\Day05\\Demos\\14DemoReflection\\Program.cs",
+              "RelativeToolTip": "14DemoReflection\\Program.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-31T10:12:37.734Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "Y:\\CDACSunbeam\\CDAC\\DotNET\\Day05\\Demos\\13DemoFileIO\\Program.cs",
+              "RelativeDocumentMoniker": "13DemoFileIO\\Program.cs",
+              "ToolTip": "Y:\\CDACSunbeam\\CDAC\\DotNET\\Day05\\Demos\\13DemoFileIO\\Program.cs",
+              "RelativeToolTip": "13DemoFileIO\\Program.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwAoAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-31T10:12:29.339Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "16DemoReflection",
+              "DocumentMoniker": "Y:\\CDACSunbeam\\CDAC\\DotNET\\Day05\\Demos\\16DemoReflection\\16DemoReflection.csproj",
+              "RelativeDocumentMoniker": "16DemoReflection\\16DemoReflection.csproj",
+              "ToolTip": "Y:\\CDACSunbeam\\CDAC\\DotNET\\Day05\\Demos\\16DemoReflection\\16DemoReflection.csproj",
+              "RelativeToolTip": "16DemoReflection\\16DemoReflection.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-12-31T10:22:28.311Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

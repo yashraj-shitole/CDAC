@@ -8,28 +8,28 @@ namespace _13DemoFileIO
         static void Main(string[] args)
         {
             #region Simple File Write
-            //string path = "C:\\KDAC Dot Net\\Data.txt";
-            //FileStream fileStream = null;
+            string path = "Y:\\CDACSunbeam\\CDAC\\DotNET\\Day05";
+            FileStream fileStream = null;
 
-            //if (File.Exists(path))
-            //{
-            //    fileStream = 
-            //        new FileStream(path, FileMode.Append, FileAccess.Write);
-            //}
-            //else
-            //{
-            //    fileStream =
-            //        new FileStream(path, FileMode.OpenOrCreate, FileAccess.Write);
-            //}
+            if (File.Exists(path))
+            {
+                fileStream =
+                    new FileStream(path, FileMode.Append, FileAccess.Write);
+            }
+            else
+            {
+                fileStream =
+                    new FileStream(path, FileMode.OpenOrCreate, FileAccess.Write);
+            }
 
-            //StreamWriter writer = new StreamWriter(fileStream);
+            StreamWriter writer = new StreamWriter(fileStream);
 
-            //Console.WriteLine("Enter something to write to:");
-            //string data = Console.ReadLine();
-            //writer.WriteLine(data);
+            Console.WriteLine("Enter something to write to:");
+            string data = Console.ReadLine();
+            writer.WriteLine(data);
 
-            //writer.Close();
-            //fileStream.Close();
+            writer.Close();
+            fileStream.Close();
             #endregion
 
             #region Simple File Read

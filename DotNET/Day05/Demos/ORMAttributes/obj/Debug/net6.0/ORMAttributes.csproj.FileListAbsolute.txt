@@ -1,0 +1,12 @@
+Y:\CDACSunbeam\CDAC\DotNET\Day05\Demos\ORMAttributes\bin\Debug\net6.0\ORMAttributes.deps.json
+Y:\CDACSunbeam\CDAC\DotNET\Day05\Demos\ORMAttributes\bin\Debug\net6.0\ORMAttributes.dll
+Y:\CDACSunbeam\CDAC\DotNET\Day05\Demos\ORMAttributes\bin\Debug\net6.0\ORMAttributes.pdb
+Y:\CDACSunbeam\CDAC\DotNET\Day05\Demos\ORMAttributes\obj\Debug\net6.0\ORMAttributes.GeneratedMSBuildEditorConfig.editorconfig
+Y:\CDACSunbeam\CDAC\DotNET\Day05\Demos\ORMAttributes\obj\Debug\net6.0\ORMAttributes.AssemblyInfoInputs.cache
+Y:\CDACSunbeam\CDAC\DotNET\Day05\Demos\ORMAttributes\obj\Debug\net6.0\ORMAttributes.AssemblyInfo.cs
+Y:\CDACSunbeam\CDAC\DotNET\Day05\Demos\ORMAttributes\obj\Debug\net6.0\ORMAttributes.csproj.CoreCompileInputs.cache
+Y:\CDACSunbeam\CDAC\DotNET\Day05\Demos\ORMAttributes\obj\Debug\net6.0\ORMAttributes.sourcelink.json
+Y:\CDACSunbeam\CDAC\DotNET\Day05\Demos\ORMAttributes\obj\Debug\net6.0\ORMAttributes.dll
+Y:\CDACSunbeam\CDAC\DotNET\Day05\Demos\ORMAttributes\obj\Debug\net6.0\refint\ORMAttributes.dll
+Y:\CDACSunbeam\CDAC\DotNET\Day05\Demos\ORMAttributes\obj\Debug\net6.0\ORMAttributes.pdb
+Y:\CDACSunbeam\CDAC\DotNET\Day05\Demos\ORMAttributes\obj\Debug\net6.0\ref\ORMAttributes.dll

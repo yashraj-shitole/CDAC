@@ -1,0 +1,7 @@
+Y:\CDACSunbeam\CDAC\DotNET\Day05\Demos\15DemoReflection\bin\Debug\15DemoReflection.exe.config
+Y:\CDACSunbeam\CDAC\DotNET\Day05\Demos\15DemoReflection\bin\Debug\15DemoReflection.exe
+Y:\CDACSunbeam\CDAC\DotNET\Day05\Demos\15DemoReflection\bin\Debug\15DemoReflection.pdb
+Y:\CDACSunbeam\CDAC\DotNET\Day05\Demos\15DemoReflection\obj\Debug\15DemoReflection.csproj.AssemblyReference.cache
+Y:\CDACSunbeam\CDAC\DotNET\Day05\Demos\15DemoReflection\obj\Debug\15DemoReflection.csproj.CoreCompileInputs.cache
+Y:\CDACSunbeam\CDAC\DotNET\Day05\Demos\15DemoReflection\obj\Debug\15DemoReflection.exe
+Y:\CDACSunbeam\CDAC\DotNET\Day05\Demos\15DemoReflection\obj\Debug\15DemoReflection.pdb

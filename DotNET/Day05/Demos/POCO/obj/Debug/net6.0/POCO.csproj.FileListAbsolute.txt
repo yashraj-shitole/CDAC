@@ -1,0 +1,16 @@
+Y:\CDACSunbeam\CDAC\DotNET\Day05\Demos\POCO\bin\Debug\net6.0\POCO.deps.json
+Y:\CDACSunbeam\CDAC\DotNET\Day05\Demos\POCO\bin\Debug\net6.0\POCO.dll
+Y:\CDACSunbeam\CDAC\DotNET\Day05\Demos\POCO\bin\Debug\net6.0\POCO.pdb
+Y:\CDACSunbeam\CDAC\DotNET\Day05\Demos\POCO\bin\Debug\net6.0\ORMAttributes.dll
+Y:\CDACSunbeam\CDAC\DotNET\Day05\Demos\POCO\bin\Debug\net6.0\ORMAttributes.pdb
+Y:\CDACSunbeam\CDAC\DotNET\Day05\Demos\POCO\obj\Debug\net6.0\POCO.csproj.AssemblyReference.cache
+Y:\CDACSunbeam\CDAC\DotNET\Day05\Demos\POCO\obj\Debug\net6.0\POCO.GeneratedMSBuildEditorConfig.editorconfig
+Y:\CDACSunbeam\CDAC\DotNET\Day05\Demos\POCO\obj\Debug\net6.0\POCO.AssemblyInfoInputs.cache
+Y:\CDACSunbeam\CDAC\DotNET\Day05\Demos\POCO\obj\Debug\net6.0\POCO.AssemblyInfo.cs
+Y:\CDACSunbeam\CDAC\DotNET\Day05\Demos\POCO\obj\Debug\net6.0\POCO.csproj.CoreCompileInputs.cache
+Y:\CDACSunbeam\CDAC\DotNET\Day05\Demos\POCO\obj\Debug\net6.0\POCO.sourcelink.json
+Y:\CDACSunbeam\CDAC\DotNET\Day05\Demos\POCO\obj\Debug\net6.0\POCO.csproj.Up2Date
+Y:\CDACSunbeam\CDAC\DotNET\Day05\Demos\POCO\obj\Debug\net6.0\POCO.dll
+Y:\CDACSunbeam\CDAC\DotNET\Day05\Demos\POCO\obj\Debug\net6.0\refint\POCO.dll
+Y:\CDACSunbeam\CDAC\DotNET\Day05\Demos\POCO\obj\Debug\net6.0\POCO.pdb
+Y:\CDACSunbeam\CDAC\DotNET\Day05\Demos\POCO\obj\Debug\net6.0\ref\POCO.dll
