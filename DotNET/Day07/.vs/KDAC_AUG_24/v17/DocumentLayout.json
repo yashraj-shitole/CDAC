@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "Y:\\CDACSunbeam\\CDAC\\DotNET\\Day07\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{19EFA09F-7F3E-4E3D-B0B8-E848096CFD6B}|19DemoThreading\\19DemoThreading.csproj|y:\\cdacsunbeam\\cdac\\dotnet\\day07\\19demothreading\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19EFA09F-7F3E-4E3D-B0B8-E848096CFD6B}|19DemoThreading\\19DemoThreading.csproj|solutionrelative:19demothreading\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB303B12-6C2D-4116-B544-3B5F9C22989F}|18DemoPerfExpressionTree\\18DemoPerfExpressionTree.csproj|y:\\cdacsunbeam\\cdac\\dotnet\\day07\\18demoperfexpressiontree\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB303B12-6C2D-4116-B544-3B5F9C22989F}|18DemoPerfExpressionTree\\18DemoPerfExpressionTree.csproj|solutionrelative:18demoperfexpressiontree\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BB814C3-B842-4BB8-AA3E-78352E64F417}|17DemoFeatures\\17DemoFeatures.csproj|y:\\cdacsunbeam\\cdac\\dotnet\\day07\\17demofeatures\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BB814C3-B842-4BB8-AA3E-78352E64F417}|17DemoFeatures\\17DemoFeatures.csproj|solutionrelative:17demofeatures\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BB814C3-B842-4BB8-AA3E-78352E64F417}|17DemoFeatures\\17DemoFeatures.csproj|y:\\cdacsunbeam\\cdac\\dotnet\\day07\\17demofeatures\\file2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BB814C3-B842-4BB8-AA3E-78352E64F417}|17DemoFeatures\\17DemoFeatures.csproj|solutionrelative:17demofeatures\\file2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "Y:\\CDACSunbeam\\CDAC\\DotNET\\Day07\\19DemoThreading\\Program.cs",
+              "RelativeDocumentMoniker": "19DemoThreading\\Program.cs",
+              "ToolTip": "Y:\\CDACSunbeam\\CDAC\\DotNET\\Day07\\19DemoThreading\\Program.cs",
+              "RelativeToolTip": "19DemoThreading\\Program.cs",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAQwFIAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-02T10:12:09.973Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "Y:\\CDACSunbeam\\CDAC\\DotNET\\Day07\\18DemoPerfExpressionTree\\Program.cs",
+              "RelativeDocumentMoniker": "18DemoPerfExpressionTree\\Program.cs",
+              "ToolTip": "Y:\\CDACSunbeam\\CDAC\\DotNET\\Day07\\18DemoPerfExpressionTree\\Program.cs",
+              "RelativeToolTip": "18DemoPerfExpressionTree\\Program.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-02T10:11:59.682Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "Y:\\CDACSunbeam\\CDAC\\DotNET\\Day07\\17DemoFeatures\\Program.cs",
+              "RelativeDocumentMoniker": "17DemoFeatures\\Program.cs",
+              "ToolTip": "Y:\\CDACSunbeam\\CDAC\\DotNET\\Day07\\17DemoFeatures\\Program.cs",
+              "RelativeToolTip": "17DemoFeatures\\Program.cs",
+              "ViewState": "AgIAAH8AAAAAAAAAAAAQwC8BAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-02T10:11:41.278Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "File2.cs",
+              "DocumentMoniker": "Y:\\CDACSunbeam\\CDAC\\DotNET\\Day07\\17DemoFeatures\\File2.cs",
+              "RelativeDocumentMoniker": "17DemoFeatures\\File2.cs",
+              "ToolTip": "Y:\\CDACSunbeam\\CDAC\\DotNET\\Day07\\17DemoFeatures\\File2.cs",
+              "RelativeToolTip": "17DemoFeatures\\File2.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-02T10:11:37.649Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+Create Console App.
+Add below packages:
+
+Microsoft.EntityFrameworkCore 6.0
+Microsoft.EntityFrameworkCore.Design 6.0
+Microsoft.EntityFrameworkCore.SqlServer 6.0
+Microsoft.EntityFrameworkCore.Tools 6.0
+
+Create POCOs
+Create Context Class
+Over OnConfiguring -> Provide ConnectionString
+
+Over Package Manager Console Provide below commands:
+
+Add-Migration MyMigration
+Update-Database
+

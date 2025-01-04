@@ -31,10 +31,7 @@ namespace EmployeeLib
 		public Person(){
 		}
 
-	public Person()
-		{
 
-		}
 
 		public string Address
 		{

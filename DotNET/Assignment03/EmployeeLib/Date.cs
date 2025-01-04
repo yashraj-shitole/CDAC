@@ -31,9 +31,9 @@ namespace EmployeeLib
 
 
         //overloaded date to get difference between years of two dates
-        public static int operator -(Date date, Date date)
+        public static int operator -(Date date1, Date date2)
         {
-            return (uint)date1._Year - date2._Year;
+            return (int)date1._Year - date2._Year;
         }
 
         public static int  YearDifference(Date date1,Date date2)
