@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>_000DemoMVC</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\ENGLISH\**" />
+    <Compile Remove="Controllers\FRENCH\**" />
+    <Content Remove="Controllers\ENGLISH\**" />
+    <Content Remove="Controllers\FRENCH\**" />
+    <EmbeddedResource Remove="Controllers\ENGLISH\**" />
+    <EmbeddedResource Remove="Controllers\FRENCH\**" />
+    <None Remove="Controllers\ENGLISH\**" />
+    <None Remove="Controllers\FRENCH\**" />
+  </ItemGroup>
+
+</Project>

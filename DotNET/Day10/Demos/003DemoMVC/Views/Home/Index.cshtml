@@ -1,0 +1,23 @@
+﻿@model _003DemoMVC.Models.Emp
+
+<html>
+    <head>
+        <title>Demo MVC</title>
+    </head>
+    <body>
+      @*   <h1>Welcome @Model.Name from @Model.Address</h1>
+        <h2>ISBN is @ViewBag.MyBook.ISBN</h2>
+        <h2>Title is @ViewBag.MyBook.Title</h2>
+        <h3>Message is : @ViewBag.MyMessage </h3> *@
+
+  <form method="post" action="/Home/AfterEdit">
+        No:<input type="text" value="@Model.No" name="No" />
+        <br />
+        Name: <input type="text" value="@Model.Name" name="Name" />
+        <br />
+        Address: <input type="text" value="@Model.Address" name="Address" />
+        <br />
+        <input type="submit" value="Update" name="btnUpdate" />
+  </form>
+</body>
+</html>
