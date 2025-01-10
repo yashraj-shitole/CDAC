@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CRUD_BANK_TRANSACTIONS")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0eae35ae17fd51b13a38caa2f56d74a159c12e24")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4d62a4a9a574046d6761e11572e4f764691260fc")]
 [assembly: System.Reflection.AssemblyProductAttribute("CRUD_BANK_TRANSACTIONS")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CRUD_BANK_TRANSACTIONS")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

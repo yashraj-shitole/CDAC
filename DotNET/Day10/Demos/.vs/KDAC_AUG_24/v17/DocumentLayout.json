@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "Y:\\CDACSunbeam\\CDAC\\DotNET\\Day10\\Demos\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{99E65106-FFB0-43DF-8878-A131E9590853}|000DemoMVC\\000DemoMVC.csproj|y:\\cdacsunbeam\\cdac\\dotnet\\day10\\demos\\000demomvc\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99E65106-FFB0-43DF-8878-A131E9590853}|000DemoMVC\\000DemoMVC.csproj|solutionrelative:000demomvc\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99E65106-FFB0-43DF-8878-A131E9590853}|000DemoMVC\\000DemoMVC.csproj|y:\\cdacsunbeam\\cdac\\dotnet\\day10\\demos\\000demomvc\\views\\home\\myui.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{99E65106-FFB0-43DF-8878-A131E9590853}|000DemoMVC\\000DemoMVC.csproj|solutionrelative:000demomvc\\views\\home\\myui.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "Y:\\CDACSunbeam\\CDAC\\DotNET\\Day10\\Demos\\000DemoMVC\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "000DemoMVC\\Controllers\\HomeController.cs",
+              "ToolTip": "Y:\\CDACSunbeam\\CDAC\\DotNET\\Day10\\Demos\\000DemoMVC\\Controllers\\HomeController.cs*",
+              "RelativeToolTip": "000DemoMVC\\Controllers\\HomeController.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-05T19:05:01.375Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MyUI.cshtml",
+              "DocumentMoniker": "Y:\\CDACSunbeam\\CDAC\\DotNET\\Day10\\Demos\\000DemoMVC\\Views\\Home\\MyUI.cshtml",
+              "RelativeDocumentMoniker": "000DemoMVC\\Views\\Home\\MyUI.cshtml",
+              "ToolTip": "Y:\\CDACSunbeam\\CDAC\\DotNET\\Day10\\Demos\\000DemoMVC\\Views\\Home\\MyUI.cshtml",
+              "RelativeToolTip": "000DemoMVC\\Views\\Home\\MyUI.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-05T19:05:01.498Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

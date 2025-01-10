@@ -1,0 +1,18 @@
+https://dotnet.microsoft.com/en-us/learn
+https://learn.microsoft.com/
+https://www.dotnetcurry.com/
+
+https://weblogs.asp.net/scottgu
+https://mtaulty.wordpress.com/about/
+https://www.johnpapa.net/
+
+https://bonaventuresystems.com/kdac
+
+
+Logged at 06-01-2025 06:57:37 PM : DB Choice Given 2
+Logged at 06-01-2025 06:58:24 PM : DB Choice Given 2
+Logged at 06-01-2025 06:58:54 PM : DB Choice Given 2
+Logged at 06-01-2025 06:59:35 PM : DB Choice Given 2
+Logged at 06-01-2025 07:00:53 PM : DB Choice Given 2
+Logged at 06-01-2025 07:02:14 PM : DB Choice Given 2
+Logged at 06-01-2025 07:02:36 PM : DB Choice Given 1

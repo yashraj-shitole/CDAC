@@ -1,0 +1,40 @@
+﻿<html>
+<head>
+    <title>Sign In</title>
+    <link href="~/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <form method="post" action="/Login/SignIn">
+        <div class="container">
+            <hr />
+            <span class="text-danger">@ViewBag.message</span>
+            <hr />
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <tbody>
+                        <tr>
+                            <td>User Name</td>
+                            <td>
+                                <input type="text" name="UserName" />
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Password</td>
+                            <td>
+                                <input type="password" name="Password" />
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <input type="submit" name="btn" value="Sign In" />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

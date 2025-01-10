@@ -1,0 +1,45 @@
+﻿@model _0000DemoMVC.Models.Emp
+<html>
+<head>
+    <title>Edit Record</title>
+    <link href="~/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <form method="post" action="/Home/AfterEdit">
+        <div class="container">
+            <a href="/Home/Index" class="btn btn-primary">Go Home</a>
+            <hr />
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <tbody>
+                        <tr>
+                            <td colspan="2">
+                                <input type="hidden" name="No" value="@Model.No" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Name</td>
+                            <td>
+                                <input type="text" name="Name" value="@Model.Name" />
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Address</td>
+                            <td>
+                                <input type="text" name="Address" value="@Model.Address" />
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <input type="submit" name="btn" value="Update Record" />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

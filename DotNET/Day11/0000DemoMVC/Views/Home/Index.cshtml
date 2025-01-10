@@ -1,0 +1,47 @@
+﻿@model List<_0000DemoMVC.Models.Emp>
+<html>
+    <head>
+        <title>MVC Demo - CRUD Ops</title>
+    <link href="~/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    </head>
+    <body>
+       <div class="container">
+           <a href="/Home/Create" class="btn btn-primary">Add Record</a>
+           <hr />
+           <div style="float: right">
+            <h3>Welcome @ViewBag.UserName</h3>
+            <a href="/Login/Signout">Sign out</a>
+           </div>
+           <hr />
+           <div class="table-responsive">
+               <table class="table table-bordered">
+                   <thead>
+                       <tr>
+                           <th>No</th>
+                           <th>Name</th>
+                           <th>Address</th>
+                           <th>Edit</th>
+                           <th>Delete</th>
+                       </tr>
+                   </thead>
+                   <tbody>
+                    @foreach (var emp in Model)
+                    {
+                        <tr>
+                            <td>@emp.No</td>
+                            <td>@emp.Name</td>
+                            <td>@emp.Address</td>
+                            <td>
+                                <a href="/Home/Edit/@emp.No" class="btn btn-warning">Edit</a>
+                            </td>
+                            <td>
+                                <a href="/Home/Delete/@emp.No" class="btn btn-danger">Delete</a>
+                            </td>
+                        </tr>
+                    }
+                   </tbody>
+               </table>
+           </div>
+       </div>
+    </body>
+</html>

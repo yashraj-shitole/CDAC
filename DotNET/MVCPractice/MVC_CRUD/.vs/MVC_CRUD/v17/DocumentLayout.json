@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "Y:\\CDACSunbeam\\CDAC\\DotNET\\MVCPractice\\MVC_CRUD\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E34DA168-C435-4596-AAA0-365417AC1205}|CRUD_BANK_TRANSACTIONS\\CRUD_BANK_TRANSACTIONS.csproj|y:\\cdacsunbeam\\cdac\\dotnet\\mvcpractice\\mvc_crud\\crud_bank_transactions\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E34DA168-C435-4596-AAA0-365417AC1205}|CRUD_BANK_TRANSACTIONS\\CRUD_BANK_TRANSACTIONS.csproj|solutionrelative:crud_bank_transactions\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E34DA168-C435-4596-AAA0-365417AC1205}|CRUD_BANK_TRANSACTIONS\\CRUD_BANK_TRANSACTIONS.csproj|y:\\cdacsunbeam\\cdac\\dotnet\\mvcpractice\\mvc_crud\\crud_bank_transactions\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E34DA168-C435-4596-AAA0-365417AC1205}|CRUD_BANK_TRANSACTIONS\\CRUD_BANK_TRANSACTIONS.csproj|solutionrelative:crud_bank_transactions\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E34DA168-C435-4596-AAA0-365417AC1205}|CRUD_BANK_TRANSACTIONS\\CRUD_BANK_TRANSACTIONS.csproj|y:\\cdacsunbeam\\cdac\\dotnet\\mvcpractice\\mvc_crud\\crud_bank_transactions\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{E34DA168-C435-4596-AAA0-365417AC1205}|CRUD_BANK_TRANSACTIONS\\CRUD_BANK_TRANSACTIONS.csproj|solutionrelative:crud_bank_transactions\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -23,10 +31,6 @@
       "RelativeMoniker": "D:0:0:{E34DA168-C435-4596-AAA0-365417AC1205}|CRUD_BANK_TRANSACTIONS\\CRUD_BANK_TRANSACTIONS.csproj|solutionrelative:crud_bank_transactions\\controllers\\transactioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E34DA168-C435-4596-AAA0-365417AC1205}|CRUD_BANK_TRANSACTIONS\\CRUD_BANK_TRANSACTIONS.csproj|y:\\cdacsunbeam\\cdac\\dotnet\\mvcpractice\\mvc_crud\\crud_bank_transactions\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{E34DA168-C435-4596-AAA0-365417AC1205}|CRUD_BANK_TRANSACTIONS\\CRUD_BANK_TRANSACTIONS.csproj|solutionrelative:crud_bank_transactions\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E34DA168-C435-4596-AAA0-365417AC1205}|CRUD_BANK_TRANSACTIONS\\CRUD_BANK_TRANSACTIONS.csproj|y:\\cdacsunbeam\\cdac\\dotnet\\mvcpractice\\mvc_crud\\crud_bank_transactions\\migrations\\20250103082435_initial create.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E34DA168-C435-4596-AAA0-365417AC1205}|CRUD_BANK_TRANSACTIONS\\CRUD_BANK_TRANSACTIONS.csproj|solutionrelative:crud_bank_transactions\\migrations\\20250103082435_initial create.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -37,10 +41,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{E34DA168-C435-4596-AAA0-365417AC1205}|CRUD_BANK_TRANSACTIONS\\CRUD_BANK_TRANSACTIONS.csproj|y:\\cdacsunbeam\\cdac\\dotnet\\mvcpractice\\mvc_crud\\crud_bank_transactions\\crud_bank_transactions.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{E34DA168-C435-4596-AAA0-365417AC1205}|CRUD_BANK_TRANSACTIONS\\CRUD_BANK_TRANSACTIONS.csproj|solutionrelative:crud_bank_transactions\\crud_bank_transactions.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E34DA168-C435-4596-AAA0-365417AC1205}|CRUD_BANK_TRANSACTIONS\\CRUD_BANK_TRANSACTIONS.csproj|y:\\cdacsunbeam\\cdac\\dotnet\\mvcpractice\\mvc_crud\\crud_bank_transactions\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E34DA168-C435-4596-AAA0-365417AC1205}|CRUD_BANK_TRANSACTIONS\\CRUD_BANK_TRANSACTIONS.csproj|solutionrelative:crud_bank_transactions\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E34DA168-C435-4596-AAA0-365417AC1205}|CRUD_BANK_TRANSACTIONS\\CRUD_BANK_TRANSACTIONS.csproj|y:\\cdacsunbeam\\cdac\\dotnet\\mvcpractice\\mvc_crud\\crud_bank_transactions\\models\\transactiondbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -58,37 +58,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "Y:\\CDACSunbeam\\CDAC\\DotNET\\MVCPractice\\MVC_CRUD\\CRUD_BANK_TRANSACTIONS\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "CRUD_BANK_TRANSACTIONS\\Views\\Shared\\_Layout.cshtml",
               "ToolTip": "Y:\\CDACSunbeam\\CDAC\\DotNET\\MVCPractice\\MVC_CRUD\\CRUD_BANK_TRANSACTIONS\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "CRUD_BANK_TRANSACTIONS\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-01-03T09:35:54.74Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "Y:\\CDACSunbeam\\CDAC\\DotNET\\MVCPractice\\MVC_CRUD\\CRUD_BANK_TRANSACTIONS\\Views\\Transaction\\Edit.cshtml",
-              "RelativeDocumentMoniker": "CRUD_BANK_TRANSACTIONS\\Views\\Transaction\\Edit.cshtml",
-              "ToolTip": "Y:\\CDACSunbeam\\CDAC\\DotNET\\MVCPractice\\MVC_CRUD\\CRUD_BANK_TRANSACTIONS\\Views\\Transaction\\Edit.cshtml",
-              "RelativeToolTip": "CRUD_BANK_TRANSACTIONS\\Views\\Transaction\\Edit.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-03T09:25:22.097Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Details.cshtml",
               "DocumentMoniker": "Y:\\CDACSunbeam\\CDAC\\DotNET\\MVCPractice\\MVC_CRUD\\CRUD_BANK_TRANSACTIONS\\Views\\Transaction\\Details.cshtml",
               "RelativeDocumentMoniker": "CRUD_BANK_TRANSACTIONS\\Views\\Transaction\\Details.cshtml",
@@ -96,12 +83,11 @@
               "RelativeToolTip": "CRUD_BANK_TRANSACTIONS\\Views\\Transaction\\Details.cshtml",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-03T09:25:19.078Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-03T09:25:19.078Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Create.cshtml",
               "DocumentMoniker": "Y:\\CDACSunbeam\\CDAC\\DotNET\\MVCPractice\\MVC_CRUD\\CRUD_BANK_TRANSACTIONS\\Views\\Transaction\\Create.cshtml",
               "RelativeDocumentMoniker": "CRUD_BANK_TRANSACTIONS\\Views\\Transaction\\Create.cshtml",
@@ -109,12 +95,11 @@
               "RelativeToolTip": "CRUD_BANK_TRANSACTIONS\\Views\\Transaction\\Create.cshtml",
               "ViewState": "AgIAABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-03T09:25:12.866Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-03T09:25:12.866Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "TransactionController.cs",
               "DocumentMoniker": "Y:\\CDACSunbeam\\CDAC\\DotNET\\MVCPractice\\MVC_CRUD\\CRUD_BANK_TRANSACTIONS\\Controllers\\TransactionController.cs",
               "RelativeDocumentMoniker": "CRUD_BANK_TRANSACTIONS\\Controllers\\TransactionController.cs",
@@ -122,12 +107,11 @@
               "RelativeToolTip": "CRUD_BANK_TRANSACTIONS\\Controllers\\TransactionController.cs",
               "ViewState": "AgIAAC8AAAAAAAAAAAAgwJwAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-03T08:35:24.736Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-03T08:35:24.736Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "TransactionDbContextModelSnapshot.cs",
               "DocumentMoniker": "Y:\\CDACSunbeam\\CDAC\\DotNET\\MVCPractice\\MVC_CRUD\\CRUD_BANK_TRANSACTIONS\\Migrations\\TransactionDbContextModelSnapshot.cs",
               "RelativeDocumentMoniker": "CRUD_BANK_TRANSACTIONS\\Migrations\\TransactionDbContextModelSnapshot.cs",
@@ -135,12 +119,49 @@
               "RelativeToolTip": "CRUD_BANK_TRANSACTIONS\\Migrations\\TransactionDbContextModelSnapshot.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-03T08:24:57.816Z",
+              "WhenOpened": "2025-01-03T08:24:57.816Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "Y:\\CDACSunbeam\\CDAC\\DotNET\\MVCPractice\\MVC_CRUD\\CRUD_BANK_TRANSACTIONS\\Program.cs",
+              "RelativeDocumentMoniker": "CRUD_BANK_TRANSACTIONS\\Program.cs",
+              "ToolTip": "Y:\\CDACSunbeam\\CDAC\\DotNET\\MVCPractice\\MVC_CRUD\\CRUD_BANK_TRANSACTIONS\\Program.cs",
+              "RelativeToolTip": "CRUD_BANK_TRANSACTIONS\\Program.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAoAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-03T07:53:31.498Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "Y:\\CDACSunbeam\\CDAC\\DotNET\\MVCPractice\\MVC_CRUD\\CRUD_BANK_TRANSACTIONS\\appsettings.json",
+              "RelativeDocumentMoniker": "CRUD_BANK_TRANSACTIONS\\appsettings.json",
+              "ToolTip": "Y:\\CDACSunbeam\\CDAC\\DotNET\\MVCPractice\\MVC_CRUD\\CRUD_BANK_TRANSACTIONS\\appsettings.json",
+              "RelativeToolTip": "CRUD_BANK_TRANSACTIONS\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-01-03T08:12:25.703Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "Y:\\CDACSunbeam\\CDAC\\DotNET\\MVCPractice\\MVC_CRUD\\CRUD_BANK_TRANSACTIONS\\Views\\Transaction\\Edit.cshtml",
+              "RelativeDocumentMoniker": "CRUD_BANK_TRANSACTIONS\\Views\\Transaction\\Edit.cshtml",
+              "ToolTip": "Y:\\CDACSunbeam\\CDAC\\DotNET\\MVCPractice\\MVC_CRUD\\CRUD_BANK_TRANSACTIONS\\Views\\Transaction\\Edit.cshtml",
+              "RelativeToolTip": "CRUD_BANK_TRANSACTIONS\\Views\\Transaction\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-03T09:25:22.097Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "20250103082435_Initial Create.cs",
               "DocumentMoniker": "Y:\\CDACSunbeam\\CDAC\\DotNET\\MVCPractice\\MVC_CRUD\\CRUD_BANK_TRANSACTIONS\\Migrations\\20250103082435_Initial Create.cs",
               "RelativeDocumentMoniker": "CRUD_BANK_TRANSACTIONS\\Migrations\\20250103082435_Initial Create.cs",
@@ -148,34 +169,19 @@
               "RelativeToolTip": "CRUD_BANK_TRANSACTIONS\\Migrations\\20250103082435_Initial Create.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-03T08:24:35.895Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-03T08:24:35.895Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "Y:\\CDACSunbeam\\CDAC\\DotNET\\MVCPractice\\MVC_CRUD\\CRUD_BANK_TRANSACTIONS\\appsettings.json",
-              "RelativeDocumentMoniker": "CRUD_BANK_TRANSACTIONS\\appsettings.json",
-              "ToolTip": "Y:\\CDACSunbeam\\CDAC\\DotNET\\MVCPractice\\MVC_CRUD\\CRUD_BANK_TRANSACTIONS\\appsettings.json",
-              "RelativeToolTip": "CRUD_BANK_TRANSACTIONS\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-01-03T08:12:25.703Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "CRUD_BANK_TRANSACTIONS",
+              "DocumentIndex": 9,
+              "Title": "CRUD_BANK_TRANSACTIONS.csproj",
               "DocumentMoniker": "Y:\\CDACSunbeam\\CDAC\\DotNET\\MVCPractice\\MVC_CRUD\\CRUD_BANK_TRANSACTIONS\\CRUD_BANK_TRANSACTIONS.csproj",
               "RelativeDocumentMoniker": "CRUD_BANK_TRANSACTIONS\\CRUD_BANK_TRANSACTIONS.csproj",
               "ToolTip": "Y:\\CDACSunbeam\\CDAC\\DotNET\\MVCPractice\\MVC_CRUD\\CRUD_BANK_TRANSACTIONS\\CRUD_BANK_TRANSACTIONS.csproj",
               "RelativeToolTip": "CRUD_BANK_TRANSACTIONS\\CRUD_BANK_TRANSACTIONS.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-01-03T08:23:55.902Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-03T08:23:55.902Z"
             },
             {
               "$type": "Document",
@@ -187,8 +193,7 @@
               "RelativeToolTip": "CRUD_BANK_TRANSACTIONS\\Models\\TransactionDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-03T08:05:11.566Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-03T08:05:11.566Z"
             },
             {
               "$type": "Document",
@@ -200,21 +205,7 @@
               "RelativeToolTip": "CRUD_BANK_TRANSACTIONS\\Models\\Transaction.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAAwA4AAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-03T07:59:14.981Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Program.cs",
-              "DocumentMoniker": "Y:\\CDACSunbeam\\CDAC\\DotNET\\MVCPractice\\MVC_CRUD\\CRUD_BANK_TRANSACTIONS\\Program.cs",
-              "RelativeDocumentMoniker": "CRUD_BANK_TRANSACTIONS\\Program.cs",
-              "ToolTip": "Y:\\CDACSunbeam\\CDAC\\DotNET\\MVCPractice\\MVC_CRUD\\CRUD_BANK_TRANSACTIONS\\Program.cs",
-              "RelativeToolTip": "CRUD_BANK_TRANSACTIONS\\Program.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAoAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-03T07:53:31.498Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-03T07:59:14.981Z"
             }
           ]
         }
