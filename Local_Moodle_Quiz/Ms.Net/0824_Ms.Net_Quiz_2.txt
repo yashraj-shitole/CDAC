@@ -1,0 +1,73 @@
+A _________ in C# is a feature that allows a class definition to be split into multiple files:
+A. Split class
+B. Partial Class
+C. Not possible split class definition into multiple files 
+D. Regular class
+ANSWER:B
+
+int? n = null; int n2 = (int)n; Console.WriteLine(n2);
+A.Compile n success
+B.Compile and output:null
+C.compile and throws InvalidOperationException.
+D.compile error
+ANSWER:C
+
+ int? a = 10; int? b = null; int? c = 10;  a++;  a = a * c;  a = a + b;  Console.WriteLine(a.HasValue);
+A.true
+B.false
+C.null
+D.110
+ANSWER:B
+
+What is correct syntax of Type.GetType Method
+A.GetType()
+B.GetType(String)
+C.GetType(String, Boolean, Boolean)
+D.all of the above
+ANSWER:D
+
+System.Linq.Expressions.Expression<Func<int, int>> e = x => x * x; Console.WriteLine(e); what is the output of above code
+A.e
+B.x=>(x * x)
+C.compile error
+D.x
+ANSWER:B
+
+var IncrementBy = (int source, int increment = 1) => source + increment; Console.WriteLine(IncrementBy(5)); Console.WriteLine(IncrementBy(5, 2));
+A.6 7
+B.6 6
+C.5 2
+D.7 6
+ANSWER:A
+
+var numberSets = new List<int[]> { new[] { 1, 2, 3, 4, 5 }, new[] { 0, 0, 0 }, new[] { 9, 8 }, new[] { 1, 0, 1, 0, 1, 0, 1, 0 } }; var setsWithManyPositives = from numberSet in numberSets where numberSet.Count(n => n > 0) > 3  select numberSet;  foreach (var numberSet in setsWithManyPositives)  { Console.WriteLine(string.Join(" ", numberSet)); }
+A.1 2 3 4 5 1 0 1 0 1 0 1 0
+B.1 0 1 0 1 0 1 0
+C.1 2 3 4 5
+D.1 0 1 0 1
+ANSWER:A
+
+var choose = (bool b) => b ? 1 : "two";
+A.the delegate type could not be inferred
+B.b
+C.1
+D.two
+ANSWER:A
+
+Which  of following is correct about a static class:
+A.Contains only static members.
+B.Can't be instantiated and Can't contain Instance Constructors.
+C.Is sealed.
+D.All of the above.
+ANSWER:D
+
+Static constructors have the following properties:
+A.A static constructor doesn't take access modifiers or have  parameters.
+B.A class or struct can only have one static constructor and Static constructors can't be inherited or overloaded.
+C.if you don't provide a static constructor to initialize static fields, all static fields are initialized to their default value
+D.All of the above
+ANSWER:D
+
+
+
+

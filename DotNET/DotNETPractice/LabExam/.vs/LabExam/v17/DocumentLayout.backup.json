@@ -1,0 +1,139 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\yashr\\OneDrive\\Desktop\\DotNETPractice\\LabExam\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7F774986-B117-4E5E-8D6D-7C0B6AD13672}|LabExam\\LabExam.csproj|c:\\users\\yashr\\onedrive\\desktop\\dotnetpractice\\labexam\\labexam\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F774986-B117-4E5E-8D6D-7C0B6AD13672}|LabExam\\LabExam.csproj|solutionrelative:labexam\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F774986-B117-4E5E-8D6D-7C0B6AD13672}|LabExam\\LabExam.csproj|c:\\users\\yashr\\onedrive\\desktop\\dotnetpractice\\labexam\\labexam\\controllers\\studentcoursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F774986-B117-4E5E-8D6D-7C0B6AD13672}|LabExam\\LabExam.csproj|solutionrelative:labexam\\controllers\\studentcoursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F774986-B117-4E5E-8D6D-7C0B6AD13672}|LabExam\\LabExam.csproj|c:\\users\\yashr\\onedrive\\desktop\\dotnetpractice\\labexam\\labexam\\controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F774986-B117-4E5E-8D6D-7C0B6AD13672}|LabExam\\LabExam.csproj|solutionrelative:labexam\\controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F774986-B117-4E5E-8D6D-7C0B6AD13672}|LabExam\\LabExam.csproj|c:\\users\\yashr\\onedrive\\desktop\\dotnetpractice\\labexam\\labexam\\model\\courses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F774986-B117-4E5E-8D6D-7C0B6AD13672}|LabExam\\LabExam.csproj|solutionrelative:labexam\\model\\courses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F774986-B117-4E5E-8D6D-7C0B6AD13672}|LabExam\\LabExam.csproj|c:\\users\\yashr\\onedrive\\desktop\\dotnetpractice\\labexam\\labexam\\model\\coursestudent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F774986-B117-4E5E-8D6D-7C0B6AD13672}|LabExam\\LabExam.csproj|solutionrelative:labexam\\model\\coursestudent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F774986-B117-4E5E-8D6D-7C0B6AD13672}|LabExam\\LabExam.csproj|c:\\users\\yashr\\onedrive\\desktop\\dotnetpractice\\labexam\\labexam\\model\\students.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F774986-B117-4E5E-8D6D-7C0B6AD13672}|LabExam\\LabExam.csproj|solutionrelative:labexam\\model\\students.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F774986-B117-4E5E-8D6D-7C0B6AD13672}|LabExam\\LabExam.csproj|c:\\users\\yashr\\onedrive\\desktop\\dotnetpractice\\labexam\\labexam\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F774986-B117-4E5E-8D6D-7C0B6AD13672}|LabExam\\LabExam.csproj|solutionrelative:labexam\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CourseStudent.cs",
+              "DocumentMoniker": "C:\\Users\\yashr\\OneDrive\\Desktop\\DotNETPractice\\LabExam\\LabExam\\Model\\CourseStudent.cs",
+              "RelativeDocumentMoniker": "LabExam\\Model\\CourseStudent.cs",
+              "ToolTip": "C:\\Users\\yashr\\OneDrive\\Desktop\\DotNETPractice\\LabExam\\LabExam\\Model\\CourseStudent.cs",
+              "RelativeToolTip": "LabExam\\Model\\CourseStudent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-08T04:36:13.188Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Courses.cs",
+              "DocumentMoniker": "C:\\Users\\yashr\\OneDrive\\Desktop\\DotNETPractice\\LabExam\\LabExam\\Model\\Courses.cs",
+              "RelativeDocumentMoniker": "LabExam\\Model\\Courses.cs",
+              "ToolTip": "C:\\Users\\yashr\\OneDrive\\Desktop\\DotNETPractice\\LabExam\\LabExam\\Model\\Courses.cs",
+              "RelativeToolTip": "LabExam\\Model\\Courses.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-08T04:36:12.193Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CourseController.cs",
+              "DocumentMoniker": "C:\\Users\\yashr\\OneDrive\\Desktop\\DotNETPractice\\LabExam\\LabExam\\Controllers\\CourseController.cs",
+              "RelativeDocumentMoniker": "LabExam\\Controllers\\CourseController.cs",
+              "ToolTip": "C:\\Users\\yashr\\OneDrive\\Desktop\\DotNETPractice\\LabExam\\LabExam\\Controllers\\CourseController.cs",
+              "RelativeToolTip": "LabExam\\Controllers\\CourseController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-08T04:36:08.963Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "StudentController.cs",
+              "DocumentMoniker": "C:\\Users\\yashr\\OneDrive\\Desktop\\DotNETPractice\\LabExam\\LabExam\\Controllers\\StudentController.cs",
+              "RelativeDocumentMoniker": "LabExam\\Controllers\\StudentController.cs",
+              "ToolTip": "C:\\Users\\yashr\\OneDrive\\Desktop\\DotNETPractice\\LabExam\\LabExam\\Controllers\\StudentController.cs",
+              "RelativeToolTip": "LabExam\\Controllers\\StudentController.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAYwCsAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-08T04:36:10.018Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "StudentCourseController.cs",
+              "DocumentMoniker": "C:\\Users\\yashr\\OneDrive\\Desktop\\DotNETPractice\\LabExam\\LabExam\\Controllers\\StudentCourseController.cs",
+              "RelativeDocumentMoniker": "LabExam\\Controllers\\StudentCourseController.cs",
+              "ToolTip": "C:\\Users\\yashr\\OneDrive\\Desktop\\DotNETPractice\\LabExam\\LabExam\\Controllers\\StudentCourseController.cs",
+              "RelativeToolTip": "LabExam\\Controllers\\StudentCourseController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwB0AAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-08T04:36:11.019Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Students.cs",
+              "DocumentMoniker": "C:\\Users\\yashr\\OneDrive\\Desktop\\DotNETPractice\\LabExam\\LabExam\\Model\\Students.cs",
+              "RelativeDocumentMoniker": "LabExam\\Model\\Students.cs",
+              "ToolTip": "C:\\Users\\yashr\\OneDrive\\Desktop\\DotNETPractice\\LabExam\\LabExam\\Model\\Students.cs",
+              "RelativeToolTip": "LabExam\\Model\\Students.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-08T04:36:14.217Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\yashr\\OneDrive\\Desktop\\DotNETPractice\\LabExam\\LabExam\\Program.cs",
+              "RelativeDocumentMoniker": "LabExam\\Program.cs",
+              "ToolTip": "C:\\Users\\yashr\\OneDrive\\Desktop\\DotNETPractice\\LabExam\\LabExam\\Program.cs",
+              "RelativeToolTip": "LabExam\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-08T04:52:01.524Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

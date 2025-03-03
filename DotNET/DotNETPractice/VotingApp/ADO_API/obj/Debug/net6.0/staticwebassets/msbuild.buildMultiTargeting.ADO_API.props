@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\ADO_API.props" />
+</Project>

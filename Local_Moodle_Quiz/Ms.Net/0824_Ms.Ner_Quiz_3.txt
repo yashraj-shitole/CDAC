@@ -1,0 +1,69 @@
+__________ contain logic that is executed before and after a view is executed.
+A) Result filters
+B) Action filters
+C) Exception filters
+D) Authorization filters
+ANSWER: A
+
+Converting client request data (form values, route data, query string parameters, HTTP headers) into objects that the controller can handle is done by ________.
+A) ViewBag
+B) Query String
+C) Cookies
+D) Model Binding
+ANSWER: D
+
+How do you manage states in asp.net application?
+A) Session Objects
+B) Application Objects
+C) Viewstate
+D) all of the above
+ANSWER: D
+
+If controller actions frequently perform the same kinds of actions, then we can move these common actions into ________.
+A) Model
+B) View
+C) Filters
+D) Helper Functions
+ANSWER: C
+
+In ASP.Net MVC Core business logic along with any implementation logic for persisting the state of the application, should be encapsulated in ____________.
+A) Model
+B) View
+C) Controller
+D) only C.
+ANSWER: A
+
+IoC is a ___________?
+A) Design Pattern
+B) Design Principle
+C) Framework
+D) None of the above
+ANSWER: B
+
+Strongly-typed views typically use ViewModel types, designed to contain the data, to display on that view. The ________ creates and populates these ViewModel instances from the ________.
+A) View, Controller
+B) Model, Controller
+C) View, Model
+D) Controller, Model
+ANSWER: D
+
+The route definitions are placed next to the ________ and ________ with which they're associated.
+A) Model, View
+B) Controller, Action
+C) Action, Model
+D) None of the above.
+ANSWER: B
+
+What are the various types of filters in an ASP.NET MVC application?
+A) Authorization filters
+B) Action filters
+C) Result filters
+D) All of these
+ANSWER: D
+
+It is possible to use ________ to encapsulate crosscutting concerns and to implement custom logic of pre- and post-processing for action method.
+A) Entity Framework
+B) Filters
+C) Routing Table
+D) Helper Functions
+ANSWER: B

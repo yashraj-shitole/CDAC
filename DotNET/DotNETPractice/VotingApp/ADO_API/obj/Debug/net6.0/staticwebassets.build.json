@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "6TdkHFsytA6aClgCxTqTTLaLQDTpYCJlEGKvWc8Ekvo=",
+  "Source": "ADO_API",
+  "BasePath": "_content/ADO_API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

@@ -1,0 +1,71 @@
+A fundamental principle of Software Engineering is to design software products that minimize the intellectual distance between _____ and solution.
+A) Method
+B) Problem
+C) Product
+D) Process
+ANSWER: B
+
+An abstraction in kubernetes which defines a logical set of pods and a policy to access them _____
+A) kubelet
+B) Service
+C) Node
+D) Container
+ANSWER: B
+
+One can list all of the containers on the machine via the ____________ command.
+A) docker run
+B) docker pc
+C) docker r
+D) docker ps
+ANSWER: D
+
+The key considerations involved in the feasibility analysis is/are
+A) Economic
+B) Technical
+C) Behavioral
+D) All of the above
+ANSWER: D
+
+What does "Timeboxed" means in Agile terms?
+A) Fast
+B) Flexible
+C) Frequent
+D) Fixed
+ANSWER: D
+
+What is a microservice?
+A) A design used primarily in functional programming and object-oriented programming
+B) A small program that represents discrete logic that executes within a well-defined boundary on dedicated hardware
+C) It is an architectural method that relies on a series of independently deployable services.lines
+D) A very small piece of code that never gets any bigger than 10 
+ANSWER: C
+
+Which component of the Docker implements the Docker API.
+A) The Docker daemon.
+B) The Docker client.
+C) containerd
+D) The OCI layer.
+ANSWER: A
+
+What is the Jenkins 'build' step used for?
+A) To initialize the Jenkins server
+B) To run automated tests
+C) To compile and package the code
+D) To deploy applications to the cloud
+ANSWER: C
+
+What happens if you use the git reset --hard command?
+A) It reverts the last commit but keeps changes in the working directory
+B) It deletes all changes in the working directory and staging area
+C) It stages all changes but doesn't commit them
+D) It pulls the latest changes from the remote repository and applies them
+ANSWER: B
+
+What is the difference between git merge and git rebase?
+A) git merge combines the history of two branches, while git rebase rewrites the history of a branch
+B) git merge deletes the source branch after merging, while git rebase does not
+C) git merge re-applies commits in sequence, while git rebase merges them directly
+D) git merge works with local repositories, while git rebase works only with remote repositories
+ANSWER: A
+
+

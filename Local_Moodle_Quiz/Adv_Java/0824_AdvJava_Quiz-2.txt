@@ -1,0 +1,60 @@
+Core Container, Data Access and Web are modules of
+A) Servlet framework
+B) JSP framework
+C) Spring framework
+D) Hibernate framework
+ANSWER: C
+In JSP page life cyle, for request processing _________ invokes ________ method.
+A) IoC, _jspinit()
+B) Web-Container, _jspService()
+C) IoC, jspService()
+D) Only B
+ANSWER: B
+@RequestMapping when used at class level _________ and when used at method level _________.
+A) it creates a base URI for which the controller will be used, it will give you the URI on which the handler methods will be executed
+B) allows autodetection of component classes in the classpath, it adds component scanning to your configuration
+C) Both A and B
+D) None of the above
+ANSWER: A
+We use sessionfactory ________ to create session objects via __________
+A) interface, openSession()
+B) object, openSession() or getCurrentSession()
+C) method, createSession()
+D) interface, getCurrentSession()
+ANSWER: B
+When a class is annotated with @MappedSuperclass, what does it mean?
+A) A mapped superclass is a special type of class that is NOT persistent itself, but has subclasses that are persistent
+B) A mapped superclass is a special type of class that is persistent itself and its subclasses are NOT persistent
+C) Only B
+D) Both A and B
+ANSWER: A
+Which statement/statements are true in context of Flushing?
+A) is the process of synchronizing the underlying database with the objects in the session's L1 cache
+B) A session gets flushed when the transaction is commited
+C) Both A and B
+D) None of the above
+ANSWER: C
+What is the difference between @RestController and @Controller?
+A) @RestController automatically converts the return value of methods to JSON or XML, while @Controller requires manual view resolution.
+B) @RestController is used for creating services, while @Controller is used for creating controllers.
+C) There is no significant difference between them.
+D) None of the above.
+ANSWER: A
+What is the role of the @EnableAutoConfiguration annotation?
+A) It enables automatic dependency injection.
+B) It enables automatic configuration of Spring beans based on classpath settings.
+C) It enables automatic creation of REST controllers.
+D) It's used to define custom auto-configurations.
+ANSWER: B
+What is the significance of Spring Boot Starters?
+A) They are essential for creating Spring Boot applications.
+B) They provide pre-configured dependencies for common functionalities.
+C) They are used to define custom auto-configurations.
+D) They are only used for web applications.
+ANSWER: B
+What is the significance of the @ComponentScan annotation?
+A) It's used to scan for and register Spring components (like controllers, services, etc.).
+B) It's used to configure data sources.
+C) It's used to define custom auto-configurations.
+D) It's only used for web applications.
+ANSWER: A

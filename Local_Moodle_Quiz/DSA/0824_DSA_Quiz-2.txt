@@ -1,0 +1,69 @@
+Consider the following array. 5, 8, 2, 10, 3, 7, 1, 9. Which algorithm out of the following options uses the least number of comparisons (among the array elements) to sort above array in ascending order?
+A) Insertion sort
+B) Selection sort
+C) Bubble sort
+D) B and C
+ANSWER: A
+
+Binary search algorithm cannot be applied to
+A) sorted linked list
+B) sorted binary trees
+C) sorted linear array
+D) pointer array
+ANSWER: A
+
+How is time complexity measured?
+A) By counting the number of algorithms in an algorithm.
+B) By counting the size of data input to the algorithm.
+C) By counting the number of primitive operations performed by the algorithm on given input size.
+D) None of the above
+ANSWER: C
+
+In a circular linked list
+A) Components are all linked together in some sequential manner.
+B) There is no beginning and no end.
+C) Components are arranged hierarchically.
+D) Forward and backward traversal within the list is permitted
+ANSWER: B
+
+In linear search algorithm the Worst case occurs when
+A) The item is somewhere in the middle of the array
+B) The item is not in the array at all
+C) The item is the last element in the array
+D) The item is the last element in the array or is not there at all
+ANSWER: D
+
+The memory address of the first element of an array is called
+A) floor address
+B) foundation address
+C) first address
+D) base address
+ANSWER: D
+
+What is the average case time complexity for finding the height of the binary tree?
+A) h = O(loglogn)
+B) h = O(nlogn)
+C) h = O[No]
+D) h = O(log n)
+ANSWER: D
+
+What is the time complexity of enqueue operation?
+A) O(logn)
+B) O(1)
+C) O[No]
+D) O(nlogn)
+ANSWER: B
+
+What is the worst case complexity of binary search using recursion?
+A) O(nlogn)
+B) O(n2)
+C) O(logn)
+D) O[No]
+ANSWER: C
+
+Which data structure is required to convert the infix to prefix notation?
+A) Stack
+B) Linked list
+C) Binary tree
+D) Queue
+ANSWER: A

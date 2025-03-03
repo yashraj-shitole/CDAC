@@ -1,0 +1,91 @@
+Which of the following function is called to render HTML to the web page in React?
+A) render()
+B) ReactDOM.render()
+C) ReactDOM_render()
+D) All of the above
+ANSWER: B
+
+Which of the following is used to pass data to a component from outside in React.js?
+A) SetState
+B) Render with arguments
+C) Props
+D) PropTypes
+ANSWER: C
+
+What is the purpose of render() in React?
+A) To update the state
+B) To modify the DOM directly
+C) To return the JSX that describes the UI
+D) To bind event handlers
+ANSWER: C
+
+How do you pass data to a child component in React?
+A) Using state
+B) Using functions
+C) Using props
+D) Using context
+ANSWER: C
+
+What is the correct way to create a functional component in React?
+A) function Component() { return <div>Hello</div>; }
+B) const Component = () => { return <div>Hello</div>; }
+C) Both A and B
+D) None of the above
+ANSWER: C
+
+What does useState return?
+A) Only the state variable
+B) Only the function to update the state
+C) Both the state variable and a function to update it
+D) A single value
+ANSWER: C
+
+Which of the following is true about React components?
+A) Components can only be class-based.
+B) Components must be wrapped in a <div>.
+C) Components can be functional or class-based.
+D) Components require an external library.
+ANSWER: C
+
+Which method is used to update state in a class component?
+A) setProps
+B) updateState
+C) setState
+D) changeState
+ANSWER: C
+
+What does the className attribute in React correspond to?
+A) JavaScript class
+B) CSS class
+C) React component class
+D) HTML ID
+ANSWER: B
+
+Which of these is NOT a React hook?
+A) useState
+B) useEffect
+C) useReducer
+D) useClass
+ANSWER: D
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

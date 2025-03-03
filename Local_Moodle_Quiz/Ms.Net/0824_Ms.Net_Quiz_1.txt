@@ -1,0 +1,60 @@
+The _______ object of the ________ class needs to be initialized for discovering the attributes associated with a class?
+A) Assembly, System.Reflection
+B) MemberInfo, System.Reflection
+C) ConstructorInfo, System.Attribute
+D) All of the above
+ANSWER: B
+The [Serializable()] attributes gets inspected at _________
+A) compile time
+B) run time
+C) design time
+D) linking time
+ANSWER: B
+The Startup class must include _______ method?
+A) Main
+B) BuildWebHost
+C) Configure
+D) ConfigService
+ANSWER: C
+To generate a simple notification for an object in runtime, the programming construct to be used for implementing this idea?
+A) namespace
+B) interface
+C) delegate
+D) attribute
+ANSWER: C
+Using which class we can dynamically load both private and shared assemblies from the local location to a remote location as well as, to explore its properties?
+A) FileInfo class
+B) Assembly class
+C) Both A and B
+D) Attribute class
+ANSWER: B
+What is CLR in C#?
+A) It is a virtual machine component of Microsoft .NET Framework
+B) It is a virtual machine component of JVM
+C) It is a compiler to compile the C# code
+D) All of the above
+ANSWER: A
+What is the relationship between Common Type System (CTS) and Common Language Specification (CLS)?
+A) DotNET Languages each offer a subset of the CTS and a superset of the CLS.
+B) DotNET Languages each offer a superset of the CTS and a subset of the CLS.
+C) DotNET Languages each offer either the CTS set or the CLS set.
+D) DotNET Languages all offer the same superset of the CTS.
+ANSWER: A
+What will be the output of the following C# code?using System;namespace MyApplication {class Program {static void Main(string[] args) {int a = 10, b=20;Console.WriteLine("{0},{0}", a, b);   }  }}
+A) 10,20
+B) 10,10
+C) 20,20
+D) Error
+ANSWER: B
+Which is the correct syntax to add an event handler in ASP.Net?
+A) Attributes("Event","Javascript_Code();")
+B) Attributes.Handle("Event","Javascript_Code();")
+C) Attributes.Add("Event","Javascript_Code();")
+D) None of the above
+ANSWER: C
+Which type of class does not have its own objects but acts as a base class for its subclass in C#?
+A) Abstract Class
+B) Static Class
+C) Sealed Class
+D) Protected Class
+ANSWER: A

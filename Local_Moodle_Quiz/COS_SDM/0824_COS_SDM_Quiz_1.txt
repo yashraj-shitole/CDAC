@@ -1,0 +1,69 @@
+An application that loads kernels into memory is known as a ______.
+A) ROM
+B) RAM
+C) BIOS
+D) BootStrap Loader
+ANSWER: D
+
+A parent process calling _____ system call will be suspended until children processes terminate.
+A) exec
+B) wait
+C) exit
+D) fork
+ANSWER: B
+
+Which of the following is used to get the list of all positional parameters
+A) $#
+B) $0
+C) $*
+D) $&
+ANSWER: C
+
+Which of the following memory allocation scheme suffers from External fragmentation?
+A) Pure demand paging
+B) Segmentation
+C) Paging
+D) Swapping
+ANSWER: B
+
+A process is dynamically allocated memory during its runtime in which section?
+A) Stack
+B) Heap
+C) Data
+D) Text
+ANSWER: B
+
+Memory management technique in which system stores and retrieves data from secondary storage for use in main memory is called?
+A) fragmentation
+B) paging
+C) mapping
+D) none of the mentioned
+ANSWER: B
+
+A processes current activity is represented by1. program counter2. contents of processor's registers3. stack4. data section
+A) 1
+B) 1, 2
+C) 1, 2, 3
+D) 1, 2, 3, 4
+ANSWER: B
+
+The kernel is ______ of user threads.
+A) unaware of
+B) the creator of
+C) aware of
+D) a part of
+ANSWER: A
+
+What will happen if a non-recursive mutex is locked more than once?
+A) Deadlock
+B) Signaling
+C) Aging
+D) Starvation
+ANSWER: A
+
+CPU scheduling is the basis of ___________
+A) multiprogramming operating systems
+B) larger memory sized systems
+C) multiprocessor systems
+D) none of the mentioned
+ANSWER: A

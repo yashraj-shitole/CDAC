@@ -1,0 +1,74 @@
+If a list of n elements is traversed in a linear search, what is the expected number of comparisons required to find a target element located halfway through the list?
+A. n
+B. n - 1
+C. n / 2
+D. n + 1
+ANSWER: C
+
+If binary search is applied on a sorted linked list, what would be the time complexity of each search operation?
+A. O( n ) due to lack of random access
+B. O( log n ) as with arrays
+C. O( n logn )
+D. O( 1 )
+ANSWER: A
+
+How is time complexity measured?
+A. By counting the number of algorithms in an algorithm.
+B. By counting the size of data input to the algorithm.
+C. By counting the number of primitive operations performed by the algorithm on given input size.
+D. None of the above
+ANSWER: C
+
+Binary search algorithm cannot be applied to
+A) sorted linked list
+B) sorted binary trees
+C) sorted linear array
+D) pointer array
+ANSWER: A
+
+Which of the following statements best describes a scenario in which a linear search is more efficient than a binary search?
+A. When the list is sorted and large
+B. When the list is small and unsorted
+C. When the list is sorted and small
+D. When the list is large and unsorted
+ANSWER: B
+
+Which of the following applications does not use a stack?
+A. Reversing a string
+B. Expression evaluation (postfix or prefix)
+C. Undo operation in text editors
+D. Sorting an array
+ANSWER: D
+
+In a linear queue, when the rear pointer reaches the end of the array, what happens if the queue is not full?
+A. The queue overflows
+B. The rear pointer wraps around to the front
+C. The queue is reset
+D. The queue cannot be used anymore
+ANSWER: B
+
+Which of the following conditions is true for a queue implemented with an array?
+A. The front pointer should always be less than the rear pointer.
+B. The queue is full when the front pointer is equal to the rear pointer.
+C. The queue is full when the rear pointer reaches the end of the array.
+D. The queue is full when the front pointer is equal to the rear pointer and the queue is not empty.
+ANSWER: D
+
+In which of the following linked list addition, deletion operations are efficient
+A) doubly circular linked list
+B) singly circular linked list
+C) doubly linear linked list
+D) singly linear linked list
+ANSWER: A
+
+Time required to reverse the singly linear linked list is
+A. O(1)
+B. O( n )
+C. O(log n)
+D. none of above
+ANSWER: B
+
+
+
+
+

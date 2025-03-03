@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "MAgczTOgK5lOURGoSWBt7j3vM1h0WQTuQh68/D6j56M=",
+  "Source": "WebApi_Ado",
+  "BasePath": "_content/WebApi_Ado",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

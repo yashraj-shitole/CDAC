@@ -1,0 +1,69 @@
+Assuming Person is a bean class with a "name" property. "p" is session scoped bean of Person type. Which of the following code may produce different output?
+A) ${sessionScope.p.name}
+B) <%= session.getAttribute("p").getName() %>
+C) ${sessionScope.p.getName()}
+D) ${p.getName()}
+ANSWER: D
+
+Assuming Person is a bean class with a "name" property, what will be the output if this code is written in a JSP?     <jsp:useBean id="p" class="com.sunbeam.Person" scope="application"/>    <jsp:setProperty name="p" property="name" value="Prashant" />    <jsp:useBean id="p" class="com.sunbeam.Person" scope="session"/>    <jsp:setProperty name="p" property="name" value="Nilesh" />    <jsp:useBean id="p" class="com.sunbeam.Person" scope="request"/>    <jsp:setProperty name="p" property="name" value="Nitin" />    ${p.name}
+A) Nilesh
+B) Nitin
+C) Prashant
+D) Error
+ANSWER: D
+
+Assuming Person is a bean class with a "name" property, what will be the output if this code is written in JSP pages as follows? Page requested by client is page1.jsp.    //page1.jsp    <jsp:useBean id="p" class="com.sunbeam.Person" scope="request"/>    <jsp:setProperty name="p" property="name" value="Prashant" />    <jsp:forward page="page2.jsp"/>    //page2.jsp    <jsp:useBean id="p" class="com.sunbeam.Person" scope="session"/>   <jsp:setProperty name="p" property="name" value="Nilesh" />    <c:redirect url="page3.jsp"/>    //page3.jsp    <jsp:useBean id="p" class="com.sunbeam.Person" scope="application"/>    <jsp:setProperty name="p" property="name" value="Nitin" />    Output: ${p.name}
+A) Nilesh
+B) Nitin
+C) Prashant
+D) Error
+ANSWER: A
+
+Assuming Person is a bean class with a "name" property, what will be the output if this code is written in JSP pages as follows? Page requested by client is page1.jsp.    //page1.jsp    <jsp:useBean id="p" class="com.sunbeam.Person" scope="request"/>    <jsp:setProperty name="p" property="name" value="Prashant" />    <jsp:forward page="page2.jsp"/>    //page2.jsp    <jsp:useBean id="p" class="com.sunbeam.Person" scope="session"/>    <jsp:setProperty name="p" property="name" value="Nilesh" />    <jsp:forward page="page3.jsp"/>    //page3.jsp    <jsp:useBean id="p" class="com.sunbeam.Person" scope="application"/>    <jsp:setProperty name="p" property="name" value="Nitin" />    Output: ${p.name}
+A) Nilesh
+B) Nitin
+C) Prashant
+D) Error
+ANSWER: C
+
+Assuming Person is a bean class with a "name" property, which of the following code in page3.jsp will produce output "Nitin" ? Page requested by client is page1.jsp.    //page1.jsp    <jsp:useBean id="p" class="com.sunbeam.Person" scope="request"/>    <jsp:setProperty name="p" property="name" value="Prashant" />    <jsp:forward page="page2.jsp"/>    //page2.jsp    <jsp:useBean id="p" class="com.sunbeam.Person" scope="session"/>    <jsp:setProperty name="p" property="name" value="Nilesh" />    <c:redirect url="page3.jsp"/>    //page3.jsp    <jsp:useBean id="p" class="com.sunbeam.Person" scope="application"/>    <jsp:setProperty name="p" property="name" value="Nitin" />    Output: <%-- Which code to write here? --%>
+A) ${p.name}
+B) ${application.p.name}
+C) ${servletContext.p.name}
+D) ${applicationScope.p.name}
+ANSWER: D
+
+An JSP page is forwarding request to another page using jsp:forward with jsp:param to send additional data. In the next page, how that data can be accessed?
+A) ${requestScope.key}
+B) ${param.key}
+C) ${response.key}
+D) ${request.key}
+ANSWER: B
+
+If JSP page is declared with <%@ page isErrorPage="true" %>, which "additional" implicit object will be available in JSP?
+A) request
+B) response
+C) exception
+D) error
+ANSWER: C
+
+I have implemented a custom SimpleTag in a JSP page. In which sequence its life cycle methods will be called?
+A) setJspBody(), setJspContext(), setParent(), doTag()
+B) setParent(), setJspBody(), setJspContext(), doTag()
+C) setJspContext(), setParent(), setJspBody(), doTag()
+D) setJspContext(), setParent(), doTag(), setJspBody()
+ANSWER: C
+
+In my first JSP page there is an hyperlink <a href="next.jsp?key1=value1&key2=value2">Next</a>. How to access value for key2 and its data type in next.jsp?
+A) request.getParameter("key2"), Object type.
+B) ${param.key2}, Object type.
+C) request.getAttribute("key2"), Object type.
+D) ${param.key2}, String type.
+ANSWER: D
+
+JSP EL auto search an object into scopes in which order?
+A) applicationScope, sessionScope, requestScope, pageScope
+B) pageScope, requestScope, sessionScope, applicationScope
+C) requestScope, pageScope, sessionScope, applicationScope
+D) None of these
+ANSWER: B
